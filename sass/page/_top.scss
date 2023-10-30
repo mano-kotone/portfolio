@@ -72,17 +72,24 @@
         height: 100vh;
         background: #ddd;
 
+        &__videoUl {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            &List {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
 
         &__wrap {
-            position: relative;
-            z-index: 3;
             @include padding;
         }
 
-        &__contaier {
-            &-01 {
-                margin: 26.1vw 0 23.2vw;
-            }
+        &__container-01 {
+            margin: 26.1vw 0 23.2vw;
         }
 
         &__ul {
@@ -120,14 +127,30 @@
             font-weight: 500;
             letter-spacing: -0.07em;
         }
+
+        &__container-02 {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        &__no {
+            display: flex;
+            gap: 15px;
+
+            &List {
+                font-size: 15px;
+            }
+        }
     }
 
     .message {
-        @include padding;
 
         &__ttl {
             &Container {
                 position: relative;
+                margin-bottom: 54.66vw;
+                @include padding;
             }
 
             font-size: clamp(0px, 12vw, 60px);
@@ -165,12 +188,40 @@
         &__circle {
             position: absolute;
             top: -17.6vw;
-            left: 21.6vw;
+            left: 15.6vw;
             z-index: -1;
             width: clamp(0px, 136vw, 535px);
             aspect-ratio: 1 / 1;
             border: 3px solid $gray01;
             border-radius: 50%;
+
+            &::before {
+                @include content($w: 141px);
+                position: absolute;
+                top: 48.2vw;
+                left: 32.66vw;
+                aspect-ratio: 1 / 1;
+                background: url(../images/message-japn.jpg) center center / cover;
+            }
+
+            &::after {
+                @include content($w: 127px);
+                position: absolute;
+                top: 96vw;
+                left: 33vw;
+                aspect-ratio: 1 / 1;
+                background: url(../images/message-sapporo.png) center center / cover;
+            }
+        }
+
+        &__gallery {
+            &::before {
+                @include content;
+                margin-bottom: clamp(0px,2.93vw,15px);
+                height: 18px;
+                background: $gray02;
+            }
+            // container内js.scssに記述
         }
     }
 

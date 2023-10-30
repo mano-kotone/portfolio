@@ -1,3 +1,29 @@
 //各ファイルは必ず登録済みの変数を最初に読み込みます
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
+
+.message__gallery {
+    &Container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 2.31vw;
+        width: 128.53vw;
+        margin-left: -13vw;
+    }
+
+    &List {
+        display: block;
+        width: 19.27vw;
+        aspect-ratio: 25 / 14;
+        background-position: center center;
+        background-size: cover;
+        border-radius: 1vw;
+    }
+
+    @for $i from 1 through 36 {
+        .message__galleryList#{$i} {
+            background-image: url(../images/message-#{$i}.jpg);
+        }
+    }
+}
