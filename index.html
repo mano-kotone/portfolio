@@ -4,114 +4,392 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>ここにタイトルがはいります</title>
+  <title>KOTONEMANOPortfolio.</title>
   <meta name="keywords" content="">
   <meta name="description" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200;300;400;500&family=Bodoni+Moda:ital,opsz,wght@1,6..96,500;1,6..96,600&family=Noto+Sans+JP:wght@400;500&display=swap"
+    rel="stylesheet">
   <link href="css/style.css" rel="stylesheet" media="all">
 </head>
 
 <body id="top">
-  <header class="header">
-    <h1 class="header__ttl"><a href="#" class="header__link"><img src="images/KOTONE MANO Portofolio.-verticalWhite.svg"
-          alt="KOTONE MANO Portfolio." class="header__img"></a></h1>
+  <div class="wrapper">
+    <header id="header" class="header">
+      <h1 class="header__ttl">
+        <a href="#" class="header__link">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="images/logo-verticalWhite.svg">
+            <img src="images/logo-black.svg" alt="KOTONE MANO Portfolio." class="header__img">
+          </picture>
+        </a>
+      </h1>
 
-    <div class="header__container">
-      <nav class="topNav">
-        <ul class="topNav__ul">
-          <li class="topNav__list"><a href="#" class="topNav__link">HOME</a></li>
-          <li class="topNav__list"><a href="#message" class="topNav__link">MESSAGE</a></li>
-          <li class="topNav__list"><a href="#works" class="topNav__link">WORKS</a></li>
-          <li class="topNav__list"><a href="#skill" class="topNav__link">SKILL</a></li>
-          <li class="topNav__list"><a href="#history" class="topNav__link">HISTORY</a></li>
-          <li class="topNav__list"><a href="#contact" class="topNav__link">CONTACT</a></li>
+      <div class="header__container">
+        <nav class="topNav">
+          <ul class="topNav__ul">
+            <li class="topNav__list"><a href="#" class="topNav__link">HOME</a></li>
+            <li class="topNav__list"><a href="#message" class="topNav__link">MESSAGE</a></li>
+            <li class="topNav__list"><a href="#works" class="topNav__link">WORKS</a></li>
+            <li class="topNav__list"><a href="#skill" class="topNav__link">SKILL</a></li>
+            <li class="topNav__list"><a href="#history" class="topNav__link">HISTORY</a></li>
+            <li class="topNav__list"><a href="#contact" class="topNav__link">CONTACT</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__btn">
+          <span class="header__btnline header__btnlineTop"></span>
+          <span class="header__btnline header__btnlineBottom"></span>
+        </div>
+      </div>
+
+      <nav class="gnav">
+        <ul class="gnav__ul">
+          <li class="gnav__list"><a href="#" class="gnav__link">HOME</a></li>
+          <li class="gnav__list"><a href="#works" class="gnav__link">WORKS</a></li>
+          <li class="gnav__list"><a href="#history" class="gnav__link">HISTORY</a></li>
+          <li class="gnav__list"><a href="#contact" class="gnav__link">CONTACT</a></li>
         </ul>
+        <p class="gnav__copyright"><small class="gnav__small">Copyright 2023 KOTONE MANO Portfolio. All right
+            reserved.</small></p>
       </nav>
-      <div class="header__btn">
-        <span id="header__btnTop"></span>
-        <span class="header__btnBottom"></span>
-      </div>
-    </div>
 
-    <div class="sunaarashi"></div>
-  </header>
+      <div class="header__sunaarashi"></div>
 
-  <nav class="gnav">
-    <ul class="gnav__ul">
-      <li class="gnav__list"><a href="#" class="gnav__link">HOME</a></li>
-      <li class="gnav__list"><a href="#works" class="gnav__link">WORKS</a></li>
-      <li class="gnav__list"><a href="#history" class="gnav__link">HISTORY</a></li>
-      <li class="gnav__list"><a href="#contact" class="gnav__link">CONTACT</a></li>
-    </ul>
-  </nav>
+    </header>
 
-  <div class="mv">
-    <!-- スワイパー -->
-    <div class="mv__container">
-      <div class="mv__box">
-        <h2 class="mv__ttl"><img src="images/KOTONE MANO Portfolio.-white.svg" alt="KOTONEMANOPortfolio."></h2>
-        <p class="mv__txt">お客さまの、こころに響くコンテンツを。</p>
-      </div>
-      <div class="mv__box">
-        <ul class="mv__ul">
-          <li class="mv__list">
-            <p class="mv__listTxt">1997~present</p>
-            <p class="mv__listTxt">眞野琴音</p>
-          </li>
-          <li class="mv__list">
-            <p class="mv__listTxt">aaaaaaaaaaaa</p>
-          </li>
-          <li class="mv__list">
-            <p class="mv__listTxt">あああああ</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <section class="message">
-    <div class="message__ttlContainer">
-      <h2 class="message__ttl">Life isn't finding<span class="message__ttl02">yourself.</span><span
-          class="message__ttl03">Life is about</span>
-        <sapn class="message__ttl04">creating youself.</sapn>
-      </h2>
-      <h3 class="message__ttlRuby">人生とは自分を見つけることではない。人生とは自分を創ることである。</h3>
-      <div class="message__circle"> <!-- b.aで画像 --></div>
-    </div>
-
-    <div class="message__gallery">
-      <!-- bで横線 -->
-      <div class="message__galleryWrap">
-        <div class="message__galleryContainer">
-          <span class="message__galleryList1"></span><span class="message__galleryList2"></span><span
-            class="message__galleryList3"></span><span class="message__galleryList4"></span><span
-            class="message__galleryList5"></span><span class="message__galleryList6"></span><span
-            class="message__galleryList7"></span><span class="message__galleryList8"></span><span
-            class="message__galleryList9"></span><span class="message__galleryList10"></span><span
-            class="message__galleryList11"></span><span class="message__galleryList12"></span><span
-            class="message__galleryList13"></span><span class="message__galleryList14"></span><span
-            class="message__galleryList15"></span><span class="message__galleryList16"></span><span
-            class="message__galleryList17"></span><span class="message__galleryList18"></span><span
-            class="message__galleryList19"></span><span class="message__galleryList20"></span><span
-            class="message__galleryList21"></span><span class="message__galleryList22"></span><span
-            class="message__galleryList23"></span><span class="message__galleryList24"></span><span
-            class="message__galleryList25"></span><span class="message__galleryList26"></span><span
-            class="message__galleryList27"></span><span class="message__galleryList28"></span><span
-            class="message__galleryList29"></span><span class="message__galleryList30"></span><span
-            class="message__galleryList31"></span><span class="message__galleryList32"></span><span
-            class="message__galleryList33"></span><span class="message__galleryList34"></span><span
-            class="message__galleryList35"></span><span class="message__galleryList36"></span>
+    <div id="mv" class="mv">
+      <div class="mv__wrap">
+        <div class="mv__container-01">
+          <ul class="mv__ul">
+            <li class="mv__list">
+              <p class="mv__listTxt">1997~present</p>
+              <p class="mv__listTxt">眞野琴音</p>
+            </li>
+            <li class="mv__list">
+              <p class="mv__listTxt">aaaaaaaaaaaa</p>
+            </li>
+            <li class="mv__list">
+              <p class="mv__listTxt">あああああ</p>
+            </li>
+          </ul>
+        </div>
+        <div class="mv__container-02">
+          <div class="mv__box">
+            <h2 class="mv__ttl">
+              <picture>
+                <source media="(min-width: 1024px)" srcset="images/logo-white.svg">
+                <img src="images/logo-2lineBlack.svg" alt="KOTONE MANO Portfolio." class="header__img">
+              </picture>
+            </h2>
+            <p class="mv__txt">お客さまの、こころに響くコンテンツを。</p>
+          </div>
+          <ul class="mv__no">
+            <li class="mv__noList">1</li>
+            <li class="mv__noList">2</li>
+            <li class="mv__noList">3</li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <div class="message__txtBox">
-      <p class="message__txt">The joy of writing code. The sense of accomplishment of <br class="br"> implementation. I wanted to become a coder because I wanted to<br class="br"> implement more different kinds of coding.</p>
-      <p class="message__txtRuby">コードを書く楽しさや実装できた時の達成感を知り、さらに新しいことを知りたい、色々なものを作りたいと思いました。<br class="br">デザインカンプ通りにコーディングが出来るように細部まで忠実に再現をめざしています。</p>
-    </div>
-  </section>
+    <section id="message" class="message">
+      <div class="message__ttlContainer">
+        <h2 class="message__ttl">
+          Life isn't <br class="br">finding
+          <br class="br">yourself.<br class="br">Life is about<span class="message__ttlSerif">creating
+            youself.</span><span class="message__ttlRuby">人生とは<br class="br">自分を見つけることではない。<br
+              class="br">人生とは自分を創ることである。</span>
+        </h2>
+        <div class="message__circle"></div>
+      </div>
 
+      <div class="message__gallery">
+        <!-- bで横線 -->
+        <div class="message__galleryWrap">
+          <div class="message__galleryContainer">
+            <span class="message__galleryList1"></span><span class="message__galleryList2"></span><span
+              class="message__galleryList3"></span><span class="message__galleryList4"></span><span
+              class="message__galleryList5"></span><span class="message__galleryList6"></span><span
+              class="message__galleryList7"></span><span class="message__galleryList8"></span><span
+              class="message__galleryList9"></span><span class="message__galleryList10"></span><span
+              class="message__galleryList11"></span><span class="message__galleryList12"></span><span
+              class="message__galleryList13"></span><span class="message__galleryList14"></span><span
+              class="message__galleryList15"></span><span class="message__galleryList16"></span><span
+              class="message__galleryList17"></span><span class="message__galleryList18"></span><span
+              class="message__galleryList19"></span><span class="message__galleryList20"></span><span
+              class="message__galleryList21"></span><span class="message__galleryList22"></span><span
+              class="message__galleryList23"></span><span class="message__galleryList24"></span><span
+              class="message__galleryList25"></span><span class="message__galleryList26"></span><span
+              class="message__galleryList27"></span><span class="message__galleryList28"></span><span
+              class="message__galleryList29"></span><span class="message__galleryList30"></span><span
+              class="message__galleryList31"></span><span class="message__galleryList32"></span><span
+              class="message__galleryList33"></span><span class="message__galleryList34"></span><span
+              class="message__galleryList35"></span><span class="message__galleryList36"></span>
+          </div>
+        </div>
+      </div>
 
+      <div class="message__txtBox">
+        <p class="message__txt">The joy of writing code. The sense of accomplishment of <br class="br"> implementation.
+          I
+          wanted to become a coder because I wanted to<br class="br"> implement more different kinds of coding.</p>
+        <p class="message__txtRuby">コードを書く楽しさや実装できた時の達成感を知り、さらに新しいことを知りたい、色々なものを作りたいと思いました。<br
+            class="br">デザインカンプ通りにコーディングが出来るように細部まで忠実に再現をめざしています。</p>
+      </div>
+    </section>
 
+    <section id="works" class="works">
+      <h2 class="works__ttl"><span class="works__ttl-01">_</span><span class="works__ttl-02">W</span><span
+          class="works__ttl-03">o</span><span class="works__ttl-04">r</span><span class="works__ttl-05">k</span><span
+          class="works__ttl-06">s</span></h2>
+      <ul class="works__ul">
+        <li class="works__list">
+          <a href="" class="works__link">
+            <p class="works__thum">
+              <img src="images/topCrepeKitchen.jpg" alt="Crepe Kitchen Choice!サムネイル" class="works__thumImg">
+            </p>
+            <p class="works__thumTtl">Crepe Kitchen Choice!</p>
+
+          </a>
+        </li>
+        <li class="works__list">
+          <a href="" class="works__link">
+            <p class="works__thum">
+              <img src="images/topPremier.jpg" alt="Premierサムネイル" class="works__thumImg">
+            </p>
+            <p class="works__thumTtl">Premier</p>
+
+          </a>
+        </li>
+        <li class="works__list">
+          <a href="" class="works__link">
+            <p class="works__thum">
+              <img src="images/topKamuy.jpg" alt="KAMUYサムネイル" class="works__thumImg">
+            </p>
+            <p class="works__thumTtl">KAMUY</p>
+          </a>
+        </li>
+        <li class="works__list">
+          <a href="" class="works__link">
+            <p class="works__thum">
+              <img src="images/topAzito.jpg" alt="Cafe azitoサムネイル" class="works__thumImg">
+            </p>
+            <p class="works__thumTtl">Cafe azito</p>
+
+          </a>
+        </li>
+        <li class="works__list">
+          <a href="" class="works__link">
+            <p class="works__thum">
+              <img src="images/topWss.jpg" alt="WSS（ウェブスタディサッポロ）サムネイル" class="works__thumImg">
+            </p>
+            <p class="works__thumTtl">WSS（ウェブスタディサッポロ）</p>
+
+          </a>
+        </li>
+        <li class="works__list">
+          <a href="" class="works__link">
+            <p class="works__thum">
+              <img src="images/topAi.jpg" alt="AI X ANIMETION PRODUCTサムネイル" class="works__thumImg">
+            </p>
+            <p class="works__thumTtl">AI X ANIMETION PRODUCT</p>
+
+          </a>
+        </li>
+        <li class="works__list">
+          <a href="" class="works__link">
+            <p class="works__thum">
+              <img src="" alt="サムネイル" class="works__thumImg">
+            </p>
+            <p class="works__thumTtl"></p>
+
+          </a>
+        </li>
+        <li class="works__list">
+          <a href="" class="works__link">
+            <p class="works__thum">
+              <img src="" alt="サムネイル" class="works__thumImg">
+            </p>
+            <p class="works__thumTtl"></p>
+
+          </a>
+        </li>
+        <li class="works__list">
+          <a href="" class="works__link">
+            <p class="works__thum">
+              <img src="" alt="サムネイル" class="works__thumImg">
+            </p>
+            <p class="works__thumTtl"></p>
+
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="skill" class="skill">
+      <h2 class="skill__ttl"><span class="skill__ttl01">_</span><span class="skill__ttl02">S</span><span
+          class="skill__ttl03">k</span><span class="skill__ttl04">l</span><span class="skill__ttl05">l</span><span
+          class="skill__ttl06"></span><span class="skill__ttl07">s</span></h2>
+
+      <div class="skill__pic"></div>
+
+      <div class="skill__kinds">
+        <p class="skill__kindsTtl">Coding</p>
+        <ul class="skill__kindsUl">
+          <li class="skill__kindsList">
+            <div class="skill__kindsBox">
+              <p class="skill__kindsName skill__kindsNameHtml">HTML LS</p>
+              <p class="skill__kindsName skill__kindsNameCss">CSS 3</p>
+            </div>
+            <p class="skill__kindsTxt">Sass(scss)を使用した基本的なコーディング、レスポンシブ対応や簡単なアニメーション制作が可能</p>
+          </li>
+          <li class="skill__kindsList">
+            <p class="skill__kindsName skill__kindsNameJs">JavaScript</p>
+            <p class="skill__kindsTxt">JQuery、swiper.jsを使用したアニメーションやクラス付与などが可能。vanillaJSへの書き換えなど勉強中</p>
+          </li>
+          <li class="skill__kindsList">
+            <p class="skill__kindsName skill__kindsNameCms">CMS(Word Press)</p>
+            <p class="skill__kindsTxt"></p>
+          </li>
+          <li class="skill__kindsList">
+            <p class="skill__kindsName skill__kindsNameGit">GitHub</p>
+            <p class="skill__kindsTxt">一人で制作するうえでのバージョン管理が可能</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="skill__kindsContainer">
+        <div class="skill__kinds">
+          <p class="skill__kindsTtl">DesignTours</p>
+          <ul class="skill__kindsUl">
+            <li class="skill__kindsList">
+              <div class="skill__kindsBox">
+                <p class="skill__kindsName skill__kindsNameFigma">Figma</p>
+                <p class="skill__kindsName skill__kindsNameXd">Adobe XD</p>
+              </div>
+              <p class="skill__kindsTxt">基本的な操作や画像のエクスポート等で使用</p>
+            </li>
+            <li class="skill__kindsList">
+              <p class="skill__kindsName skill__kindsNamePs">Adobe Photoshop CC</p>
+              <p class="skill__kindsTxt">画像の簡単な加工やリサイズが可能</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skill__kinds">
+          <p class="skill__kindsTtl">Others</p>
+          <ul class="skill__kindsUl">
+            <li class="skill__kindsList">
+              <p class="skill__kindsName skill__kindsNameVscode">VisualStudioCode</p>
+              <p class="skill__kindsTxt">プラグインなどを使いVSCodeでの制作</p>
+            </li>
+            <li class="skill__kindsList">
+              <p class="skill__kindsName skill__kindsNameChat">Chatwork</p>
+              <p class="skill__kindsTxt">連絡や画像・データの送受信で使用</p>
+            </li>
+            <li class="skill__kindsList">
+              <p class="skill__kindsName skill__kindsNameQuip">Quip</p>
+              <p class="skill__kindsTxt">普段のメモやメモの共有が可能</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="history" class="history">
+      <h2 class="history__ttl"><span class="history__ttl01">_</span><span class="history__ttl02">H</span><span
+          class="history__ttl03">i</span><span class="history__ttl04">s</span><span class="history__ttl05">t</span><span
+          class="history__ttl06">o</span><span class="history__ttl07">r</span><span class="history__ttl08">y</span></h2>
+
+      <div class="history_bgVideo"></div>
+
+      <dl class="history__dl">
+        <div class="history__dlBox">
+          <dt class="history__dd">since</dt>
+          <dd class="history__dt">1997</dd>
+          <dd class="history__dt">生まれ</dd>
+        </div>
+        <div class="history__dlBox">
+          <dt class="history__dd">years</dt>
+          <dd class="history__dt">26</dd>
+          <dd class="history__dt">歳</dd>
+        </div>
+        <div class="history__dlBox">
+          <dt class="history__dd">aaaaaa</dt>
+          <dd class="history__dt">000000</dd>
+          <dd class="history__dt">ああああ</dd>
+        </div>
+      </dl>
+
+      <p class="history__txt">
+        前職ではパティシエをしていました。<br class="br">
+        もともとモノづくりが好きで自分の手で作り、それを誰かに喜んでもらえることを仕事にしたいと思っています。コーディングでは実装する楽しさだけでなく、自分で作ったサイトが沢山のエンドユーザーのもとに届き、見てもらえる、使ってもらえるということが目指したきっかけです。
+      </p>
+
+      <p class="history__more"><a href="" class="history__link">View More</a></p>
+
+      <div class="history__item"><span class="history__ttl01">_</span><span class="history__ttl02">H</span><span
+          class="history__ttl03">i</span><span class="history__ttl04">s</span><span class="history__ttl05">t</span><span
+          class="history__ttl06">o</span><span class="history__ttl07">r</span><span class="history__ttl08">y</span>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <a href="" class="contact__link">
+        <h3 class="contact__subTtl">Get In Touch</h3>
+        <div class="contact__container">
+          <p class="contact__txt">ここまで見ていただき、ありがとうございました。<br class="br">
+            これからも色々なことを学びスキルを磨いていきます。<br class="br">
+            就職し、たくさんの仕事をして、エンドユーザーに届けることを目標に頑張ります。</p>
+          <h2 class="contact__ttl">Contact</h2>
+          <p class="contact__mail">Gmail:mano.kotone@gmail.com</p>
+        </div>
+      </a>
+    </section>
+
+    <footer class="footer">
+      <p class="footer__pic">
+      <div class="footer__siteNameTop">
+        <span class="footer__siteName"><img src="images/logo-white.svg" alt="KOTONE MANO Portfolio."
+            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
+            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
+            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
+            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
+            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
+            class="footer__siteNameImg"></span>
+      </div>
+
+      <div class="footer__siteNameBottom">
+        <span class="footer__siteName"><img src="images/logo-white.svg" alt="KOTONE MANO Portfolio."
+            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
+            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
+            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
+            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
+            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
+            class="footer__siteNameImg"></span>
+      </div>
+
+      <ul class="footer__ul">
+        <li class="footer__list"><a href="#" class="footer__link">HOME</a></li>
+        <li class="footer__list"><a href="" class="footer__link">WORKS</a></li>
+        <li class="footer__list"><a href="" class="footer__link">HISTORY</a></li>
+        <li class="footer__list"><a href="" class="footer__link">CONTACT</a></li>
+      </ul>
+
+      <div class="footer__container">
+        <p class="footer__ttl">
+          <a href="#" class="footer__ttlLink"><img src="images/logo-white.svg" alt="KOTONE MANO Portfolio."
+              class="footer__ttlImg"></a>
+        </p>
+        <p class="footer__copyright"><small class="footer__small">Copyright 2023 KOTONE MANO Portfolio. All right
+            reserved.</small></p>
+      </div>
+    </footer>
+
+  </div>
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/function.js"></script>
