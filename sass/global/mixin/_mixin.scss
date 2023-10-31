@@ -11,3 +11,47 @@
     display: block;
     width: $w;
 }
+
+@mixin ttl{
+    span {
+        display: inline-block;
+        color: #fff;
+        font-size: 20.26vw;
+        font-weight: 400;
+        &:first-of-type{
+            font-size: 14.66vw;
+            font-weight: 300;
+        }
+    }
+}
+
+@mixin arrow($c:#fff){
+    position: relative;
+        display: inline-block;
+        margin-left: -1vw;
+        width: 17.7px;
+        height: 18px;
+        transform: rotate(-45deg);
+        transform-origin: 100%;
+
+        &::before {
+            @include content($w: 17.7px);
+            position: absolute;
+            top: 9px;
+            right: -1vw;
+            height: 2px;
+            background: $c;
+        }
+
+        &::after {
+            @include content($w: 8px);
+            position: absolute;
+            top: 9px;
+            right: 0;
+            aspect-ratio: 1 / 1;
+            border-top: 2px solid $c;
+            border-right: 2px solid $c;
+            border-radius: 0 0.3vw 0 0;
+            transform: rotate(45deg) translateY(-50%);
+        }
+}

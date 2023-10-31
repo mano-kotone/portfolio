@@ -47,10 +47,10 @@
 
       <nav class="gnav">
         <ul class="gnav__ul">
-          <li class="gnav__list"><a href="#" class="gnav__link">HOME</a></li>
-          <li class="gnav__list"><a href="#works" class="gnav__link">WORKS</a></li>
-          <li class="gnav__list"><a href="#history" class="gnav__link">HISTORY</a></li>
-          <li class="gnav__list"><a href="#contact" class="gnav__link">CONTACT</a></li>
+          <li class="gnav__list"><a href="#" class="gnav__link">HOME<span class="arrow"></span></a></li>
+          <li class="gnav__list"><a href="#works" class="gnav__link">WORKS<span class="arrow"></span></a></li>
+          <li class="gnav__list"><a href="#history" class="gnav__link">HISTORY<span class="arrow"></span></a></li>
+          <li class="gnav__list"><a href="#contact" class="gnav__link">CONTACT<span class="arrow"></span></a></li>
         </ul>
         <p class="gnav__copyright"><small class="gnav__small">Copyright 2023 KOTONE MANO Portfolio. All right
             reserved.</small></p>
@@ -62,13 +62,13 @@
 
     <div id="mv" class="mv">
       <ul class="mv__videoUl">
-        <li class="mv__videoList mv__videoList-01">
-          <video src=""></video>
+        <li id="mv__videoList-01" class="mv__videoList mv__videoList-01">
+          <video src="videos/video-01.mp4" controls></video>
         </li>
-        <li class="mv__videoList mv__videoList-02">
-          <video src=""></video>
+        <li id="mv__videoList-02" class="mv__videoList mv__videoList-02">
+          <video src="videos/video-02.mp4" controls></video>
         </li>
-        <li class="mv__videoList mv__videoList-03">
+        <li id="mv__videoList-03" class="mv__videoList mv__videoList-03">
           <video src=""></video>
         </li>
       </ul>
@@ -97,10 +97,10 @@
             </h2>
             <p class="mv__txt">お客さまの、こころに響くコンテンツを。</p>
           </div>
-          <ul class="mv__no">
-            <li class="mv__noList">1</li>
-            <li class="mv__noList">2</li>
-            <li class="mv__noList">3</li>
+          <ul id="mv__pagination" class="mv__pagination">
+            <li class="mv__paginationList-01">1</li>
+            <li class="mv__paginationList-02">2</li>
+            <li class="mv__paginationList-03">3</li>
           </ul>
         </div>
       </div>
@@ -118,13 +118,14 @@
       </div>
 
       <div class="message__gallery">
-          <div id="message__galleryContainer" class="message__galleryContainer"></div>
+        <div id="message__galleryContainer" class="message__galleryContainer"></div>
       </div>
 
       <div class="message__txtBox">
-        <p class="message__txt">The joy of writing code. The sense of accomplishment of <br class="br"> implementation.
-          I
-          wanted to become a coder because I wanted to<br class="br"> implement more different kinds of coding.</p>
+        <p class="message__txt">The joy of writing code.<br class="br"> The sense of accomplishment of <br class="br">
+          implementation.<br class="br">
+          wanted to <br class="br">become a coder because I wanted to<br class="br"> implement more different kinds of
+          coding.</p>
         <p class="message__txtRuby">コードを書く楽しさや実装できた時の達成感を知り、さらに新しいことを知りたい、色々なものを作りたいと思いました。<br
             class="br">デザインカンプ通りにコーディングが出来るように細部まで忠実に再現をめざしています。</p>
       </div>
@@ -134,13 +135,14 @@
       <h2 class="works__ttl"><span class="works__ttl-01">_</span><span class="works__ttl-02">W</span><span
           class="works__ttl-03">o</span><span class="works__ttl-04">r</span><span class="works__ttl-05">k</span><span
           class="works__ttl-06">s</span></h2>
+
       <ul class="works__ul">
         <li class="works__list">
           <a href="" class="works__link">
             <p class="works__thum">
               <img src="images/topCrepeKitchen.jpg" alt="Crepe Kitchen Choice!サムネイル" class="works__thumImg">
             </p>
-            <p class="works__thumTtl">Crepe Kitchen Choice!</p>
+            <p class="works__thumTtl">Crepe Kitchen<br class="br"> Choice!<span class="arrow"></span></p>
 
           </a>
         </li>
@@ -149,16 +151,16 @@
             <p class="works__thum">
               <img src="images/topPremier.jpg" alt="Premierサムネイル" class="works__thumImg">
             </p>
-            <p class="works__thumTtl">Premier</p>
+            <p class="works__thumTtl">Premier<span class="arrow"></span></p>
 
           </a>
         </li>
         <li class="works__list">
           <a href="" class="works__link">
             <p class="works__thum">
-              <img src="images/topKamuy.jpg" alt="KAMUYサムネイル" class="works__thumImg">
+              <img src="images/topKamuy.jpg" alt="Kamuyサムネイル" class="works__thumImg">
             </p>
-            <p class="works__thumTtl">KAMUY</p>
+            <p class="works__thumTtl">Kamuy<span class="arrow"></span></p>
           </a>
         </li>
         <li class="works__list">
@@ -166,7 +168,7 @@
             <p class="works__thum">
               <img src="images/topAzito.jpg" alt="Cafe azitoサムネイル" class="works__thumImg">
             </p>
-            <p class="works__thumTtl">Cafe azito</p>
+            <p class="works__thumTtl">Cafe azito<span class="arrow"></span></p>
 
           </a>
         </li>
@@ -175,7 +177,7 @@
             <p class="works__thum">
               <img src="images/topWss.jpg" alt="WSS（ウェブスタディサッポロ）サムネイル" class="works__thumImg">
             </p>
-            <p class="works__thumTtl">WSS（ウェブスタディサッポロ）</p>
+            <p class="works__thumTtl">WSS(ウェブスタディ<br class="br">サッポロ)<span class="arrow"></span></p>
 
           </a>
         </li>
@@ -184,34 +186,34 @@
             <p class="works__thum">
               <img src="images/topAi.jpg" alt="AI X ANIMETION PRODUCTサムネイル" class="works__thumImg">
             </p>
-            <p class="works__thumTtl">AI X ANIMETION PRODUCT</p>
+            <p class="works__thumTtl">AI X ANIMETION<br class="br"> PRODUCT<span class="arrow"></span></p>
 
           </a>
         </li>
         <li class="works__list">
           <a href="" class="works__link">
             <p class="works__thum">
-              <img src="" alt="サムネイル" class="works__thumImg">
+              <img src="images/topCrepeKitchen.jpg" alt="Crepe Kitchen Choice!サムネイル" class="works__thumImg">
             </p>
-            <p class="works__thumTtl"></p>
+            <p class="works__thumTtl">Crepe Kitchen<br class="br"> Choice!<span class="arrow"></span></p>
 
           </a>
         </li>
         <li class="works__list">
           <a href="" class="works__link">
             <p class="works__thum">
-              <img src="" alt="サムネイル" class="works__thumImg">
+              <img src="images/topCrepeKitchen.jpg" alt="Crepe Kitchen Choice!サムネイル" class="works__thumImg">
             </p>
-            <p class="works__thumTtl"></p>
+            <p class="works__thumTtl">Crepe Kitchen<br class="br"> Choice!<span class="arrow"></span></p>
 
           </a>
         </li>
         <li class="works__list">
           <a href="" class="works__link">
             <p class="works__thum">
-              <img src="" alt="サムネイル" class="works__thumImg">
+              <img src="images/topCrepeKitchen.jpg" alt="Crepe Kitchen Choice!サムネイル" class="works__thumImg">
             </p>
-            <p class="works__thumTtl"></p>
+            <p class="works__thumTtl">Crepe Kitchen<br class="br"> Choice!<span class="arrow"></span></p>
 
           </a>
         </li>
@@ -219,21 +221,29 @@
     </section>
 
     <section id="skill" class="skill">
-      <h2 class="skill__ttl"><span class="skill__ttl01">_</span><span class="skill__ttl02">S</span><span
-          class="skill__ttl03">k</span><span class="skill__ttl04">l</span><span class="skill__ttl05">l</span><span
-          class="skill__ttl06"></span><span class="skill__ttl07">s</span></h2>
+      <h2 class="skill__ttl"><span class="skill__ttl-01">_</span><span class="skill__ttl-02">S</span><span
+          class="skill__ttl-03">k</span><span class="skill__ttl-04">i</span><span class="skill__ttl-05">l</span><span
+          class="skill__ttl-06">l</span><span class="skill__ttl-07">s</span></h2>
 
-      <div class="skill__pic"></div>
+      <div class="skill__pic">
+        <span class="skill__pic-01"></span>
+        <span class="skill__pic-02"></span>
+        <span class="skill__pic-03"></span>
+        <span class="skill__pic-04"></span>
+        <span class="skill__pic-05"></span>
+        <span class="skill__pic-06"></span>
+      </div>
 
       <div class="skill__kinds">
         <p class="skill__kindsTtl">Coding</p>
+
         <ul class="skill__kindsUl">
           <li class="skill__kindsList">
             <div class="skill__kindsBox">
               <p class="skill__kindsName skill__kindsNameHtml">HTML LS</p>
               <p class="skill__kindsName skill__kindsNameCss">CSS 3</p>
             </div>
-            <p class="skill__kindsTxt">Sass(scss)を使用した基本的なコーディング、レスポンシブ対応や簡単なアニメーション制作が可能</p>
+            <p class="skill__kindsTxt">Sass(scss)を使用した基本的なコーディング、<br class="br">レスポンシブ対応や簡単なアニメーション制作が可能</p>
           </li>
           <li class="skill__kindsList">
             <p class="skill__kindsName skill__kindsNameJs">JavaScript</p>
@@ -289,11 +299,14 @@
     </section>
 
     <section id="history" class="history">
-      <h2 class="history__ttl"><span class="history__ttl01">_</span><span class="history__ttl02">H</span><span
-          class="history__ttl03">i</span><span class="history__ttl04">s</span><span class="history__ttl05">t</span><span
-          class="history__ttl06">o</span><span class="history__ttl07">r</span><span class="history__ttl08">y</span></h2>
+      <h2 class="history__ttl">
+        <span class="history__ttl-01">_</span><span class="history__ttl-02">H</span><span
+          class="history__ttl-03">i</span><span class="history__ttl-04">s</span><span
+          class="history__ttl-05">t</span><span class="history__ttl-06">o</span><span
+          class="history__ttl-07">r</span><span class="history__ttl-08">y</span>
+      </h2>
 
-      <div class="history_bgVideo"></div>
+      <div class="history__bgPic"></div>
 
       <dl class="history__dl">
         <div class="history__dlBox">
@@ -318,23 +331,25 @@
         もともとモノづくりが好きで自分の手で作り、それを誰かに喜んでもらえることを仕事にしたいと思っています。コーディングでは実装する楽しさだけでなく、自分で作ったサイトが沢山のエンドユーザーのもとに届き、見てもらえる、使ってもらえるということが目指したきっかけです。
       </p>
 
-      <p class="history__more"><a href="" class="history__link">View More</a></p>
+      <p class="history__more"><a href="history/" class="history__link">View More<span class="arrow"></span></a></p>
 
-      <div class="history__item"><span class="history__ttl01">_</span><span class="history__ttl02">H</span><span
-          class="history__ttl03">i</span><span class="history__ttl04">s</span><span class="history__ttl05">t</span><span
-          class="history__ttl06">o</span><span class="history__ttl07">r</span><span class="history__ttl08">y</span>
+      <div class="history__item"><span class="history__ttl-01">_</span><span class="history__ttl-02">H</span><span
+          class="history__ttl-03">i</span><span class="history__ttl-04">s</span><span
+          class="history__ttl-05">t</span><span class="history__ttl-06">o</span><span
+          class="history__ttl-07">r</span><span class="history__ttl-08">y</span>
       </div>
     </section>
 
     <section id="contact" class="contact">
       <a href="" class="contact__link">
-        <h3 class="contact__subTtl">Get In Touch</h3>
+        <h3 class="contact__subTtl">Get In Touch<span class="arrow"></span></h3>
         <div class="contact__container">
           <p class="contact__txt">ここまで見ていただき、ありがとうございました。<br class="br">
             これからも色々なことを学びスキルを磨いていきます。<br class="br">
-            就職し、たくさんの仕事をして、エンドユーザーに届けることを目標に頑張ります。</p>
-          <h2 class="contact__ttl">Contact</h2>
-          <p class="contact__mail">Gmail:mano.kotone@gmail.com</p>
+            就職し、たくさんの仕事をして、エンドユーザーに届けることを目標に頑張ります。
+          </p>
+          <h2 class="contact__ttl">Contact<span class="arrow"></span></h2>
+              <p class="contact__mail">Gmail:mano.kotone@gmail.com</p>
         </div>
       </a>
     </section>
@@ -362,10 +377,10 @@
       </div>
 
       <ul class="footer__ul">
-        <li class="footer__list"><a href="#" class="footer__link">HOME</a></li>
-        <li class="footer__list"><a href="" class="footer__link">WORKS</a></li>
-        <li class="footer__list"><a href="" class="footer__link">HISTORY</a></li>
-        <li class="footer__list"><a href="" class="footer__link">CONTACT</a></li>
+        <li class="footer__list"><a href="#" class="footer__link">HOME<span class="arrow"></span></a></li>
+        <li class="footer__list"><a href="" class="footer__link">WORKS<span class="arrow"></span></a></li>
+        <li class="footer__list"><a href="" class="footer__link">HISTORY<span class="arrow"></span></a></li>
+        <li class="footer__list"><a href="" class="footer__link">CONTACT<span class="arrow"></span></a></li>
       </ul>
 
       <div class="footer__container">
