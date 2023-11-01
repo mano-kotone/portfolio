@@ -12,6 +12,24 @@
     width: $w;
 }
 
+@mixin navfont{
+    color: #fff;
+    font-size: 45px;
+    letter-spacing: -0.06em;
+
+    .arrow {
+        @include arrow(#fff);
+    }
+
+    &-03,
+    &-04 {
+        .arrow {
+            margin-left: -10px;
+        }
+    }
+}
+
+
 @mixin ttl{
     span {
         display: inline-block;

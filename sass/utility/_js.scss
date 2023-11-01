@@ -2,6 +2,51 @@
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
 
+// mv背景動画
+#top {
+    .mv__swiper {
+        height: 100vh;
+
+        &-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &-pagination {
+            position: absolute;
+            top: 130vw;
+            left: 75vw;
+            display: flex;
+            gap: 15px;
+            width: fit-content;
+            height: fit-content;
+            mix-blend-mode: difference;
+
+            .swiper-pagination-bullet {
+                display: block;
+                background: none;
+
+                &:nth-last-of-type(1)::before {
+                    @include content("3");
+                    color: #fff;
+                }
+
+                &:nth-last-of-type(2)::before {
+                    @include content("2");
+                    color: #fff;
+                }
+
+                &:nth-last-of-type(3)::before {
+                    @include content("1");
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+// messageギャラリー画像
 .message__gallery {
     &Container {
         display: flex;

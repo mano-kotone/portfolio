@@ -12,66 +12,77 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200;300;400;500&family=Bodoni+Moda:ital,opsz,wght@1,6..96,500;1,6..96,600&family=Noto+Sans+JP:wght@400;500&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
   <link href="css/style.css" rel="stylesheet" media="all">
 </head>
 
 <body id="top">
   <div class="wrapper">
+
+
     <header id="header" class="header">
       <h1 class="header__ttl">
         <a href="#" class="header__link">
           <picture>
             <source media="(min-width: 1024px)" srcset="images/logo-verticalWhite.svg">
-            <img src="images/logo-black.svg" alt="KOTONE MANO Portfolio." class="header__img">
+            <img src="images/logo-white.svg" alt="KOTONE MANO Portfolio." class="header__img">
           </picture>
         </a>
       </h1>
 
-      <div class="header__container">
-        <nav class="topNav">
-          <ul class="topNav__ul">
-            <li class="topNav__list"><a href="#" class="topNav__link">HOME</a></li>
-            <li class="topNav__list"><a href="#message" class="topNav__link">MESSAGE</a></li>
-            <li class="topNav__list"><a href="#works" class="topNav__link">WORKS</a></li>
-            <li class="topNav__list"><a href="#skill" class="topNav__link">SKILL</a></li>
-            <li class="topNav__list"><a href="#history" class="topNav__link">HISTORY</a></li>
-            <li class="topNav__list"><a href="#contact" class="topNav__link">CONTACT</a></li>
+        <nav class="gnav">
+          <ul class="gnav__ul">
+            <li class="gnav__list"><a href="#" class="gnav__link">HOME<span class="arrow"></span></a></li>
+            <li class="gnav__list"><a href="" class="gnav__link">WORKS<span class="arrow"></span></a></li>
+            <li class="gnav__list"><a href="" class="gnav__link">HISTORY<span class="arrow"></span></a></li>
+            <li class="gnav__list"><a href="" class="gnav__link">CONTACT<span class="arrow"></span></a></li>
           </ul>
         </nav>
-
-        <div class="header__btn">
-          <span class="header__btnline header__btnlineTop"></span>
-          <span class="header__btnline header__btnlineBottom"></span>
-        </div>
-      </div>
-
-      <nav class="gnav">
-        <ul class="gnav__ul">
-          <li class="gnav__list"><a href="#" class="gnav__link">HOME<span class="arrow"></span></a></li>
-          <li class="gnav__list"><a href="#works" class="gnav__link">WORKS<span class="arrow"></span></a></li>
-          <li class="gnav__list"><a href="#history" class="gnav__link">HISTORY<span class="arrow"></span></a></li>
-          <li class="gnav__list"><a href="#contact" class="gnav__link">CONTACT<span class="arrow"></span></a></li>
-        </ul>
-        <p class="gnav__copyright"><small class="gnav__small">Copyright 2023 KOTONE MANO Portfolio. All right
-            reserved.</small></p>
-      </nav>
-
-      <div class="header__sunaarashi"></div>
-
     </header>
 
+    <!-- スライドメニュー -->
+    <nav class="gnavSlider">
+      <div class="gnavSlider__wrap">
+        <ul class="gnavSlider__ul">
+          <li class="gnavSlider__list"><a href="#" class="gnavSlider__link gnavSlider__link-01">HOME<span
+                class="arrow"></span></a></li>
+          <li class="gnavSlider__list"><a href="" class="gnavSlider__link gnavSlider__link-02">WORKS<span
+                class="arrow"></span></a></li>
+          <li class="gnavSlider__list"><a href="" class="gnavSlider__link gnavSlider__link-03">HISTORY<span
+                class="arrow"></span></a></li>
+          <li class="gnavSlider__list"><a href="" class="gnavSlider__link gnavSlider__link-04">CONTACT<span
+                class="arrow"></span></a></li>
+        </ul>
+        <p class="gnavSlider__copyright"><small class="gnavSlider__small">Copyright 2023 KOTONE MANO Portfolio. All
+            right
+            reserved.</small></p>
+      </div>
+    </nav>
+    
+    <div class="gnavSlider__btn">
+      <span class="gnavSlider__btnline gnavSlider__btnlineTop"></span>
+      <span class="gnavSlider__btnline gnavSlider__btnlineBottom"></span>
+    </div>
+
+    <div id="header__sunaarashi" class="header__sunaarashi"></div>
+
+
     <div id="mv" class="mv">
-      <ul class="mv__videoUl">
-        <li id="mv__videoList-01" class="mv__videoList mv__videoList-01">
-          <video src="videos/video-01.mp4" controls></video>
-        </li>
-        <li id="mv__videoList-02" class="mv__videoList mv__videoList-02">
-          <video src="videos/video-02.mp4" controls></video>
-        </li>
-        <li id="mv__videoList-03" class="mv__videoList mv__videoList-03">
-          <video src=""></video>
-        </li>
-      </ul>
+
+      <!-- mv動画スワイパー -->
+      <div class="swiper mv__swiper">
+        <div class="swiper-wrapper mv__swiper-wrapper">
+          <div class="swiper-slide mv__swiper-slide"><video class="mv__swiper-video" src="videos/video-01.mp4"
+              muted></video></div>
+          <div class="swiper-slide mv__swiper-slide"><video class="mv__swiper-video" src="videos/video-02.mp4"
+              muted></video></div>
+          <div class="swiper-slide mv__swiper-slide"><video class="mv__swiper-video" src="videos/video-03.mp4"
+              muted></video></div>
+        </div>
+
+        <div class="swiper-pagination mv__swiper-pagination"></div>
+      </div>
+
       <div class="mv__wrap">
         <div class="mv__container-01">
           <ul class="mv__ul">
@@ -92,20 +103,15 @@
             <h2 class="mv__ttl">
               <picture>
                 <source media="(min-width: 1024px)" srcset="images/logo-white.svg">
-                <img src="images/logo-2lineBlack.svg" alt="KOTONE MANO Portfolio." class="header__img">
+                <img src="images/logo-2lineWhite.svg" alt="KOTONE MANO Portfolio." class="header__img">
               </picture>
             </h2>
             <p class="mv__txt">お客さまの、こころに響くコンテンツを。</p>
           </div>
-          <ul id="mv__pagination" class="mv__pagination">
-            <li class="mv__paginationList-01">1</li>
-            <li class="mv__paginationList-02">2</li>
-            <li class="mv__paginationList-03">3</li>
-          </ul>
         </div>
       </div>
-    </div>
 
+    </div>
     <section id="message" class="message">
       <div class="message__ttlContainer">
         <h2 class="message__ttl">
@@ -349,38 +355,31 @@
             就職し、たくさんの仕事をして、エンドユーザーに届けることを目標に頑張ります。
           </p>
           <h2 class="contact__ttl">Contact<span class="arrow"></span></h2>
-              <p class="contact__mail">Gmail:mano.kotone@gmail.com</p>
+          <p class="contact__mail">Gmail:mano.kotone@gmail.com</p>
         </div>
       </a>
     </section>
 
     <footer class="footer">
-      <p class="footer__pic">
-      <div class="footer__siteNameTop">
-        <span class="footer__siteName"><img src="images/logo-white.svg" alt="KOTONE MANO Portfolio."
-            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
-            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
-            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
-            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
-            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
-            class="footer__siteNameImg"></span>
-      </div>
+      <div class="footer__pic">
+        <div class="footer__siteNameTop">
+          <img class="footer__siteNameRoop" src="images/footer-roopRogo-sp.svg" alt="KOTONE MANO Portfolio.">
+        </div>
 
-      <div class="footer__siteNameBottom">
-        <span class="footer__siteName"><img src="images/logo-white.svg" alt="KOTONE MANO Portfolio."
-            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
-            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
-            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
-            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
-            class="footer__siteNameImg"></span><span class="footer__siteName"><img src="images/logo-white.svg" alt=""
-            class="footer__siteNameImg"></span>
+        <div class="footer__siteNameBottom">
+          <img class="footer__siteNameRoop" src="images/footer-roopRogo-sp.svg" alt="KOTONE MANO Portfolio.">
+        </div>
       </div>
 
       <ul class="footer__ul">
-        <li class="footer__list"><a href="#" class="footer__link">HOME<span class="arrow"></span></a></li>
-        <li class="footer__list"><a href="" class="footer__link">WORKS<span class="arrow"></span></a></li>
-        <li class="footer__list"><a href="" class="footer__link">HISTORY<span class="arrow"></span></a></li>
-        <li class="footer__list"><a href="" class="footer__link">CONTACT<span class="arrow"></span></a></li>
+        <li class="footer__list"><a href="#" class="footer__link footer__link-01">HOME<span class="arrow"></span></a>
+        </li>
+        <li class="footer__list"><a href="" class="footer__link footer__link-02">WORKS<span class="arrow"></span></a>
+        </li>
+        <li class="footer__list"><a href="" class="footer__link footer__link-03">HISTORY<span class="arrow"></span></a>
+        </li>
+        <li class="footer__list"><a href="" class="footer__link footer__link-04">CONTACT<span class="arrow"></span></a>
+        </li>
       </ul>
 
       <div class="footer__container">
@@ -394,9 +393,13 @@
     </footer>
 
   </div>
+
+  <!-- swiper本体 -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/function.js"></script>
+  <script src="js/swiper.js"></script>
 </body>
 
 </html>

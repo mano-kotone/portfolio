@@ -7,21 +7,80 @@
         overflow: hidden;
     }
 
+    
     .header {
         position: relative;
-        z-index: 5;
+        z-index: 10;
+        height: 100vh;
         margin-bottom: 44.8vw;
         @include padding;
-        height: 100vh;
-
+        mix-blend-mode: difference;
+        
         &__ttl {
             padding-top: 15px;
             width: 215px;
             height: fit-content;
+            mix-blend-mode: difference;
         }
 
+        &__sunaarashi {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+            width: 100%;
+            height: 20px;
+        }
+    }
+
+    .gnav {
+        display: none;
+    }
+
+    .gnavSlider {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        height: 100vh;
+        width: 100%;
+
+        &__wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background: #000;
+        }
+
+        &__ul{
+            margin-bottom: 99px;
+        }
+
+        &__link{
+            @include navfont;
+        }
+
+        @for $i from 1 through 4 {
+            .gnavSlider__link-0#{$i}::before {
+                content: "_0#{$i}";
+                margin-right: 3px;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: -0.08em;
+            }
+        }
+
+        &__small{
+            color: #fff;
+            font-size: 11px;
+            letter-spacing: -0.09em;
+        }
+        
         &__btn {
             position: fixed;
+            z-index: 21;
             top: 24px;
             right: 20px;
             display: flex;
@@ -29,11 +88,12 @@
             justify-content: space-between;
             width: 52px;
             height: 12px;
+            mix-blend-mode: difference;
 
             &line {
                 display: block;
                 height: 2px;
-                background: $black;
+                background: #fff;
 
                 &Top {
                     width: 100%;
@@ -45,23 +105,6 @@
             }
 
         }
-
-        &__sunaarashi {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 20px;
-            background: #ccc;
-        }
-    }
-
-    .topNav {
-        display: none;
-    }
-
-    .gnav {
-        display: none;
     }
 
     .mv {
@@ -69,23 +112,19 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh;
-        background: #ddd;
 
-        &__videoUl {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-
-            &List {
-                width: 100%;
-                height: 100%;
-            }
-        }
-
+        // 背景動画はjs.scssファイルに記述
 
         &__wrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 5;
             @include padding;
+            mix-blend-mode: difference;
+            * {
+                color: #fff;
+            }
         }
 
         &__container-01 {
@@ -134,14 +173,6 @@
             align-items: flex-start;
         }
 
-        &__no {
-            display: flex;
-            gap: 15px;
-
-            &List {
-                font-size: 15px;
-            }
-        }
     }
 
     .message {
@@ -150,6 +181,7 @@
         &__ttl {
             &Container {
                 position: relative;
+                z-index: -1;
                 margin-bottom: 54.66vw;
                 @include padding;
             }
@@ -606,10 +638,12 @@
             @include padding;
             text-align: right;
         }
-        &__link{
+
+        &__link {
             color: #fff;
             font-size: 35px;
             letter-spacing: -0.07em;
+
             .arrow {
                 @include arrow(#fff)
             }
@@ -626,11 +660,12 @@
         }
     }
 
-    .contact{
+    .contact {
         padding-top: 14.66vw;
         padding-bottom: 13.33vw;
         background: $bgBlack;
-        &__subTtl{
+
+        &__subTtl {
             margin: 0 auto 13vw;
             width: fit-content;
             color: #fff;
@@ -638,41 +673,124 @@
             font-size: 62px;
             letter-spacing: -0.03em;
 
-            &::after{
+            &::after {
                 @include content;
                 margin-top: -18px;
                 height: 1px;
                 background: #fff;
             }
         }
-        &__container{
+
+        &__container {
             @include padding;
         }
-        &__txt{
+
+        &__txt {
             margin-bottom: 15vw;
             color: rgba(255, 255, 255, 0.6);
             font-size: 14px;
             line-height: 178.57%;
-            .br{
+
+            .br {
                 display: none;
             }
         }
-        &__ttl{
+
+        &__ttl {
             margin-bottom: 5.4vw;
             color: #fff;
             font-size: 34px;
             font-weight: 400;
             letter-spacing: -0.07em;
             text-align: right;
-            .arrow{
+
+            .arrow {
                 @include arrow(#fff);
             }
         }
-        &__mail{
+
+        &__mail {
             color: #fff;
             font-size: 12px;
             letter-spacing: -0.07em;
             text-align: right;
+        }
+    }
+
+    .footer {
+        padding-bottom: 16.26vw;
+        background: $bgBlack;
+
+        &__pic {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 19.46vw;
+            padding: 2.6vw 0 3.46vw;
+            height: 100vw;
+            background: url(../images/footer-sp.jpg)center center / cover;
+        }
+
+        &__siteName {
+            &Top {
+                width: 130%;
+                height: 4.26vw;
+            }
+
+            &Bottom {
+                @extend .footer__siteNameTop;
+            }
+        }
+
+        &__ul {
+            margin-bottom: 20vw;
+        }
+
+        &__list {
+            $border: 0.5px solid rgba(255, 255, 255, 0.3);
+            border-top: $border;
+
+            &:last-of-type {
+                border-bottom: $border;
+            }
+        }
+
+        &__link {
+            margin-top: -5px;
+            margin-bottom: -2px;
+            @include padding;
+            @include navfont;
+        }
+
+        @for $i from 1 through 4 {
+            .footer__link-0#{$i}::before {
+                content: "_0#{$i}";
+                margin-right: 3px;
+                font-size: 23px;
+                font-weight: 500;
+                letter-spacing: -0.08em;
+            }
+        }
+
+        &__container {
+            @include padding;
+        }
+
+        &__ttl {
+            margin-left: auto;
+            margin-bottom: 30px;
+            width: 133.51px;
+        }
+
+        &__copyright {
+            text-align: right;
+        }
+
+        &__small {
+            color: #fff;
+            font-size: 11px;
+            font-weight: 300;
+            letter-spacing: -0.07em;
         }
     }
 }
