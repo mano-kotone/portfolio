@@ -2,111 +2,123 @@
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
 
-#top {
-    .wrapper {
-        overflow: hidden;
-    }
+.wrapper {
+    background: #fff;
+    overflow: hidden;
+}
 
-    
-    .header {
-        position: relative;
-        z-index: 10;
-        height: 100vh;
-        margin-bottom: 44.8vw;
-        @include padding;
+
+.header {
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+    margin-bottom: 44.8vw;
+    @include padding;
+    mix-blend-mode: difference;
+
+    &__ttl {
+        padding-top: 15px;
+        width: 215px;
+        height: fit-content;
         mix-blend-mode: difference;
-        
-        &__ttl {
-            padding-top: 15px;
-            width: 215px;
-            height: fit-content;
-            mix-blend-mode: difference;
-        }
-
-        &__sunaarashi {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            z-index: 10;
-            width: 100%;
-            height: 20px;
-        }
     }
 
-    .gnav {
-        display: none;
-    }
+}
 
-    .gnavSlider {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 20;
-        height: 100vh;
-        width: 100%;
+.fixed__sunaarashi {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 20px;
+}
 
-        &__wrap{
+.gnav {
+    display: none;
+}
+
+.gnavSlider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    height: 100vh;
+    width: 100%;
+    transform: translateY(100%);
+    transition: .5s;
+    opacity: 0;
+
+    &__wrap {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100%;
-        background: #000;
-        }
+    }
 
-        &__ul{
-            margin-bottom: 99px;
-        }
+    &__ul {
+        margin-bottom: 99px;
+    }
 
-        &__link{
-            @include navfont;
-        }
+    &__link {
+        @include navfont;
+    }
 
-        @for $i from 1 through 4 {
-            .gnavSlider__link-0#{$i}::before {
-                content: "_0#{$i}";
-                margin-right: 3px;
-                font-size: 14px;
-                font-weight: 500;
-                letter-spacing: -0.08em;
-            }
-        }
-
-        &__small{
-            color: #fff;
-            font-size: 11px;
-            letter-spacing: -0.09em;
-        }
-        
-        &__btn {
-            position: fixed;
-            z-index: 21;
-            top: 24px;
-            right: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 52px;
-            height: 12px;
-            mix-blend-mode: difference;
-
-            &line {
-                display: block;
-                height: 2px;
-                background: #fff;
-
-                &Top {
-                    width: 100%;
-                }
-
-                &Bottom {
-                    width: 50%;
-                }
-            }
-
+    @for $i from 1 through 4 {
+        .gnavSlider__link-0#{$i}::before {
+            content: "_0#{$i}";
+            margin-right: 3px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: -0.08em;
         }
     }
 
+    &__small {
+        color: #fff;
+        font-size: 11px;
+        letter-spacing: -0.09em;
+    }
+
+    &__btn {
+        @extend %slide__btn;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        mix-blend-mode: difference;
+
+        &line {
+            display: block;
+            height: 2px;
+            background: #fff;
+            transition: .3s;
+
+            &Top {
+                transform: scale(100%);
+                transform-origin: 0;
+            }
+
+            &Bottom {
+                transform: scale(50%);
+                transform-origin: 0;
+            }
+        }
+
+        &:hover {
+            .gnavSlider__btnlineTop {
+                transform: scale(50%);
+            }
+
+            .gnavSlider__btnlineBottom {
+                transform: scale(100%);
+            }
+        }
+
+    }
+}
+
+#top {
     .mv {
         position: absolute;
         top: 0;
@@ -122,6 +134,7 @@
             z-index: 5;
             @include padding;
             mix-blend-mode: difference;
+
             * {
                 color: #fff;
             }
@@ -178,14 +191,13 @@
     .message {
         margin-bottom: 21.33vw;
 
-        &__ttl {
-            &Container {
-                position: relative;
-                z-index: -1;
-                margin-bottom: 54.66vw;
-                @include padding;
-            }
+        &__container {
+            position: relative;
+            margin-bottom: 54.66vw;
+            @include padding;
+        }
 
+        &__ttl {
             font-size: clamp(0px, 12vw, 60px);
             font-weight: 400;
             line-height: 1;
@@ -220,9 +232,9 @@
 
         &__circle {
             position: absolute;
+            z-index: -1;
             top: -17.6vw;
             left: 15.6vw;
-            z-index: -1;
             width: clamp(0px, 136vw, 535px);
             aspect-ratio: 1 / 1;
             border: 3px solid $gray01;
@@ -357,6 +369,38 @@
                 .arrow {
                     @include arrow(#717171)
                 }
+            }
+        }
+        &__switch{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 14px 51px;
+            width: 175px;
+            height: 45px;
+            background: #fff;
+            border-radius: 999px;
+            
+            %btnSize{
+                width: 20px;
+                height: 18px;
+            }
+            &Line{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                @extend %btnSize;
+
+                span{
+                    width: 100%;
+                    height: 4px;
+                    background: #757575;
+                }
+            }
+            &Block{
+                display: flex;
+                flex-wrap: wrap;
+                @extend %btnSize;
             }
         }
     }

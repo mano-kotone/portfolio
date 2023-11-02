@@ -2,6 +2,45 @@
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
 
+//スライドメニュー
+.gnavSlider {
+    &__slide{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    &-click {
+        @extend %slide__btn;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+
+        .gnavSlider__btnline {
+            position: absolute;
+            display: block;
+            height: 2px;
+            width: 26px;
+            background: #fff;
+            transition: .3s;
+        }
+    }
+
+
+}
+
+.btnTop-click {
+    transform:rotate(45deg);
+    transform-origin: center;
+}
+
+.btnBottom-click {
+    transform:rotate(-45deg);
+    transform-origin: center;
+}
+
+
+
 // mv背景動画
 #top {
     .mv__swiper {

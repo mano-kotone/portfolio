@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width">
   <title>KOTONEMANOPortfolio.</title>
   <meta name="keywords" content="">
@@ -30,18 +31,18 @@
         </a>
       </h1>
 
-        <nav class="gnav">
-          <ul class="gnav__ul">
-            <li class="gnav__list"><a href="#" class="gnav__link">HOME<span class="arrow"></span></a></li>
-            <li class="gnav__list"><a href="" class="gnav__link">WORKS<span class="arrow"></span></a></li>
-            <li class="gnav__list"><a href="" class="gnav__link">HISTORY<span class="arrow"></span></a></li>
-            <li class="gnav__list"><a href="" class="gnav__link">CONTACT<span class="arrow"></span></a></li>
-          </ul>
-        </nav>
+      <nav class="gnav">
+        <ul class="gnav__ul">
+          <li class="gnav__list"><a href="#" class="gnav__link">HOME<span class="arrow"></span></a></li>
+          <li class="gnav__list"><a href="" class="gnav__link">WORKS<span class="arrow"></span></a></li>
+          <li class="gnav__list"><a href="" class="gnav__link">HISTORY<span class="arrow"></span></a></li>
+          <li class="gnav__list"><a href="" class="gnav__link">CONTACT<span class="arrow"></span></a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- スライドメニュー -->
-    <nav class="gnavSlider">
+    <nav id="gnavSlider" class="gnavSlider">
       <div class="gnavSlider__wrap">
         <ul class="gnavSlider__ul">
           <li class="gnavSlider__list"><a href="#" class="gnavSlider__link gnavSlider__link-01">HOME<span
@@ -58,13 +59,11 @@
             reserved.</small></p>
       </div>
     </nav>
-    
-    <div class="gnavSlider__btn">
-      <span class="gnavSlider__btnline gnavSlider__btnlineTop"></span>
-      <span class="gnavSlider__btnline gnavSlider__btnlineBottom"></span>
-    </div>
 
-    <div id="header__sunaarashi" class="header__sunaarashi"></div>
+    <div id="gnavSlider__btn" class="gnavSlider__btn">
+      <span id="gnavSlider__btnlineTop" class="gnavSlider__btnline gnavSlider__btnlineTop"></span>
+      <span id="gnavSlider__btnlineBottom" class="gnavSlider__btnline gnavSlider__btnlineBottom"></span>
+    </div>
 
 
     <div id="mv" class="mv">
@@ -112,15 +111,18 @@
       </div>
 
     </div>
+
+    <div id="fixed__sunaarashi" class="fixed__sunaarashi"></div>
+
     <section id="message" class="message">
-      <div class="message__ttlContainer">
+      <div class="message__container">
+        <div class="message__circle"></div>
         <h2 class="message__ttl">
           Life isn't <br class="br">finding
           <br class="br">yourself.<br class="br">Life is about<span class="message__ttlSerif">creating
             youself.</span><span class="message__ttlRuby">人生とは<br class="br">自分を見つけることではない。<br
               class="br">人生とは自分を創ることである。</span>
         </h2>
-        <div class="message__circle"></div>
       </div>
 
       <div class="message__gallery">
@@ -224,6 +226,17 @@
           </a>
         </li>
       </ul>
+
+      <div class="works__switch">
+        <div class="works__switchLine">
+          <span class="works__switchLineTop"></span>
+          <span class="works__switchLineMiddum"></span>
+          <span class="works__switchLineBottom"></span>
+        </div>
+        <div class="works__switchBlock">
+          <span class="works__switchBlock-01"></span><span class="works__switchBlock-02"></span><span class="works__switchBlock-03"></span><span class="works__switchBlock-04"></span><span class="works__switchBlock-05"></span><span class="works__switchBlock-06"></span><span class="works__switchBlock-07"></span><span class="works__switchBlock-08"></span><span class="works__switchBlock-09"></span>
+        </div>
+      </div>
     </section>
 
     <section id="skill" class="skill">

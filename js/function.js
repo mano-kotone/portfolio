@@ -27,8 +27,9 @@ for (let i = 0; i < 54; i++) {
 
 
 // 画面下部の砂嵐の生成
-const fixSunaarashi = document.getElementById('header__sunaarashi');
-console.log(fixSunaarashi )
+const fixSunaarashi = document.getElementById('fixed__sunaarashi');
+const sliderSunaarashi = document.getElementById('gnavSlider');
+
 
 function sunaarashi() {
     if (!!!document.createElement('canvas').getContext) {
@@ -51,10 +52,34 @@ function sunaarashi() {
             }
         }
         fixSunaarashi.style.backgroundImage = "url(" + canvas.toDataURL("image/png") + ")";
+        sliderSunaarashi.style.backgroundImage = "url(" + canvas.toDataURL("image/png") + ")";
         requestAnimationFrame(draw);
     }
-
+    
     draw();
 }
 
 sunaarashi()
+
+
+//スライドメニュー
+// const btn = getElementById('gnavSlider__btn');
+
+$(function () {
+    $('#gnavSlider__btn').on('click', function () {
+        $('#gnavSlider').toggleClass('gnavSlider__slide');
+        $('#gnavSlider__btn').toggleClass('gnavSlider-click gnavSlider__btn');
+        $('#gnavSlider__btnlineTop').toggleClass('btnTop-click');
+        $('#gnavSlider__btnlineBottom').toggleClass('btnBottom-click');
+    });
+    $('.gnavSlider__list').on('click',function(){
+        $('#gnavSlider').removeClass('gnavSlider-click');
+        $('#gnavSlider__btnlineTop').removeClass('btnTop-click');
+        $('#gnavSlider__btnlineBottom').removeClass('btnBottom-click');
+        $('#gnavSlider__btn').addClass('gnavSlider__btn');
+    })
+});
+
+$(function(){
+
+})
