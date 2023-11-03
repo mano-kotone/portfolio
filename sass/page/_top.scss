@@ -198,6 +198,8 @@
         }
 
         &__ttl {
+            position: relative;
+            z-index: 1;
             font-size: clamp(0px, 12vw, 60px);
             font-weight: 400;
             line-height: 1;
@@ -232,7 +234,6 @@
 
         &__circle {
             position: absolute;
-            z-index: -1;
             top: -17.6vw;
             left: 15.6vw;
             width: clamp(0px, 136vw, 535px);
@@ -346,61 +347,159 @@
             }
         }
 
-        &__ul {
+        //works切り替え
+        //works block表示用
+        &__ulBlock {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             row-gap: 11.2vw;
             @include padding;
-        }
 
-        &__list {
-            width: 43.73vw;
-        }
+            .works {
+                &__list {
+                    width: 43.73vw;
 
-        &__thum {
-            margin-bottom: 2.13vw;
+                    &:first-of-type {
+                        display: none;
+                    }
+                }
 
-            &Ttl {
-                font-size: 14px;
-                font-weight: 500;
-                line-height: 1.4;
+                &__thum {
+                    margin-bottom: 2.13vw;
+                }
 
-                .arrow {
-                    @include arrow(#717171)
+                &__name {
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 1.4;
+
+                    .arrow {
+                        @include arrow(#717171)
+                    }
+                }
+
+                &__time {
+                    display: none;
+                }
+
+                &__responsive {
+                    display: none;
                 }
             }
         }
-        &__switch{
+
+        //works line表示用
+        &__ulLine {
+            .works {
+                $works__border: 1px solid #717171;
+
+                &__list {
+                    border-top: $works__border;
+
+                    &:first-of-type {
+                        display: none;
+                    }
+
+                    &:nth-of-type(2),
+                    &:nth-of-type(8),
+                    &:nth-of-type(9),
+                    &:nth-of-type(10) {
+                        .br {
+                            display: none;
+                        }
+                    }
+
+                    &:last-of-type {
+                        border-bottom: $works__border;
+                    }
+                }
+
+                &__link {
+                    @include padding;
+                    padding-top: 7px;
+                    padding-bottom: 18px;
+
+                }
+
+                &__thum {
+                    display: none;
+                }
+
+                &__name {
+                    font-size: 26px;
+                    font-weight: 500;
+                    line-height: 1.3;
+
+
+                    .arrow {
+                        @include arrow(#717171)
+                    }
+                }
+
+                &__time, &__responsive {
+                    color: rgb(0, 0, 0, 0.5);
+                    font-size: 14px;
+                }
+
+                &__time::before {
+                    content: 'time';
+                    padding-right: 1em;
+                    letter-spacing: -0.07em;
+                }
+
+                &__responsive {
+                    margin-top: -3px;
+
+                    &::before {
+                        content: 'responsive';
+                        padding-right: 1em;
+                        letter-spacing: -0.07em;
+                    }
+                }
+            }
+        }
+
+        &__switch {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
+            margin: 0 auto;
             padding: 14px 51px;
             width: 175px;
             height: 45px;
             background: #fff;
             border-radius: 999px;
-            
-            %btnSize{
+
+            %btnSize {
                 width: 20px;
                 height: 18px;
             }
-            &Line{
+
+            &Line {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 @extend %btnSize;
 
-                span{
+                span {
                     width: 100%;
                     height: 4px;
                     background: #757575;
                 }
             }
-            &Block{
+
+            &Block {
                 display: flex;
                 flex-wrap: wrap;
+                gap: 3px;
                 @extend %btnSize;
+
+                span {
+                    width: 4px;
+                    height: 4px;
+                    background: #757575;
+                }
             }
         }
     }
@@ -449,43 +548,19 @@
 
         &__pic {
             display: flex;
-            margin-left: -20vw;
             margin-bottom: 29vw;
-            width: max-content;
             overflow: hidden;
-
-            span {
-                display: block;
-                width: 169.43px;
-                height: 84px;
-                background-position: center top;
-                background-size: cover;
-                border-color: #00000081;
-                mix-blend-mode: overlay;
+            
+            img{
+                width: 100vw;
             }
 
             &-01 {
-                background-image: url(../images/topAi.jpg);
+                animation: roop1 10s -5s linear infinite;
             }
 
             &-02 {
-                background-image: url(../images/topAzito.jpg);
-            }
-
-            &-03 {
-                background-image: url(../images/topCrepeKitchen.jpg);
-            }
-
-            &-04 {
-                background-image: url(../images/topPremier.jpg);
-            }
-
-            &-05 {
-                background-image: url(../images/topKamuy.jpg);
-            }
-
-            &-06 {
-                background-image: url(../images/topWss.jpg);
+                animation: roop2 10s linear infinite;
             }
         }
 
@@ -777,12 +852,25 @@
 
         &__siteName {
             &Top {
-                width: 130%;
+                display: flex;
+                gap: 3.63vw;
                 height: 4.26vw;
             }
 
             &Bottom {
                 @extend .footer__siteNameTop;
+            }
+
+            &Roop {
+                width: 100vw;
+
+                &-01 {
+                    animation: roop1 60s -30s linear infinite;
+                }
+
+                &-02 {
+                    animation: roop2 60s linear infinite;
+                }
             }
         }
 

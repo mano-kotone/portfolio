@@ -27,8 +27,8 @@ for (let i = 0; i < 54; i++) {
 
 
 // 画面下部の砂嵐の生成
-const fixSunaarashi = document.getElementById('fixed__sunaarashi');
-const sliderSunaarashi = document.getElementById('gnavSlider');
+const fixSunaarashi = document.querySelector('#fixed__sunaarashi');
+const sliderSunaarashi = document.querySelector('#gnavSlider');
 
 
 function sunaarashi() {
@@ -55,7 +55,7 @@ function sunaarashi() {
         sliderSunaarashi.style.backgroundImage = "url(" + canvas.toDataURL("image/png") + ")";
         requestAnimationFrame(draw);
     }
-    
+
     draw();
 }
 
@@ -72,14 +72,31 @@ $(function () {
         $('#gnavSlider__btnlineTop').toggleClass('btnTop-click');
         $('#gnavSlider__btnlineBottom').toggleClass('btnBottom-click');
     });
-    $('.gnavSlider__list').on('click',function(){
+    $('.gnavSlider__list').on('click', function () {
         $('#gnavSlider').removeClass('gnavSlider-click');
         $('#gnavSlider__btnlineTop').removeClass('btnTop-click');
         $('#gnavSlider__btnlineBottom').removeClass('btnBottom-click');
         $('#gnavSlider__btn').addClass('gnavSlider__btn');
     })
+
+
+//worksのswich用クラス
+    $('#works__switchLine').on('click', function () {
+
+        if ($('#works__ul').hasClass('works__ulLine')) {
+        }else{
+            $('#works__ul').addClass('works__ulLine');
+            $('#works__ul').removeClass('works__ulBlock')
+        }
+    });
+
+    $('#works__switchBlock').on('click', function () {
+        if ($('#works__ul').hasClass('works__ulBlock')) {
+        }else{
+            $('#works__ul').addClass('works__ulBlock');
+            $('#works__ul').removeClass('works__ulLine')
+        }
+    })
+
 });
 
-$(function(){
-
-})
