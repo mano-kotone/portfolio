@@ -115,14 +115,12 @@
     <div id="fixed__sunaarashi" class="fixed__sunaarashi"></div>
 
     <section id="message" class="message">
-      <div class="message__container">
-        <h2 class="message__ttl">
-          Life isn't <br class="br">finding
-          <br class="br">yourself.<br class="br">Life is about<span class="message__ttlSerif">creating
-            youself.</span><span class="message__ttlRuby">人生とは<br class="br">自分を見つけることではない。<br
-              class="br">人生とは自分を創ることである。</span>
-        </h2>
-        <div class="message__circle"></div>
+      <div id="message__container" class="message__container">
+        <h2 id="message__ttl" class="message__ttl"><span class="fadeIn01">Life isn't </span><br class="br"><span class="fadeIn01">finding</span><br class="br"><span class="message__ttl-02 fadeIn01">yourself.</span><span class="message__ttl-03 fadeIn01">Life is about</span><span class="message__ttlSerif fadeIn">creating youself.</span><span class="message__ttlRuby fadeIn">人生とは<br class="Rubybr">自分を見つけることではない。<br class="Rubybr">人生とは自分を創ることである。</span></h2>
+        <div id="scaleAnimation" class="message__circle">
+          <span class="message__circlePic message__circlePic-01"></span>
+          <span class="message__circlePic message__circlePic-02"></span>
+        </div>
       </div>
 
       <div class="message__gallery">
@@ -131,16 +129,13 @@
 
       <div class="message__txtBox">
         <p class="message__txt">The joy of writing code.<br class="br"> The sense of accomplishment of <br class="br">
-          implementation.<br class="br">
-          wanted to <br class="br">become a coder because I wanted to<br class="br"> implement more different kinds of
-          coding.</p>
-        <p class="message__txtRuby">コードを書く楽しさや実装できた時の達成感を知り、さらに新しいことを知りたい、色々なものを作りたいと思いました。<br
-            class="br">デザインカンプ通りにコーディングが出来るように細部まで忠実に再現をめざしています。</p>
+          implementation.<br class="br"> wanted to <br class="br">become a coder because I <br class="br">wanted to<br class="br"> implement more different kinds of coding.</p>
+        <p class="message__txtRuby">コードを書く楽しさや実装できた時の達成感を知り、さらに新しいことを知りたい、色々なものを作りたいと思いました。<br class="br">デザインカンプ通りにコーディングが出来るように細部まで忠実に再現をめざしています。</p>
       </div>
     </section>
 
     <section id="works" class="works">
-      <h2 class="works__ttl"><span class="works__ttl-01">_</span><span class="works__ttl-02">W</span><span
+      <h2 class="h2 works__ttl"><span class="works__ttl-01">_</span><span class="works__ttl-02">W</span><span
           class="works__ttl-03">o</span><span class="works__ttl-04">r</span><span class="works__ttl-05">k</span><span
           class="works__ttl-06">s</span></h2>
 
@@ -242,7 +237,7 @@
         </li>
       </ul>
 
-      <div class="works__switch">
+      <div id="works__switch" class="works__switch">
         <div id="works__switchLine" class="works__switchLine">
           <span class="works__switchLineTop"></span>
           <span class="works__switchLineMiddum"></span>
@@ -259,13 +254,13 @@
     </section>
 
     <section id="skill" class="skill">
-      <h2 class="skill__ttl"><span class="skill__ttl-01">_</span><span class="skill__ttl-02">S</span><span
+      <h2 class="h2 skill__ttl"><span class="skill__ttl-01">_</span><span class="skill__ttl-02">S</span><span
           class="skill__ttl-03">k</span><span class="skill__ttl-04">i</span><span class="skill__ttl-05">l</span><span
           class="skill__ttl-06">l</span><span class="skill__ttl-07">s</span></h2>
 
       <div class="skill__pic">
         <img src="images/skill-roop01.jpg" alt="worksサムネイル1" class="skill__pic-01">
-        <img src="images/skill-roop02.jpg" alt="worksサムネイル2" class="skill__pic-01">
+        <img src="images/skill-roop02.jpg" alt="worksサムネイル2" class="skill__pic-02">
       </div>
 
       <div class="skill__kinds">
@@ -333,14 +328,13 @@
     </section>
 
     <section id="history" class="history">
-      <h2 class="history__ttl">
-        <span class="history__ttl-01">_</span><span class="history__ttl-02">H</span><span
+      <h2 class="h2 history__ttl"><span class="history__ttl-01">_</span><span class="history__ttl-02">H</span><span
           class="history__ttl-03">i</span><span class="history__ttl-04">s</span><span
           class="history__ttl-05">t</span><span class="history__ttl-06">o</span><span
-          class="history__ttl-07">r</span><span class="history__ttl-08">y</span>
-      </h2>
+          class="history__ttl-07">r</span><span class="history__ttl-08">y</span></h2>
 
-      <div class="history__bgPic"></div>
+      <div class="history__bgPic history__bgPic-01"></div>
+      <div class="history__bgPic history__bgPic-02"></div>
 
       <dl class="history__dl">
         <div class="history__dlBox">
@@ -390,7 +384,7 @@
 
     <footer class="footer">
       <div class="footer__pic">
-        <div class="footer__siteNameTop">><img class="footer__siteNameRoop footer__siteNameRoop-01"
+        <div class="footer__siteNameTop"><img class="footer__siteNameRoop footer__siteNameRoop-01"
             src="images/footer-roopRogo-sp.svg" alt="KOTONE MANO Portfolio."><img
             class="footer__siteNameRoop footer__siteNameRoop-02" src="images/footer-roopRogo-sp.svg"
             alt="KOTONE MANO Portfolio.">
@@ -404,13 +398,29 @@
       </div>
 
       <ul class="footer__ul">
-        <li class="footer__list"><a href="#" class="footer__link footer__link-01">HOME<span class="arrow"></span></a>
+        <li class="footer__list">
+          <a href="#" class="footer__link">
+            <p class="footer__linkNumber">_01</p>
+            <p class="footer__linkName" data-txt="HOME">HOME<span class="arrow"></span></p>
+          </a>
         </li>
-        <li class="footer__list"><a href="" class="footer__link footer__link-02">WORKS<span class="arrow"></span></a>
+        <li class="footer__list">
+          <a href="" class="footer__link">
+            <p class="footer__linkNumber">_02</p>
+            <p class="footer__linkName" data-txt="WORKS">WORKS<span class="arrow"></span></p>
+          </a>
         </li>
-        <li class="footer__list"><a href="" class="footer__link footer__link-03">HISTORY<span class="arrow"></span></a>
+        <li class="footer__list">
+          <a href="" class="footer__link">
+            <p class="footer__linkNumber">_03</p>
+            <p class="footer__linkName" data-txt="HISTORY">HISTORY<span class="arrow"></span></p>
+          </a>
         </li>
-        <li class="footer__list"><a href="" class="footer__link footer__link-04">CONTACT<span class="arrow"></span></a>
+        <li class="footer__list">
+          <a href="" class="footer__link">
+            <p class="footer__linkNumber">_04</p>
+            <p class="footer__linkName" data-txt="CONTACT">CONTACT<span class="arrow"></span></p>
+          </a>
         </li>
       </ul>
 
@@ -430,8 +440,13 @@
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- ZSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
   <script src="js/function.js"></script>
   <script src="js/swiper.js"></script>
+  <script src="js/gsap.js"></script>
 </body>
 
 </html>

@@ -13,7 +13,18 @@ function assignRandomClass(element) {
 // container内53個のspan生成
 const container = document.getElementById('message__galleryContainer');
 
-for (let i = 0; i < 54; i++) {
+const screenWidth = window.innerHeight;
+
+let numberOfElements;
+if (screenWidth < 500) {
+    numberOfElements = 54;
+} else if (screenWidth < 1000) {
+    numberOfElements = 90;
+} {
+    numberOfElements = 162;
+};
+
+for (let i = 0; i < numberOfElements; i++) {
     const element = document.createElement('span');
 
     // クラス名付与
@@ -80,11 +91,11 @@ $(function () {
     })
 
 
-//worksのswich用クラス
+    //worksのswich用クラス
     $('#works__switchLine').on('click', function () {
 
         if ($('#works__ul').hasClass('works__ulLine')) {
-        }else{
+        } else {
             $('#works__ul').addClass('works__ulLine');
             $('#works__ul').removeClass('works__ulBlock')
         }
@@ -92,7 +103,7 @@ $(function () {
 
     $('#works__switchBlock').on('click', function () {
         if ($('#works__ul').hasClass('works__ulBlock')) {
-        }else{
+        } else {
             $('#works__ul').addClass('works__ulBlock');
             $('#works__ul').removeClass('works__ulLine')
         }

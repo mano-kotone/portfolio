@@ -85,24 +85,26 @@
     }
 }
 
+
 // messageギャラリー画像
 .message__gallery {
     &Container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        row-gap: 2.31vw;
+        gap: 8.67px;
         width: 128.53vw;
+        height: 442px;
         margin-left: -13vw;
+        overflow: hidden;
     }
 
     &List {
         display: block;
-        width: 19.27vw;
+        width: 72.27px;
         aspect-ratio: 25 / 14;
         background-position: center center;
         background-size: cover;
-        border-radius: 1vw;
+        border-radius: 3.69px;
         opacity: 0;
     }
 

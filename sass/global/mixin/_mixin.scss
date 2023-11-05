@@ -45,12 +45,13 @@
 
 @mixin arrow($c:#fff){
     position: relative;
-        display: inline-block;
-        margin-left: -1vw;
-        width: 17.7px;
-        height: 18px;
-        transform: rotate(-45deg);
-        transform-origin: 100%;
+    display: inline-block;
+    margin-left: -1vw;
+    width: 17.7px;
+    height: 18px;
+    transform: rotate(-45deg);
+    transform-origin: 100%;
+    transition: .5s;
 
         &::before {
             @include content($w: 17.7px);
@@ -72,4 +73,10 @@
             border-radius: 0 0.3vw 0 0;
             transform: rotate(45deg) translateY(-50%);
         }
+}
+
+@mixin arrowHover{
+    .arrow{
+        animation: arrow .5s linear;
+    }
 }

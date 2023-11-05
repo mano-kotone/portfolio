@@ -63,6 +63,10 @@
 
     &__link {
         @include navfont;
+
+        &:hover {
+            @include arrowHover;
+        }
     }
 
     @for $i from 1 through 4 {
@@ -87,6 +91,7 @@
         flex-direction: column;
         justify-content: space-between;
         mix-blend-mode: difference;
+        cursor: pointer;
 
         &line {
             display: block;
@@ -189,7 +194,10 @@
     }
 
     .message {
-        margin-bottom: 21.33vw;
+        position: relative;
+        z-index: 3;
+        background:#fff;
+        padding-bottom: clamp(0px,21.33vw,127px);
 
         &__container {
             position: relative;
@@ -199,11 +207,37 @@
 
         &__ttl {
             position: relative;
-            z-index: 1;
+            z-index: 3;
             font-size: clamp(0px, 12vw, 60px);
             font-weight: 400;
             line-height: 1;
             letter-spacing: -0.07em;
+
+            &-02 {
+                @media screen and (min-width:768px) {
+                    display: block;
+                    margin-top: -7px;
+                }
+            }
+
+            &-03 {
+                @media screen and (min-width:768px) {
+                    display: block;
+                    margin-top: 5px;
+                }
+            }
+
+            @media screen and (min-width:768px) {
+                line-height: 0.9;
+            }
+
+            .br {
+                &:nth-of-type(1) {
+                    @media screen and (min-width:768px) {
+                        display: none;
+                    }
+                }
+            }
 
             &Serif {
                 display: block;
@@ -235,33 +269,37 @@
         &__circle {
             position: absolute;
             top: -17.6vw;
-            left: 15.6vw;
+            left: clamp(58.5px, 55.6vw, 430px);
             width: clamp(0px, 136vw, 535px);
             aspect-ratio: 1 / 1;
             border: 3px solid $gray01;
             border-radius: 50%;
 
-            &::before {
-                @include content($w: 141px);
+            &Pic-01 {
                 position: absolute;
-                top: 48vw;
-                left: 43vw;
+                z-index: 1;
+                bottom: clamp(0px, 50vw, 184px);
+                left: clamp(161px, 24vw, 710px);
+                display: block;
+                width: 141px;
                 aspect-ratio: 1 / 1;
                 background: url(../images/message-japn.jpg) center center / cover;
             }
 
-            &::after {
-                @include content($w: 127px);
+            &Pic-02 {
                 position: absolute;
-                top: 96vw;
-                left: 43vw;
+                z-index: 1;
+                bottom: 14px;
+                left: clamp(161px, 24vw, 710px);
+                display: block;
+                width: 127px;
                 aspect-ratio: 1 / 1;
                 background: url(../images/message-sapporo.png) center center / cover;
             }
         }
 
         &__gallery {
-            margin-bottom: 18vw;
+            margin-bottom: clamp(0px,18vw,70.08px);
 
             &::before {
                 @include content;
@@ -275,22 +313,53 @@
 
         &__txt {
             &Box {
-                @include padding
+                @include padding;
+                @media screen and (min-width:768px) {
+                    margin: 0 auto;
+                    padding: 0;
+                    width: 632px;
+                }
             }
 
-            margin-bottom: 26.93vw;
-            font-size: 6.93vw;
+            margin-bottom: 100px;
+            font-size: 26px;
             font-weight: 200;
             letter-spacing: -0.05em;
             line-height: 115%;
 
             .br {
+                &:nth-of-type(1) {
+                    @media screen and (min-width:768px) {
+                        display: none;
+                    }
+                }
+
                 &:nth-of-type(2) {
                     display: none;
                 }
 
+                &:nth-of-type(3) {
+                    @media screen and (min-width:768px) {
+                        display: none;
+                    }
+                }
+
                 &:nth-of-type(4) {
                     display: none;
+                }
+
+                &:nth-of-type(5) {
+                    display: none;
+
+                    @media screen and (min-width:768px) {
+                        display: block;
+                    }
+                }
+
+                &:nth-of-type(6) {
+                    @media screen and (min-width:768px) {
+                        display: none;
+                    }
                 }
             }
 
@@ -305,10 +374,14 @@
 
     .works {
         position: relative;
-        padding-top: 11.5vw;
+        z-index: 1;
+        padding-top: clamp(0px, calc(58.125px - 4vw), 43.12px) ;
         padding-bottom: 44vw;
         background: $blue;
-
+        @media screen and (min-width:768px){
+            padding: 0;
+        }
+        
         &::after {
             @include content;
             position: absolute;
@@ -321,6 +394,12 @@
         &__ttl {
             margin-bottom: 23vw;
             @include ttl;
+            @media screen and (min-width:768px){
+                position: relative;
+                z-index: 1;
+                margin-top: -20px;
+            }
+
 
             &-01 {
                 transform: translateX(-2vw);
@@ -345,6 +424,16 @@
             &-06 {
                 transform: translateX(23vw);
             }
+        }
+
+        &__link {
+            &:hover {
+                @include arrowHover;
+            }
+        }
+
+        ul {
+            margin-bottom: 13vw;
         }
 
         //works切り替え
@@ -461,10 +550,13 @@
         }
 
         &__switch {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 0 auto;
             padding: 14px 51px;
             width: 175px;
             height: 45px;
@@ -481,6 +573,7 @@
                 flex-direction: column;
                 justify-content: space-between;
                 @extend %btnSize;
+                cursor: pointer;
 
                 span {
                     width: 100%;
@@ -494,6 +587,7 @@
                 flex-wrap: wrap;
                 gap: 3px;
                 @extend %btnSize;
+                cursor: pointer;
 
                 span {
                     width: 4px;
@@ -549,18 +643,16 @@
         &__pic {
             display: flex;
             margin-bottom: 29vw;
+            width: 130%;
             overflow: hidden;
-            
-            img{
-                width: 100vw;
-            }
+
 
             &-01 {
-                animation: roop1 10s -5s linear infinite;
+                animation: roop1 70s -35s linear infinite;
             }
 
             &-02 {
-                animation: roop2 10s linear infinite;
+                animation: roop2 70s linear infinite;
             }
         }
 
@@ -699,12 +791,26 @@
             z-index: 2;
             width: 495px;
             aspect-ratio: 495.31 / 323;
-            background: url(../images/topHistory-1.jpg) center center / cover;
+            background-position: center center;
 
             &::after {
                 @include content;
                 height: 100%;
                 background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.8) 90%, #000 100%);
+            }
+
+            &-01 {
+                background-size: 100%;
+                background-image: url(../images/topHistory-1.jpg);
+                animation: history1 20s ease-in infinite;
+                opacity: .4;
+            }
+
+            &-02 {
+                background-size: 140%;
+                background-image: url(../images/topHistory-2.jpg);
+                animation: history2 20s linear infinite;
+                opacity: 0;
             }
         }
 
@@ -784,6 +890,10 @@
         padding-bottom: 13.33vw;
         background: $bgBlack;
 
+        &:hover {
+            @include arrowHover;
+        }
+
         &__subTtl {
             margin: 0 auto 13vw;
             width: fit-content;
@@ -853,7 +963,6 @@
         &__siteName {
             &Top {
                 display: flex;
-                gap: 3.63vw;
                 height: 4.26vw;
             }
 
@@ -862,7 +971,7 @@
             }
 
             &Roop {
-                width: 100vw;
+                width: 120%;
 
                 &-01 {
                     animation: roop1 60s -30s linear infinite;
@@ -878,9 +987,11 @@
             margin-bottom: 20vw;
         }
 
+        $border: 0.5px solid rgba(255, 255, 255, 0.3);
+
         &__list {
-            $border: 0.5px solid rgba(255, 255, 255, 0.3);
             border-top: $border;
+            overflow: hidden;
 
             &:last-of-type {
                 border-bottom: $border;
@@ -888,19 +999,53 @@
         }
 
         &__link {
+            position: relative;
+            display: flex;
+            align-items: baseline;
             margin-top: -5px;
             margin-bottom: -2px;
             @include padding;
-            @include navfont;
-        }
 
-        @for $i from 1 through 4 {
-            .footer__link-0#{$i}::before {
-                content: "_0#{$i}";
+            &:hover {
+                @include arrowHover;
+            }
+
+            &Number {
                 margin-right: 3px;
+                color: #fff;
                 font-size: 23px;
                 font-weight: 500;
                 letter-spacing: -0.08em;
+            }
+
+            &Name {
+                position: relative;
+                @include navfont;
+                transition: .4s;
+                transform-style: preserve-3d;
+                transform-origin: top;
+
+                &::after {
+                    @include content(attr(data-txt));
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: rotateX(-90deg) translateY(50%);
+                    opacity: 0;
+                    transition: .4s;
+                }
+            }
+
+            &:hover {
+                .footer__link {
+                    &Name {
+                        transform: rotateX(90deg) translateY(50%);
+
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
             }
         }
 
