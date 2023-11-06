@@ -114,32 +114,32 @@
         }
     }
     @for $i from 1 through 6 {
-        .message__galleryList#{$i} {
+        .message__galleryListAninme#{$i} {
             animation: gallery .8s linear forwards;
         }
     }
     @for $i from 7 through 12 {
-        .message__galleryList#{$i} {
+        .message__galleryListAninme#{$i} {
             animation: gallery .8s .2s linear forwards;
         }
     }
     @for $i from 13 through 18 {
-        .message__galleryList#{$i} {
+        .message__galleryListAninme#{$i} {
             animation: gallery .8s .4s linear forwards;
         }
     }
     @for $i from 19 through 24 {
-        .message__galleryList#{$i} {
+        .message__galleryListAninme#{$i} {
             animation: gallery .8s .6s linear forwards;
         }
     }
     @for $i from 25 through 30 {
-        .message__galleryList#{$i} {
+        .message__galleryListAninme#{$i} {
             animation: gallery .8s .8s linear forwards;
         }
     }
     @for $i from 31 through 36 {
-        .message__galleryList#{$i} {
+        .message__galleryListAninme#{$i} {
             animation: gallery .8s 1s linear forwards;
         }
     }

@@ -2,6 +2,10 @@
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
 
+body {
+    -webkit-text-size-adjust: 100%;
+}
+
 .wrapper {
     background: #fff;
     overflow: hidden;
@@ -9,10 +13,8 @@
 
 
 .header {
-    position: relative;
+    position: absolute;
     z-index: 10;
-    height: 100vh;
-    margin-bottom: 44.8vw;
     @include padding;
     mix-blend-mode: difference;
 
@@ -23,15 +25,6 @@
         mix-blend-mode: difference;
     }
 
-}
-
-.fixed__sunaarashi {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    height: 20px;
 }
 
 .gnav {
@@ -125,14 +118,16 @@
 
 #top {
     .mv {
-        position: absolute;
+        position: relative;
         top: 0;
         left: 0;
+        height: 100vh;
+        margin-bottom: 44.8vw;
         width: 100%;
 
         // 背景動画はjs.scssファイルに記述
 
-        &__wrap {
+        &__container {
             position: absolute;
             top: 0;
             left: 0;
@@ -145,7 +140,7 @@
             }
         }
 
-        &__container-01 {
+        &__box-01 {
             margin: 26.1vw 0 23.2vw;
         }
 
@@ -185,7 +180,7 @@
             letter-spacing: -0.07em;
         }
 
-        &__container-02 {
+        &__box-02 {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
@@ -193,11 +188,20 @@
 
     }
 
+    .fixed__sunaarashi {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 20px;
+    }
+
     .message {
         position: relative;
         z-index: 3;
-        background:#fff;
-        padding-bottom: clamp(0px,21.33vw,127px);
+        background: #fff;
+        padding-bottom: clamp(0px, 21.33vw, 127px);
 
         &__container {
             position: relative;
@@ -269,7 +273,7 @@
         &__circle {
             position: absolute;
             top: -17.6vw;
-            left: clamp(58.5px, 55.6vw, 430px);
+            left: clamp(58.5px, 16.6vw, 430px);
             width: clamp(0px, 136vw, 535px);
             aspect-ratio: 1 / 1;
             border: 3px solid $gray01;
@@ -299,7 +303,7 @@
         }
 
         &__gallery {
-            margin-bottom: clamp(0px,18vw,70.08px);
+            margin-bottom: clamp(0px, 18vw, 70.08px);
 
             &::before {
                 @include content;
@@ -314,6 +318,7 @@
         &__txt {
             &Box {
                 @include padding;
+
                 @media screen and (min-width:768px) {
                     margin: 0 auto;
                     padding: 0;
@@ -375,13 +380,14 @@
     .works {
         position: relative;
         z-index: 1;
-        padding-top: clamp(0px, calc(58.125px - 4vw), 43.12px) ;
+        padding-top: clamp(0px, calc(58.125px - 4vw), 43.12px);
         padding-bottom: 44vw;
         background: $blue;
-        @media screen and (min-width:768px){
+
+        @media screen and (min-width:768px) {
             padding: 0;
         }
-        
+
         &::after {
             @include content;
             position: absolute;
@@ -394,7 +400,8 @@
         &__ttl {
             margin-bottom: 23vw;
             @include ttl;
-            @media screen and (min-width:768px){
+
+            @media screen and (min-width:768px) {
                 position: relative;
                 z-index: 1;
                 margin-top: -20px;
@@ -896,10 +903,10 @@
 
         &__subTtl {
             margin: 0 auto 13vw;
-            width: fit-content;
+            width: max-content;
             color: #fff;
             font-family: $serif;
-            font-size: 62px;
+            font-size: 16.53vw;
             letter-spacing: -0.03em;
 
             &::after {

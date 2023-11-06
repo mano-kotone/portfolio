@@ -10,10 +10,12 @@ function assignRandomClass(element) {
     const randomClassName = `message__galleryList${getRandomInt()}`;
     element.classList.add(randomClassName);
 }
+
+console.log(assignRandomClassAnime);
 // container内53個のspan生成
 const container = document.getElementById('message__galleryContainer');
 
-const screenWidth = window.innerHeight;
+const screenWidth = window.innerWidth;
 
 let numberOfElements;
 if (screenWidth < 500) {
@@ -34,7 +36,26 @@ for (let i = 0; i < numberOfElements; i++) {
     container.appendChild(element);
 }
 
+//アニメーション用クラス
 
+function assignRandomClassAnime(element) {
+    const AnimeName = `message__galleryListAninme${getRandomInt()}`;
+    element.classList.add(AnimeName);
+};
+
+const galleryList = document.querySelectorAll('#message__galleryContainer span');
+const windowHeight = window.innerHeight;
+const galleryContainerY = container.getBoundingClientRect().top;
+
+window.addEventListener('scroll', function () {
+    const ST = window.scrollY;
+
+    galleryList.forEach(galleryListItem =>{
+        if (ST > galleryContainerY - windowHeight * 0.8) {
+            assignRandomClassAnime(galleryListItem)
+        }
+    });
+});
 
 
 // 画面下部の砂嵐の生成
