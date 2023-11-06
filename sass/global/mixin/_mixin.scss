@@ -40,18 +40,22 @@
             font-size: 14.66vw;
             font-weight: 300;
         }
+        @media screen and (min-width:768px) {
+            font-size: 160px;
+        }
     }
 }
 
 @mixin arrow($c:#fff){
     position: relative;
     display: inline-block;
-    margin-left: -1vw;
+    margin-left: -5px;
     width: 17.7px;
     height: 18px;
     transform: rotate(-45deg);
     transform-origin: 100%;
     transition: .5s;
+
 
         &::before {
             @include content($w: 17.7px);

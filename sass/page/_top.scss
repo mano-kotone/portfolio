@@ -38,10 +38,9 @@ body {
     z-index: 20;
     height: 100vh;
     width: 100%;
-    transform: translateY(100%);
+    transform: translateY(97%);
     transition: .5s;
-    opacity: 0;
-
+    background-size: 20%;
     &__wrap {
         display: flex;
         flex-direction: column;
@@ -121,7 +120,7 @@ body {
         position: relative;
         top: 0;
         left: 0;
-        height: 100vh;
+        height: 100dvh;
         margin-bottom: 44.8vw;
         width: 100%;
 
@@ -133,6 +132,7 @@ body {
             left: 0;
             z-index: 5;
             @include padding;
+            width: 100%;
             mix-blend-mode: difference;
 
             * {
@@ -140,15 +140,14 @@ body {
             }
         }
 
-        &__box-01 {
-            margin: 26.1vw 0 23.2vw;
-        }
 
         &__ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            margin: 26.1vw 0 23.2vw;
             width: 100%;
+
+            @media screen and (min-width:768px) {
+                margin: 261px 0;
+            }
         }
 
         &__list {
@@ -157,13 +156,14 @@ body {
             &:first-of-type {
                 display: flex;
                 gap: 9.86vw;
-                margin-bottom: 70.93vw;
+                margin-bottom: clamp(0px, 70.93vw, 273px);
                 width: 100%;
                 font-size: 13px;
             }
 
-            &:nth-of-type(2),
-            &:nth-of-type(3) {
+            &:nth-of-type(2) {
+                display: flex;
+                justify-content: space-between;
                 font-size: 14px;
             }
 
@@ -180,10 +180,9 @@ body {
             letter-spacing: -0.07em;
         }
 
-        &__box-02 {
+        &__box {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            flex-direction: column;
         }
 
     }
@@ -205,7 +204,7 @@ body {
 
         &__container {
             position: relative;
-            margin-bottom: 54.66vw;
+            margin-bottom: clamp(0px, 54.66vw, 371px);
             @include padding;
         }
 
@@ -278,6 +277,10 @@ body {
             aspect-ratio: 1 / 1;
             border: 3px solid $gray01;
             border-radius: 50%;
+
+            @media screen and (min-width:500px) {
+                left: clamp(58.5px, 56.6vw, 450px);
+            }
 
             &Pic-01 {
                 position: absolute;
@@ -373,6 +376,16 @@ body {
                 font-size: 11px;
                 font-weight: 500;
                 line-height: 181.8%;
+
+                @media screen and (min-width:768px) {
+                    font-size: 12px;
+                }
+
+                .br {
+                    @media screen and (min-width:768px) {
+                        display: none;
+                    }
+                }
             }
         }
     }
@@ -381,24 +394,24 @@ body {
         position: relative;
         z-index: 1;
         padding-top: clamp(0px, calc(58.125px - 4vw), 43.12px);
-        padding-bottom: 44vw;
+        padding-bottom: clamp(0px,44vw,100px);
         background: $blue;
 
         @media screen and (min-width:768px) {
-            padding: 0;
+            padding-top: 0;
         }
 
         &::after {
             @include content;
             position: absolute;
-            bottom: 32vw;
+            bottom: clamp(0px,32vw,122px);
             left: 0;
             height: 1px;
             background: $black;
         }
 
         &__ttl {
-            margin-bottom: 23vw;
+            margin-bottom: clamp(0px, 23vw, 90px);
             @include ttl;
 
             @media screen and (min-width:768px) {
@@ -418,14 +431,26 @@ body {
 
             &-03 {
                 transform: translateX(2.5vw);
+
+                @media screen and (min-width:768px) {
+                    transform: translateX(7vw);
+                }
             }
 
             &-04 {
                 transform: translateX(10.3vw);
+
+                @media screen and (min-width:768px) {
+                    transform: translateX(15.3vw);
+                }
             }
 
             &-05 {
                 transform: translateX(9.5vw);
+
+                @media screen and (min-width:768px) {
+                    transform: translateX(14.3vw);
+                }
             }
 
             &-06 {
@@ -459,10 +484,20 @@ body {
                     &:first-of-type {
                         display: none;
                     }
+
+                    @media screen and (min-width:768px) {
+                        width: 359px;
+                    }
                 }
 
                 &__thum {
+                    width: 100%;
+                    aspect-ratio: 126 / 79;
                     margin-bottom: 2.13vw;
+
+                    &Img {
+                        object-fit: cover;
+                    }
                 }
 
                 &__name {
@@ -472,6 +507,12 @@ body {
 
                     .arrow {
                         @include arrow(#717171)
+                    }
+
+                    .br {
+                        @media screen and (min-width:768px) {
+                            display: none;
+                        }
                     }
                 }
 
@@ -607,19 +648,21 @@ body {
 
     .skill {
         position: relative;
-        z-index: 2;
         padding-bottom: 13vw;
         background: $bgGray;
 
         &__ttl {
             position: relative;
             z-index: 3;
-            margin-top: -21vw;
-            margin-bottom: 15vw;
+            margin-top: clamp(-108px,-21vw,-78px);
+            margin-bottom: clamp(0px,15vw,50px);
             @include ttl;
 
             &-01 {
                 transform: translateX(-2vw);
+                @media screen and (min-width:768px) {
+                    transform: translateX(1vw);
+                }
             }
 
             &-02 {
@@ -628,37 +671,58 @@ body {
 
             &-03 {
                 transform: translateX(10vw);
+                @media screen and (min-width:768px) {
+                    transform: translateX(11vw);
+                }
             }
 
             &-04 {
                 transform: translateX(9vw);
+                @media screen and (min-width:768px) {
+                    transform: translateX(10vw);
+                }
             }
 
             &-05 {
                 transform: translateX(15vw);
+                @media screen and (min-width:768px) {
+                    transform: translateX(17vw);
+                }
             }
 
             &-06 {
                 transform: translateX(35vw);
+                @media screen and (min-width:768px) {
+                    transform: translateX(37vw);
+                }
             }
 
             &-07 {
                 transform: translateX(34vw);
+                @media screen and (min-width:768px) {
+                    transform: translateX(36vw);
+                }
             }
         }
 
         &__pic {
             display: flex;
-            margin-bottom: 29vw;
+            margin-bottom: clamp(0px,29vw,95px);
             width: 130%;
             overflow: hidden;
 
+            @media screen and (min-width:768px) {
+                height: 84px;
+            }
+
 
             &-01 {
+                object-fit: cover;
                 animation: roop1 70s -35s linear infinite;
             }
 
             &-02 {
+                object-fit: cover;
                 animation: roop2 70s linear infinite;
             }
         }

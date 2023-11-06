@@ -11,7 +11,6 @@ function assignRandomClass(element) {
     element.classList.add(randomClassName);
 }
 
-console.log(assignRandomClassAnime);
 // container内53個のspan生成
 const container = document.getElementById('message__galleryContainer');
 
@@ -47,10 +46,10 @@ const galleryList = document.querySelectorAll('#message__galleryContainer span')
 const windowHeight = window.innerHeight;
 const galleryContainerY = container.getBoundingClientRect().top;
 
-window.addEventListener('scroll', function () {
-    const ST = window.scrollY;
 
-    galleryList.forEach(galleryListItem =>{
+window.addEventListener('scroll', () => {
+    ST = window.scrollY;
+    galleryList.forEach(galleryListItem => {
         if (ST > galleryContainerY - windowHeight * 0.8) {
             assignRandomClassAnime(galleryListItem)
         }
@@ -58,8 +57,9 @@ window.addEventListener('scroll', function () {
 });
 
 
+
 // 画面下部の砂嵐の生成
-const fixSunaarashi = document.querySelector('#fixed__sunaarashi');
+// const fixSunaarashi = document.querySelector('#fixed__sunaarashi');
 const sliderSunaarashi = document.querySelector('#gnavSlider');
 
 
@@ -71,9 +71,10 @@ function sunaarashi() {
         ctx = canvas.getContext('2d'),
         x, y, c
 
-    canvas.width = 100;
-    canvas.height = 100;
-    let arry = [100, 200]
+    animationInterval = 30
+    canvas.width = 30;
+    canvas.height = 30;
+    let arry = [55, 100, 155]
 
     function draw() {
         for (x = 0; x < canvas.width; x++) {
@@ -83,9 +84,12 @@ function sunaarashi() {
                 ctx.fillRect(x, y, 3, 3);
             }
         }
-        fixSunaarashi.style.backgroundImage = "url(" + canvas.toDataURL("image/png") + ")";
+        // fixSunaarashi.style.backgroundImage = "url(" + canvas.toDataURL("image/png") + ")";
         sliderSunaarashi.style.backgroundImage = "url(" + canvas.toDataURL("image/png") + ")";
-        requestAnimationFrame(draw);
+        // requestAnimationFrame(draw);
+        setTimeout(() => {
+            requestAnimationFrame(draw);
+        }, animationInterval);
     }
 
     draw();
