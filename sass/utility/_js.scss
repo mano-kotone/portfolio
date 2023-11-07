@@ -3,9 +3,16 @@
 @use "../global" as *;
 
 //スライドメニュー
+.header__fixed{
+    position: fixed;
+    top: 0;
+    left: 20px;
+    z-index: 25;
+}
+
 .gnavSlider {
     &__slide{
-        transform: translateY(0);
+        transform: translateY(20px);
     }
 
     &-click {

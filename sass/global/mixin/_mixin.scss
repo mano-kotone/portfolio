@@ -6,6 +6,10 @@
     padding: 0 20px;
 }
 
+@mixin paddingPc{
+    padding: 0 65px;
+}
+
 @mixin content($c:"",$w:100%){
     content:$c;
     display: block;

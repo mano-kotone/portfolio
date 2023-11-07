@@ -1,6 +1,32 @@
-//
+//mvビデオ遅延読み込み
 const video01 = document.querySelector('#mv__swiper-video-01');
 video01.videoplaybackRate = 0.01;
+
+document.addEventListener("DOMContentLoaded", function () {
+    var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+
+    if ("IntersectionObserver" in window) {
+        var lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (video) {
+                if (video.isIntersecting) {
+                    for (var source in video.target.children) {
+                        var videoSource = video.target.children[source];
+                        if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                            videoSource.src = videoSource.dataset.src;
+                        }
+                    }
+
+                    video.target.load();
+                    video.target.classList.remove("lazy");
+                    lazyVideoObserver.unobserve(video.target);
+                }
+            });
+        });
+        lazyVideos.forEach(function (lazyVideo) {
+            lazyVideoObserver.observe(lazyVideo);
+        });
+    }
+});
 
 
 
@@ -50,12 +76,16 @@ sunaarashi()
 
 $(function () {
     $('#gnavSlider__btn').on('click', function () {
+        $('#header').toggleClass('header');
+        $('#header').toggleClass('header__fixed');
         $('#gnavSlider').toggleClass('gnavSlider__slide');
         $('#gnavSlider__btn').toggleClass('gnavSlider-click gnavSlider__btn');
         $('#gnavSlider__btnlineTop').toggleClass('btnTop-click');
         $('#gnavSlider__btnlineBottom').toggleClass('btnBottom-click');
     });
     $('.gnavSlider__list').on('click', function () {
+        $('#header').addClass('header');
+        $('#header').removeClass('header__fixed');
         $('#gnavSlider').removeClass('gnavSlider-click');
         $('#gnavSlider__btnlineTop').removeClass('btnTop-click');
         $('#gnavSlider__btnlineBottom').removeClass('btnBottom-click');
@@ -121,12 +151,12 @@ if (screenWidth < 500) {
 };
 
 
-let isElementsGenerated = false; 
+let isElementsGenerated = false;
 
 window.addEventListener('scroll', () => {
     const ST = window.scrollY;
     if (ST > galleryContainerY - windowHeight * 0.8 && !isElementsGenerated) {
-        if(flg){generateAndAppendElements();}
+        if (flg) { generateAndAppendElements(); }
     }
 });
 

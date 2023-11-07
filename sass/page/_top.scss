@@ -15,20 +15,44 @@ body {
 .header {
     position: absolute;
     z-index: 10;
+    margin-top: 15px;
     @include padding;
     mix-blend-mode: difference;
 
+    @media screen and (min-width: 900px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 24px;
+        width: 85%;
+    }
+
     &__ttl {
-        padding-top: 15px;
         width: 215px;
         height: fit-content;
-        mix-blend-mode: difference;
+
+        @media screen and (min-width: 900px) {
+            width: 56px;
+        }
     }
 
 }
 
 .gnav {
     display: none;
+
+    @media screen and (min-width: 900px) {
+        display: block;
+    }
+
+    &__ul {
+        display: flex;
+        gap: 67px;
+    }
+
+    &__link {
+        color: #fff;
+    }
 }
 
 .gnavSlider {
@@ -53,6 +77,10 @@ body {
 
     &__ul {
         margin-bottom: 99px;
+    }
+
+    &__list {
+        margin-top: -20px;
     }
 
     &__link {
@@ -141,33 +169,49 @@ body {
             * {
                 color: #fff;
             }
+
+            @media screen and (min-width: 900px) {
+                top: 80dvh;
+                left: 0;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                // width: %;
+            }
         }
 
 
         &__ul {
-            margin: 26.1vw 0 23.2vw;
-            width: 100%;
+            // margin: 26.1vw 0 23.2vw;
+            // width: 100%;
 
-            @media screen and (min-width:768px) {
-                margin: 261px 0;
-            }
+            // @media screen and (min-width:768px) {
+            //     margin: 261px 0;
+            // }
         }
 
         &__list {
             font-weight: 500;
+            text-align: right;
 
             &:first-of-type {
                 display: flex;
-                gap: 9.86vw;
+                gap: clamp(0px, 9.86vw, 35px);
                 margin-bottom: clamp(0px, 70.93vw, 273px);
-                width: 100%;
+                width: max-content;
                 font-size: 13px;
+
+                @media screen and (min-width: 900px) {
+                    gap: 53px;
+                    margin-bottom: 0;
+                    font-size: 17px;
+                }
             }
 
             &:nth-of-type(2) {
-                display: flex;
-                justify-content: space-between;
-                font-size: 14px;
+                // display: flex;
+                // justify-content: space-between;
+                // font-size: 14px;
             }
 
         }
@@ -175,12 +219,20 @@ body {
         &__ttl {
             margin-bottom: 14px;
             width: 215px;
+
+            @media screen and (min-width: 900px) {
+                width: 45%;
+            }
         }
 
         &__txt {
             font-size: 10px;
             font-weight: 500;
             letter-spacing: -0.07em;
+
+            @media screen and (min-width: 900px) {
+                font-size: 16px;
+            }
         }
 
         &__box {
@@ -717,9 +769,8 @@ body {
             overflow: hidden;
 
             @media screen and (min-width:768px) {
-                height: 84px;
+                width: 265%;
             }
-
 
             &-01 {
                 object-fit: cover;
@@ -840,7 +891,7 @@ body {
 
     .history {
         position: relative;
-        padding-top: 26.6vw;
+        padding-top: clamp(0px, 26.6vw, 178px);
         padding-bottom: 3vw;
         background: #000;
 
@@ -849,7 +900,6 @@ body {
             top: clamp(-103px, -21.5vw, 0px);
             left: 0;
             z-index: 3;
-            margin-bottom: 17vw;
             @include ttl;
 
             &-01 {
@@ -883,10 +933,10 @@ body {
 
         &__bgPic {
             position: absolute;
-            top: 50vw;
-            left: -27vw;
+            top: clamp(0px, 50vw, 100px);
+            left: clamp(-101px, -138.75px - 10vw, -49px);
             z-index: 2;
-            width: 495px;
+            width: clamp(0px, 132vw, 601px);
             aspect-ratio: 495.31 / 323;
             background-position: center center;
 
@@ -914,12 +964,12 @@ body {
         &__dl {
             position: relative;
             z-index: 3;
-            margin-bottom: clamp(0px,8.5vw,29px);
+            margin-bottom: clamp(0px, 8.5vw, 27px);
             @include padding;
             text-align: right;
 
             &Box {
-                margin-bottom: 4.53vw;
+                margin-bottom: clamp(0px, 4.53vw, 27px);
             }
         }
 
@@ -946,7 +996,7 @@ body {
         &__txt {
             position: relative;
             z-index: 3;
-            margin-bottom: 5vw;
+            margin-bottom: clamp(0px, 5vw, 23px);
             @include padding;
             color: rgba(255, 255, 255, 0.6);
             font-size: 12px;
@@ -983,8 +1033,8 @@ body {
     }
 
     .contact {
-        padding-top: 14.66vw;
-        padding-bottom: 13.33vw;
+        padding-top: 55px;
+        padding-bottom: 50px;
         background: $bgBlack;
 
         &:hover {
@@ -992,13 +1042,18 @@ body {
         }
 
         &__subTtl {
-            margin: 0 auto 13vw;
+            margin: 0 auto 49px;
+            @include padding;
             width: max-content;
             color: #fff;
             font-family: $serif;
             font-style: italic;
-            font-size: 16.53vw;
+            font-size: clamp(0px, 16.53vw, 62px);
             letter-spacing: -0.03em;
+
+            @media screen and (min-width:470px) {
+                margin: 0 0 49px;
+            }
 
             &::after {
                 @include content;
@@ -1013,23 +1068,38 @@ body {
         }
 
         &__txt {
-            margin-bottom: 15vw;
+            margin: 0 auto 56.25px;
+            width: clamp(0px, 89.976vw, 337.41px);
             color: rgba(255, 255, 255, 0.6);
             font-size: 14px;
             line-height: 178.57%;
 
+            @media screen and (min-width:470px) {
+                margin: 0 0 52px;
+                width: 100%;
+            }
+
             .br {
                 display: none;
+
+                @media screen and (min-width:470px) {
+                    display: block;
+                }
             }
+
         }
 
         &__ttl {
-            margin-bottom: 5.4vw;
+            margin-bottom: 21px;
             color: #fff;
             font-size: 34px;
             font-weight: 400;
             letter-spacing: -0.07em;
             text-align: right;
+
+            @media screen and (min-width:470px) {
+                margin-bottom: 16px;
+            }
 
             .arrow {
                 @include arrow(#fff);
@@ -1045,16 +1115,16 @@ body {
     }
 
     .footer {
-        padding-bottom: 16.26vw;
+        padding-bottom: 68px;
         background: $bgBlack;
 
         &__pic {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            margin-bottom: 19.46vw;
+            margin-bottom: 74px;
             padding: 2.6vw 0 3.46vw;
-            height: 100vw;
+            height: clamp(0px, 121.3vw, 922px);
             background: url(../images/footer-sp.jpg)center center / cover;
         }
 
@@ -1082,7 +1152,11 @@ body {
         }
 
         &__ul {
-            margin-bottom: 20vw;
+            margin-bottom: 76px;
+
+            @media screen and (min-width:470px) {
+                margin-bottom: 67px;
+            }
         }
 
         $border: 0.5px solid rgba(255, 255, 255, 0.3);

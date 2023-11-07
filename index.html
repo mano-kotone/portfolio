@@ -25,7 +25,7 @@
       <h1 class="header__ttl">
         <a href="#" class="header__link">
           <picture>
-            <source media="(min-width: 1024px)" srcset="images/logo-verticalWhite.svg">
+            <source media="(min-width: 900px)" srcset="images/logo-verticalWhite.svg">
             <img src="images/logo-white.svg" alt="KOTONE MANO Portfolio." class="header__img">
           </picture>
         </a>
@@ -71,11 +71,11 @@
         <!-- mv動画スワイパー -->
         <div class="swiper mv__swiper">
           <div class="swiper-wrapper mv__swiper-wrapper">
-            <div class="swiper-slide mv__swiper-slide"><video id="mv__swiper-video-01" class="mv__swiper-video"
-                src="videos/video-01.mp4" muted></video></div>
-            <div class="swiper-slide mv__swiper-slide"><video id="mv__swiper-video-02" class="mv__swiper-video"
+            <div class="swiper-slide mv__swiper-slide"><video id="mv__swiper-video-01" class="mv__swiper-video lazy"
+                src="videos/video-01.mp4" poster="" muted></video></div>
+            <div class="swiper-slide mv__swiper-slide"><video id="mv__swiper-video-02" class="mv__swiper-video lazy"
                 src="videos/video-02.mp4" muted></video></div>
-            <div class="swiper-slide mv__swiper-slide"><video id="mv__swiper-video-03" class="mv__swiper-video"
+            <div class="swiper-slide mv__swiper-slide"><video id="mv__swiper-video-03" class="mv__swiper-video lazy"
                 src="videos/video-03.mp4" muted></video></div>
           </div>
 
@@ -94,13 +94,15 @@
             </li>
           </ul>
 
-          <h2 class="mv__ttl">
-            <picture>
-              <source media="(min-width: 1024px)" srcset="images/logo-white.svg">
-              <img src="images/logo-2lineWhite.svg" alt="KOTONE MANO Portfolio." class="header__img">
-            </picture>
-          </h2>
-          <p class="mv__txt">お客さまの、こころに響くコンテンツを。</p>
+          <div class="mv__box">
+            <h2 class="mv__ttl">
+              <picture>
+                <source media="(min-width: 900px)" srcset="images/logo-white.svg">
+                <img src="images/logo-2lineWhite.svg" alt="KOTONE MANO Portfolio." class="header__img">
+              </picture>
+            </h2>
+            <p class="mv__txt">お客さまの、こころに響くコンテンツを。</p>
+          </div>
         </div>
       </div>
     </div>
@@ -258,8 +260,14 @@
           class="skill__ttl-06">l</span><span class="skill__ttl-07">s</span></h2>
 
       <div class="skill__pic">
-        <img src="images/skill-roop01.jpg" alt="worksサムネイル1" class="skill__pic-01">
-        <img src="images/skill-roop02.jpg" alt="worksサムネイル2" class="skill__pic-02">
+        <picture>
+          <source media="(min-width:600px)" srcset="images/skill-roopTab.jpg" w>
+          <img src="images/skill-roop01.jpg" alt="worksサムネイル1" class="skill__pic-01">
+        </picture>
+        <picture>
+          <source media="(min-width:600px)" srcset="images/skill-roopTab.jpg" w>
+          <img src="images/skill-roop02.jpg" alt="worksサムネイル2" class="skill__pic-02">
+        </picture>
       </div>
 
       <div class="skill__wrap">
@@ -394,7 +402,7 @@
         <div class="footer__siteNameBottom"><img class="footer__siteNameRoop footer__siteNameRoop-01"
             src="images/footer-roopRogo-sp.svg" alt="KOTONE MANO Portfolio."><img
             class="footer__siteNameRoop footer__siteNameRoop-02" src="images/footer-roopRogo-sp.svg"
-            alt="KOTONE MANO Portfolio.">
+            alt="KOTONE MANO Portfolio." loading="lazy">
         </div>
       </div>
 
