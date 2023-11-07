@@ -13,7 +13,7 @@ function assignRandomClass(element) {
 
 // container内53個のspan生成
 const container = document.getElementById('message__galleryContainer');
-
+// const galleryContainerY = container.getBoundingClientRect().top;
 const screenWidth = window.innerWidth;
 
 let numberOfElements;
@@ -21,25 +21,51 @@ if (screenWidth < 500) {
     numberOfElements = 54;
 } else if (screenWidth < 1000) {
     numberOfElements = 90;
-} {
+} else {
     numberOfElements = 162;
 };
 
+
 for (let i = 0; i < numberOfElements; i++) {
-    const element = document.createElement('span');
+        const element = document.createElement('span');
+        // クラス名付与
+        assignRandomClass(element);
+    
+        container.appendChild(element);
+    }
 
-    // クラス名付与
-    assignRandomClass(element);
-    element.classList.add('message__galleryList');
 
-    container.appendChild(element);
-}
+    // function assignRandomClass(element) {
+    //     const randomClassName = `message__galleryList${getRandomInt()}`;
+    //     element.classList.add(randomClassName);
+    // }
 
-//アニメーション用クラス
+    // const windowHeight = window.innerHeight;
 
-function assignRandomClassAnime(element) {
-    const AnimeName = `message__galleryListAninme${getRandomInt()}`;
-    element.classList.add(AnimeName);
+    // const element = document.createElement('span');
+        
+    // window.addEventListener('scroll', () => {
+    // ST = window.scrollY;
+    //     element.forEach(element => {
+    //         if (ST > galleryContainerY - windowHeight * 0.8) {
+    //             for (let i = 0; i < numberOfElements; i++) {
+
+    //             // クラス名付与
+
+    //             assignRandomClass(element);
+    //             // element.classList.add('message__galleryList');
+    //             container.appendChild(element);
+
+    //         }
+    //     };
+    //     });
+    // });
+
+    //アニメーション用クラス
+
+    function assignRandomClassAnime(element) {
+        const AnimeName = `message__galleryListAninme${getRandomInt()}`;
+        element.classList.add(AnimeName);
 };
 
 const galleryList = document.querySelectorAll('#message__galleryContainer span');
