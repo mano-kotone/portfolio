@@ -95,17 +95,18 @@
         height: 442px;
         margin-left: -13vw;
         overflow: hidden;
+        
+        span {
+            display: block;
+            width: 72.27px;
+            aspect-ratio: 25 / 14;
+            background-position: center center;
+            background-size: cover;
+            border-radius: 3.69px;
+            opacity: 0;
+        }
     }
 
-    span {
-        display: block;
-        width: 72.27px;
-        aspect-ratio: 25 / 14;
-        background-position: center center;
-        background-size: cover;
-        border-radius: 3.69px;
-        opacity: 0;
-    }
 
     @for $i from 1 through 36 {
         .message__galleryList#{$i} {
@@ -113,32 +114,32 @@
         }
     }
     @for $i from 1 through 6 {
-        .message__galleryListAninme#{$i} {
+        .message__galleryList#{$i} {
             animation: gallery .8s linear forwards;
         }
     }
     @for $i from 7 through 12 {
-        .message__galleryListAninme#{$i} {
+        .message__galleryList#{$i} {
             animation: gallery .8s .2s linear forwards;
         }
     }
     @for $i from 13 through 18 {
-        .message__galleryListAninme#{$i} {
+        .message__galleryList#{$i} {
             animation: gallery .8s .4s linear forwards;
         }
     }
     @for $i from 19 through 24 {
-        .message__galleryListAninme#{$i} {
+        .message__galleryList#{$i} {
             animation: gallery .8s .6s linear forwards;
         }
     }
     @for $i from 25 through 30 {
-        .message__galleryListAninme#{$i} {
+        .message__galleryList#{$i} {
             animation: gallery .8s .8s linear forwards;
         }
     }
     @for $i from 31 through 36 {
-        .message__galleryListAninme#{$i} {
+        .message__galleryList#{$i} {
             animation: gallery .8s 1s linear forwards;
         }
     }

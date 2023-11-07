@@ -1,20 +1,33 @@
 
 // message__gallery内の要素の記述
 
-const getRandomInt = () => {
-    return Math.floor(Math.random() * 36) + 1;
-}
+
+
+let flg = 1;
 
 // ランダムなクラス名
-function assignRandomClass(element) {
-    const randomClassName = `message__galleryList${getRandomInt()}`;
-    element.classList.add(randomClassName);
+const assignRandomClass = (int) => {
+    return `message__galleryList${int}`;
 }
+
+const generateAndAppendElements = () => {
+    for (let i = 0; i < numberOfElements; i++) {
+        const int = Math.floor(Math.random() * 36) + 1;
+        const element = document.createElement('span');
+        // クラス名付与        
+        const numAssignRandomClass = assignRandomClass(int);
+        element.classList.add(numAssignRandomClass);
+        container.appendChild(element);
+    }
+    flg = 0;
+}
+
 
 // container内53個のspan生成
 const container = document.getElementById('message__galleryContainer');
-// const galleryContainerY = container.getBoundingClientRect().top;
+const galleryContainerY = container.getBoundingClientRect().top;
 const screenWidth = window.innerWidth;
+const windowHeight = window.innerHeight;
 
 let numberOfElements;
 if (screenWidth < 500) {
@@ -26,61 +39,16 @@ if (screenWidth < 500) {
 };
 
 
-for (let i = 0; i < numberOfElements; i++) {
-        const element = document.createElement('span');
-        // クラス名付与
-        assignRandomClass(element);
-    
-        container.appendChild(element);
-    }
-
-
-    // function assignRandomClass(element) {
-    //     const randomClassName = `message__galleryList${getRandomInt()}`;
-    //     element.classList.add(randomClassName);
-    // }
-
-    // const windowHeight = window.innerHeight;
-
-    // const element = document.createElement('span');
-        
-    // window.addEventListener('scroll', () => {
-    // ST = window.scrollY;
-    //     element.forEach(element => {
-    //         if (ST > galleryContainerY - windowHeight * 0.8) {
-    //             for (let i = 0; i < numberOfElements; i++) {
-
-    //             // クラス名付与
-
-    //             assignRandomClass(element);
-    //             // element.classList.add('message__galleryList');
-    //             container.appendChild(element);
-
-    //         }
-    //     };
-    //     });
-    // });
-
-    //アニメーション用クラス
-
-    function assignRandomClassAnime(element) {
-        const AnimeName = `message__galleryListAninme${getRandomInt()}`;
-        element.classList.add(AnimeName);
-};
-
-const galleryList = document.querySelectorAll('#message__galleryContainer span');
-const windowHeight = window.innerHeight;
-const galleryContainerY = container.getBoundingClientRect().top;
-
+let isElementsGenerated = false; 
 
 window.addEventListener('scroll', () => {
-    ST = window.scrollY;
-    galleryList.forEach(galleryListItem => {
-        if (ST > galleryContainerY - windowHeight * 0.8) {
-            assignRandomClassAnime(galleryListItem)
-        }
-    });
+    const ST = window.scrollY;
+    if (ST > galleryContainerY - windowHeight * 0.8 && !isElementsGenerated) {
+        // generateAndAppendElements(getRandomInt());
+        if(flg){generateAndAppendElements();}
+    }
 });
+
 
 
 
