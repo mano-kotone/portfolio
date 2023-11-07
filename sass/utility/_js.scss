@@ -53,8 +53,9 @@
 
         &-pagination {
             position: absolute;
-            top: 130vw;
-            left: 75vw;
+            top: clamp(0px,130vw,836px);
+            left: auto;
+            right: 20px;
             display: flex;
             gap: 15px;
             width: fit-content;
@@ -64,20 +65,19 @@
             .swiper-pagination-bullet {
                 display: block;
                 background: none;
+                color: #fff;
+                font-size: 15px;
 
                 &:nth-last-of-type(1)::before {
                     @include content("3");
-                    color: #fff;
                 }
 
                 &:nth-last-of-type(2)::before {
                     @include content("2");
-                    color: #fff;
                 }
 
                 &:nth-last-of-type(3)::before {
                     @include content("1");
-                    color: #fff;
                 }
             }
         }
@@ -91,9 +91,9 @@
         display: flex;
         flex-wrap: wrap;
         gap: 8.67px;
-        width: 128.53vw;
+        width: clamp(0px,128.53vw,817px);
         height: 442px;
-        margin-left: -13vw;
+        margin-left: clamp(-29px,15.5px - 9vw,49px);
         overflow: hidden;
         
         span {

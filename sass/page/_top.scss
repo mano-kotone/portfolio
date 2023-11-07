@@ -36,11 +36,13 @@ body {
     top: 0;
     left: 0;
     z-index: 20;
+    margin-top: -20px;
     height: 100vh;
     width: 100%;
-    transform: translateY(97%);
+    transform: translateY(100%);
     transition: .5s;
     background-size: 20%;
+
     &__wrap {
         display: flex;
         flex-direction: column;
@@ -115,6 +117,7 @@ body {
     }
 }
 
+
 #top {
     .mv {
         position: relative;
@@ -185,15 +188,6 @@ body {
             flex-direction: column;
         }
 
-    }
-
-    .fixed__sunaarashi {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: 10;
-        width: 100%;
-        height: 20px;
     }
 
     .message {
@@ -392,9 +386,8 @@ body {
 
     .works {
         position: relative;
-        z-index: 1;
         padding-top: clamp(0px, calc(58.125px - 4vw), 43.12px);
-        padding-bottom: clamp(0px,44vw,100px);
+        padding-bottom: clamp(0px, 25vw, 100px);
         background: $blue;
 
         @media screen and (min-width:768px) {
@@ -404,7 +397,7 @@ body {
         &::after {
             @include content;
             position: absolute;
-            bottom: clamp(0px,32vw,122px);
+            bottom: clamp(0px, 32vw, 122px);
             left: 0;
             height: 1px;
             background: $black;
@@ -599,6 +592,7 @@ body {
 
         &__switch {
             position: absolute;
+            z-index: 3;
             top: 20%;
             left: 50%;
             transform: translateX(-50%);
@@ -648,18 +642,20 @@ body {
 
     .skill {
         position: relative;
+        padding-top: 22.93vw;
         padding-bottom: 13vw;
         background: $bgGray;
 
         &__ttl {
-            position: relative;
-            z-index: 3;
-            margin-top: clamp(-108px,-21vw,-78px);
-            margin-bottom: clamp(0px,15vw,50px);
+            position: absolute;
+            top: clamp(-111px, -21vw, 0px);
+            left: 0;
+            margin-bottom: clamp(0px, 15vw, 50px);
             @include ttl;
 
             &-01 {
                 transform: translateX(-2vw);
+
                 @media screen and (min-width:768px) {
                     transform: translateX(1vw);
                 }
@@ -667,10 +663,15 @@ body {
 
             &-02 {
                 transform: translateX(-2vw);
+
+                @media screen and (min-width:768px) {
+                    transform: translateX(1vw);
+                }
             }
 
             &-03 {
                 transform: translateX(10vw);
+
                 @media screen and (min-width:768px) {
                     transform: translateX(11vw);
                 }
@@ -678,6 +679,7 @@ body {
 
             &-04 {
                 transform: translateX(9vw);
+
                 @media screen and (min-width:768px) {
                     transform: translateX(10vw);
                 }
@@ -685,6 +687,7 @@ body {
 
             &-05 {
                 transform: translateX(15vw);
+
                 @media screen and (min-width:768px) {
                     transform: translateX(17vw);
                 }
@@ -692,6 +695,7 @@ body {
 
             &-06 {
                 transform: translateX(35vw);
+
                 @media screen and (min-width:768px) {
                     transform: translateX(37vw);
                 }
@@ -699,6 +703,7 @@ body {
 
             &-07 {
                 transform: translateX(34vw);
+
                 @media screen and (min-width:768px) {
                     transform: translateX(36vw);
                 }
@@ -707,7 +712,7 @@ body {
 
         &__pic {
             display: flex;
-            margin-bottom: clamp(0px,29vw,95px);
+            margin-bottom: clamp(0px, 29vw, 95px);
             width: 130%;
             overflow: hidden;
 
@@ -727,8 +732,17 @@ body {
             }
         }
 
+        &__wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+
         &__kinds {
             @include padding;
+
+            &Container {
+                width: 50%;
+            }
 
             &Ttl {
                 margin-bottom: 26px;
@@ -770,8 +784,18 @@ body {
                     background-image: url(../images/iconCss.svg)
                 }
 
-                &Js::before {
-                    background-image: url(../images/iconJs.svg)
+                &Js {
+                    .br {
+                        display: none;
+
+                        @media screen and (min-width: 768px) {
+                            display: block;
+                        }
+                    }
+
+                    &::before {
+                        background-image: url(../images/iconJs.svg)
+                    }
                 }
 
                 &Cms::before {
@@ -816,13 +840,15 @@ body {
 
     .history {
         position: relative;
+        padding-top: 26.6vw;
         padding-bottom: 3vw;
         background: #000;
 
         &__ttl {
-            position: relative;
+            position: absolute;
+            top: clamp(-103px, -21.5vw, 0px);
+            left: 0;
             z-index: 3;
-            margin-top: -22.5vw;
             margin-bottom: 17vw;
             @include ttl;
 
@@ -888,7 +914,7 @@ body {
         &__dl {
             position: relative;
             z-index: 3;
-            margin-bottom: 8.5vw;
+            margin-bottom: clamp(0px,8.5vw,29px);
             @include padding;
             text-align: right;
 
@@ -906,13 +932,13 @@ body {
             color: #fff;
 
             &:nth-of-type(1) {
-                margin-top: -3vw;
+                margin-top: -13px;
                 font-size: 45px;
                 letter-spacing: -0.07em;
             }
 
             &:nth-of-type(2) {
-                margin-top: -2vw;
+                margin-top: -12px;
                 font-size: 10px;
             }
         }
@@ -970,6 +996,7 @@ body {
             width: max-content;
             color: #fff;
             font-family: $serif;
+            font-style: italic;
             font-size: 16.53vw;
             letter-spacing: -0.03em;
 

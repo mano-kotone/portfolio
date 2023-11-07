@@ -72,8 +72,8 @@ circlePic.forEach(target => {
         },
         {
             autoAlpha: 1,
-            duration:0,
-            delay:0.8,
+            duration: 0,
+            delay: 0.8,
 
             scrollTrigger: {
                 trigger: '#message__container',
@@ -165,7 +165,8 @@ gsap.to('#works__switch', {
         end: 'top 106%',
         endTrigger: '#skill',
         pin: true,
-        // markers: true
     }
 });
+
+
 

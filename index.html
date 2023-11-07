@@ -71,12 +71,12 @@
         <!-- mv動画スワイパー -->
         <div class="swiper mv__swiper">
           <div class="swiper-wrapper mv__swiper-wrapper">
-            <div class="swiper-slide mv__swiper-slide"><video class="mv__swiper-video" src="videos/video-01.mp4"
-                muted></video></div>
-            <div class="swiper-slide mv__swiper-slide"><video class="mv__swiper-video" src="videos/video-02.mp4"
-                muted></video></div>
-            <div class="swiper-slide mv__swiper-slide"><video class="mv__swiper-video" src="videos/video-03.mp4"
-                muted></video></div>
+            <div class="swiper-slide mv__swiper-slide"><video id="mv__swiper-video-01" class="mv__swiper-video"
+                src="videos/video-01.mp4" muted></video></div>
+            <div class="swiper-slide mv__swiper-slide"><video id="mv__swiper-video-02" class="mv__swiper-video"
+                src="videos/video-02.mp4" muted></video></div>
+            <div class="swiper-slide mv__swiper-slide"><video id="mv__swiper-video-03" class="mv__swiper-video"
+                src="videos/video-03.mp4" muted></video></div>
           </div>
 
           <div class="swiper-pagination mv__swiper-pagination"></div>
@@ -262,66 +262,68 @@
         <img src="images/skill-roop02.jpg" alt="worksサムネイル2" class="skill__pic-02">
       </div>
 
-      <div class="skill__kinds">
-        <p class="skill__kindsTtl">Coding</p>
-
-        <ul class="skill__kindsUl">
-          <li class="skill__kindsList">
-            <div class="skill__kindsBox">
-              <p class="skill__kindsName skill__kindsNameHtml">HTML LS</p>
-              <p class="skill__kindsName skill__kindsNameCss">CSS 3</p>
-            </div>
-            <p class="skill__kindsTxt">Sass(scss)を使用した基本的なコーディング、<br class="br">レスポンシブ対応や簡単なアニメーション制作が可能</p>
-          </li>
-          <li class="skill__kindsList">
-            <p class="skill__kindsName skill__kindsNameJs">JavaScript</p>
-            <p class="skill__kindsTxt">JQuery、swiper.jsを使用したアニメーションやクラス付与などが可能。vanillaJSへの書き換えなど勉強中</p>
-          </li>
-          <li class="skill__kindsList">
-            <p class="skill__kindsName skill__kindsNameCms">CMS(Word Press)</p>
-            <p class="skill__kindsTxt"></p>
-          </li>
-          <li class="skill__kindsList">
-            <p class="skill__kindsName skill__kindsNameGit">GitHub</p>
-            <p class="skill__kindsTxt">一人で制作するうえでのバージョン管理が可能</p>
-          </li>
-        </ul>
-      </div>
-
-      <div class="skill__kindsContainer">
+      <div class="skill__wrap">
         <div class="skill__kinds">
-          <p class="skill__kindsTtl">DesignTours</p>
+          <p class="skill__kindsTtl">Coding</p>
+
           <ul class="skill__kindsUl">
             <li class="skill__kindsList">
               <div class="skill__kindsBox">
-                <p class="skill__kindsName skill__kindsNameFigma">Figma</p>
-                <p class="skill__kindsName skill__kindsNameXd">Adobe XD</p>
+                <p class="skill__kindsName skill__kindsNameHtml">HTML LS</p>
+                <p class="skill__kindsName skill__kindsNameCss">CSS 3</p>
               </div>
-              <p class="skill__kindsTxt">基本的な操作や画像のエクスポート等で使用</p>
+              <p class="skill__kindsTxt">Sass(scss)を使用した基本的なコーディング、<br class="br">レスポンシブ対応や簡単なアニメーション制作が可能</p>
             </li>
             <li class="skill__kindsList">
-              <p class="skill__kindsName skill__kindsNamePs">Adobe Photoshop CC</p>
-              <p class="skill__kindsTxt">画像の簡単な加工やリサイズが可能</p>
+              <p class="skill__kindsName skill__kindsNameJs">JavaScript</p>
+              <p class="skill__kindsTxt">JQuery、swiper.jsを使用したアニメーションやクラス付与などが可能。<br class="br">vanillaJSへの書き換えなど勉強中</p>
+            </li>
+            <li class="skill__kindsList">
+              <p class="skill__kindsName skill__kindsNameCms">CMS(Word Press)</p>
+              <p class="skill__kindsTxt"></p>
+            </li>
+            <li class="skill__kindsList">
+              <p class="skill__kindsName skill__kindsNameGit">GitHub</p>
+              <p class="skill__kindsTxt">一人で制作するうえでのバージョン管理が可能</p>
             </li>
           </ul>
         </div>
 
-        <div class="skill__kinds">
-          <p class="skill__kindsTtl">Others</p>
-          <ul class="skill__kindsUl">
-            <li class="skill__kindsList">
-              <p class="skill__kindsName skill__kindsNameVscode">VisualStudioCode</p>
-              <p class="skill__kindsTxt">プラグインなどを使いVSCodeでの制作</p>
-            </li>
-            <li class="skill__kindsList">
-              <p class="skill__kindsName skill__kindsNameChat">Chatwork</p>
-              <p class="skill__kindsTxt">連絡や画像・データの送受信で使用</p>
-            </li>
-            <li class="skill__kindsList">
-              <p class="skill__kindsName skill__kindsNameQuip">Quip</p>
-              <p class="skill__kindsTxt">普段のメモやメモの共有が可能</p>
-            </li>
-          </ul>
+        <div class="skill__kindsContainer">
+          <div class="skill__kinds">
+            <p class="skill__kindsTtl">DesignTours</p>
+            <ul class="skill__kindsUl">
+              <li class="skill__kindsList">
+                <div class="skill__kindsBox">
+                  <p class="skill__kindsName skill__kindsNameFigma">Figma</p>
+                  <p class="skill__kindsName skill__kindsNameXd">Adobe XD</p>
+                </div>
+                <p class="skill__kindsTxt">基本的な操作や画像のエクスポート等で使用</p>
+              </li>
+              <li class="skill__kindsList">
+                <p class="skill__kindsName skill__kindsNamePs">Adobe Photoshop CC</p>
+                <p class="skill__kindsTxt">画像の簡単な加工やリサイズが可能</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill__kinds">
+            <p class="skill__kindsTtl">Others</p>
+            <ul class="skill__kindsUl">
+              <li class="skill__kindsList">
+                <p class="skill__kindsName skill__kindsNameVscode">VisualStudioCode</p>
+                <p class="skill__kindsTxt">プラグインなどを使いVSCodeでの制作</p>
+              </li>
+              <li class="skill__kindsList">
+                <p class="skill__kindsName skill__kindsNameChat">Chatwork</p>
+                <p class="skill__kindsTxt">連絡や画像・データの送受信で使用</p>
+              </li>
+              <li class="skill__kindsList">
+                <p class="skill__kindsName skill__kindsNameQuip">Quip</p>
+                <p class="skill__kindsTxt">普段のメモやメモの共有が可能</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>

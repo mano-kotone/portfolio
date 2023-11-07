@@ -1,53 +1,6 @@
-
-// message__gallery内の要素の記述
-
-
-
-let flg = 1;
-
-// ランダムなクラス名
-const assignRandomClass = (int) => {
-    return `message__galleryList${int}`;
-}
-
-const generateAndAppendElements = () => {
-    for (let i = 0; i < numberOfElements; i++) {
-        const int = Math.floor(Math.random() * 36) + 1;
-        const element = document.createElement('span');
-        // クラス名付与        
-        const numAssignRandomClass = assignRandomClass(int);
-        element.classList.add(numAssignRandomClass);
-        container.appendChild(element);
-    }
-    flg = 0;
-}
-
-
-// container内53個のspan生成
-const container = document.getElementById('message__galleryContainer');
-const galleryContainerY = container.getBoundingClientRect().top;
-const screenWidth = window.innerWidth;
-const windowHeight = window.innerHeight;
-
-let numberOfElements;
-if (screenWidth < 500) {
-    numberOfElements = 54;
-} else if (screenWidth < 1000) {
-    numberOfElements = 90;
-} else {
-    numberOfElements = 162;
-};
-
-
-let isElementsGenerated = false; 
-
-window.addEventListener('scroll', () => {
-    const ST = window.scrollY;
-    if (ST > galleryContainerY - windowHeight * 0.8 && !isElementsGenerated) {
-        // generateAndAppendElements(getRandomInt());
-        if(flg){generateAndAppendElements();}
-    }
-});
+//
+const video01 = document.querySelector('#mv__swiper-video-01');
+video01.videoplaybackRate = 0.01;
 
 
 
@@ -129,4 +82,52 @@ $(function () {
     })
 
 });
+
+
+// message__gallery内の要素の記述
+let flg = 1;
+
+// ランダムなクラス名
+const assignRandomClass = (int) => {
+    return `message__galleryList${int}`;
+}
+
+const generateAndAppendElements = () => {
+    for (let i = 0; i < numberOfElements; i++) {
+        const int = Math.floor(Math.random() * 36) + 1;
+        const element = document.createElement('span');
+        // クラス名付与        
+        const numAssignRandomClass = assignRandomClass(int);
+        element.classList.add(numAssignRandomClass);
+        container.appendChild(element);
+    }
+    flg = 0;
+}
+
+
+// container内53個のspan生成
+const container = document.getElementById('message__galleryContainer');
+const galleryContainerY = container.getBoundingClientRect().top;
+const screenWidth = window.innerWidth;
+const windowHeight = window.innerHeight;
+
+let numberOfElements;
+if (screenWidth < 500) {
+    numberOfElements = 54;
+} else if (screenWidth < 1000) {
+    numberOfElements = 90;
+} else {
+    numberOfElements = 162;
+};
+
+
+let isElementsGenerated = false; 
+
+window.addEventListener('scroll', () => {
+    const ST = window.scrollY;
+    if (ST > galleryContainerY - windowHeight * 0.8 && !isElementsGenerated) {
+        if(flg){generateAndAppendElements();}
+    }
+});
+
 
