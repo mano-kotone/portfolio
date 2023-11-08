@@ -2,21 +2,23 @@
 
 @use "../setting" as *;
 
-@mixin padding{
+@mixin padding {
     padding: 0 20px;
 }
 
-@mixin paddingPc{
-    padding: 0 65px;
+@mixin paddingPc {
+    padding: 0 150px;
 }
 
-@mixin content($c:"",$w:100%){
-    content:$c;
+$mvPaddingPc: 60px;
+
+@mixin content($c: "", $w: 100%) {
+    content: $c;
     display: block;
     width: $w;
 }
 
-@mixin navfont{
+@mixin navfont {
     color: #fff;
     font-size: 45px;
     letter-spacing: -0.06em;
@@ -34,23 +36,29 @@
 }
 
 
-@mixin ttl{
+@mixin ttl {
     span {
         display: inline-block;
         color: #fff;
         font-size: 20.26vw;
         font-weight: 400;
-        &:first-of-type{
-            font-size: 14.66vw;
+
+        &:first-of-type {
+            font-size: clamp(0px, 14.66vw, 115px);
             font-weight: 300;
+
+            @media screen and (min-width: 768px) {
+                font-size: clamp(115px, 14.97vw, 214px);
+            }
         }
+
         @media screen and (min-width:768px) {
-            font-size: 160px;
+            font-size: clamp(160px, 20.83vw, 326px);
         }
     }
 }
 
-@mixin arrow($c:#fff){
+@mixin arrow($c: #fff) {
     position: relative;
     display: inline-block;
     margin-left: -5px;
@@ -61,30 +69,30 @@
     transition: .5s;
 
 
-        &::before {
-            @include content($w: 17.7px);
-            position: absolute;
-            top: 9px;
-            right: -3px;
-            height: 2px;
-            background: $c;
-        }
+    &::before {
+        @include content($w: 17.7px);
+        position: absolute;
+        top: 9px;
+        right: -3px;
+        height: 2px;
+        background: $c;
+    }
 
-        &::after {
-            @include content($w: 8px);
-            position: absolute;
-            top: 9px;
-            right: 0;
-            aspect-ratio: 1 / 1;
-            border-top: 2px solid $c;
-            border-right: 2px solid $c;
-            border-radius: 0 0.3vw 0 0;
-            transform: rotate(45deg) translateY(-50%);
-        }
+    &::after {
+        @include content($w: 8px);
+        position: absolute;
+        top: 9px;
+        right: 0;
+        aspect-ratio: 1 / 1;
+        border-top: 2px solid $c;
+        border-right: 2px solid $c;
+        border-radius: 0 0.3vw 0 0;
+        transform: rotate(45deg) translateY(-50%);
+    }
 }
 
-@mixin arrowHover{
-    .arrow{
+@mixin arrowHover {
+    .arrow {
         animation: arrow .5s linear;
     }
 }

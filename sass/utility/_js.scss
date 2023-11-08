@@ -3,7 +3,7 @@
 @use "../global" as *;
 
 //スライドメニュー
-.header__fixed{
+.header__fixed {
     position: fixed;
     top: 0;
     left: 20px;
@@ -11,17 +11,18 @@
 }
 
 .gnavSlider {
-    &__slide{
+    &__slide {
         transform: translateY(20px);
     }
 
     &-click {
-        @extend %slide__btn;
+        @extend %slide__btn; //_placeholderに記述
         display: flex;
         align-items: center;
         justify-content: center;
         color: #fff;
 
+        //Xボタン
         .gnavSlider__btnline {
             position: absolute;
             display: block;
@@ -29,6 +30,10 @@
             width: 26px;
             background: #fff;
             transition: .3s;
+
+            @media screen and (min-width: 900px) {
+                width: 34px;
+            }
         }
     }
 
@@ -36,12 +41,12 @@
 }
 
 .btnTop-click {
-    transform:rotate(45deg);
+    transform: rotate(45deg);
     transform-origin: center;
 }
 
 .btnBottom-click {
-    transform:rotate(-45deg);
+    transform: rotate(-45deg);
     transform-origin: center;
 }
 
@@ -60,7 +65,7 @@
 
         &-pagination {
             position: absolute;
-            top: clamp(0px,130vw,836px);
+            top: 75dvh;
             left: auto;
             right: 20px;
             display: flex;
@@ -68,6 +73,10 @@
             width: fit-content;
             height: fit-content;
             mix-blend-mode: difference;
+
+            @media screen and (min-width: 900px) {
+                right: $mvPaddingPc;
+            }
 
             .swiper-pagination-bullet {
                 display: block;
@@ -86,6 +95,10 @@
                 &:nth-last-of-type(3)::before {
                     @include content("1");
                 }
+
+                @media screen and (min-width: 900px) {
+                    font-size: 22px;
+                }
             }
         }
     }
@@ -98,11 +111,16 @@
         display: flex;
         flex-wrap: wrap;
         gap: 8.67px;
-        width: clamp(0px,128.53vw,817px);
+        width: clamp(0px, 128.53vw, 817px);
         height: 442px;
-        margin-left: clamp(-29px,15.5px - 9vw,49px);
+        margin-left: clamp(-29px, 15.5px - 9vw, 49px);
         overflow: hidden;
-        
+
+        @media screen and (min-width: 1024px) {
+            width: clamp(817px, 106vw, 2005px);
+            height: 600px;
+        }
+
         span {
             display: block;
             width: 72.27px;
@@ -111,6 +129,10 @@
             background-size: cover;
             border-radius: 3.69px;
             opacity: 0;
+
+            @media screen and (min-width: 1024px) {
+                width: 100px;
+            }
         }
     }
 
@@ -120,31 +142,37 @@
             background-image: url(../images/message-#{$i}.jpg);
         }
     }
+
     @for $i from 1 through 6 {
         .message__galleryList#{$i} {
             animation: gallery .8s linear forwards;
         }
     }
+
     @for $i from 7 through 12 {
         .message__galleryList#{$i} {
             animation: gallery .8s .2s linear forwards;
         }
     }
+
     @for $i from 13 through 18 {
         .message__galleryList#{$i} {
             animation: gallery .8s .4s linear forwards;
         }
     }
+
     @for $i from 19 through 24 {
         .message__galleryList#{$i} {
             animation: gallery .8s .6s linear forwards;
         }
     }
+
     @for $i from 25 through 30 {
         .message__galleryList#{$i} {
             animation: gallery .8s .8s linear forwards;
         }
     }
+
     @for $i from 31 through 36 {
         .message__galleryList#{$i} {
             animation: gallery .8s 1s linear forwards;

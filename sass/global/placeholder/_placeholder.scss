@@ -3,7 +3,7 @@
 @use "../setting" as *;
 @use"../mixin" as *;
 
-%slide__btn{
+%slide__btn {
     position: fixed;
     z-index: 21;
     top: 24px;
@@ -11,5 +11,11 @@
     padding: 10px;
     width: 72px;
     height: 32px;
-}
 
+    @media screen and (min-width: 900px) {
+        top: 32px;
+        right: $mvPaddingPc;
+        width: 88px;
+        height: 36px;
+    }
+}
