@@ -151,7 +151,7 @@ if (screenWidth < 500) {
 } else if (screenWidth < 1000) {
     numberOfElements = 90;
 } else {
-    numberOfElements = 162;
+    numberOfElements = 170;
 };
 
 

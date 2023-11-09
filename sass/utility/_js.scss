@@ -8,6 +8,14 @@
     top: 0;
     left: 20px;
     z-index: 25;
+    @media screen and (min-width: 900px) {
+      top: 42px;
+      left: $mvPaddingPc;
+    }
+
+    .gnav{
+        display: none;
+    }
 }
 
 .gnavSlider {
@@ -65,7 +73,7 @@
 
         &-pagination {
             position: absolute;
-            top: 75dvh;
+            top: 82dvh;
             left: auto;
             right: 20px;
             display: flex;
@@ -75,6 +83,7 @@
             mix-blend-mode: difference;
 
             @media screen and (min-width: 900px) {
+                top: 75dvh;
                 right: $mvPaddingPc;
             }
 
@@ -83,6 +92,10 @@
                 background: none;
                 color: #fff;
                 font-size: 15px;
+
+                @media screen and (min-width: 900px) {
+                    font-size: clamp(18px, 1.11vw, 22px);
+                }
 
                 &:nth-last-of-type(1)::before {
                     @include content("3");
@@ -94,10 +107,6 @@
 
                 &:nth-last-of-type(3)::before {
                     @include content("1");
-                }
-
-                @media screen and (min-width: 900px) {
-                    font-size: 22px;
                 }
             }
         }
@@ -111,13 +120,13 @@
         display: flex;
         flex-wrap: wrap;
         gap: 8.67px;
-        width: clamp(0px, 128.53vw, 817px);
+        width: 128.53vw;
         height: 442px;
-        margin-left: clamp(-29px, 15.5px - 9vw, 49px);
+        margin-left: -29px;
         overflow: hidden;
 
         @media screen and (min-width: 1024px) {
-            width: clamp(817px, 106vw, 2005px);
+            width: clamp(0px, 106vw, 2005px);
             height: 600px;
         }
 
@@ -130,8 +139,8 @@
             border-radius: 3.69px;
             opacity: 0;
 
-            @media screen and (min-width: 1024px) {
-                width: 100px;
+            @media screen and (min-width: 768px) {
+                width: clamp(72.27px,9.76vw,100px);
             }
         }
     }
