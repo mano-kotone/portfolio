@@ -8,12 +8,13 @@
     top: 0;
     left: 20px;
     z-index: 25;
+
     @media screen and (min-width: 900px) {
-      top: 42px;
-      left: $mvPaddingPc;
+        top: 42px;
+        left: $mvPaddingPc;
     }
 
-    .gnav{
+    .gnav {
         display: none;
     }
 }
@@ -111,80 +112,81 @@
             }
         }
     }
-}
 
 
-// messageギャラリー画像
-.message__gallery {
-    &Container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8.67px;
-        width: 128.53vw;
-        height: 442px;
-        margin-left: -29px;
-        overflow: hidden;
 
-        @media screen and (min-width: 1024px) {
-            width: clamp(0px, 106vw, 2005px);
-            height: 600px;
-        }
+    // messageギャラリー画像
+    .message__gallery {
+        &Container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8.67px;
+            width: 128.53vw;
+            height: 442px;
+            margin-left: -29px;
+            overflow: hidden;
 
-        span {
-            display: block;
-            width: 72.27px;
-            aspect-ratio: 25 / 14;
-            background-position: center center;
-            background-size: cover;
-            border-radius: 3.69px;
-            opacity: 0;
+            @media screen and (min-width: 1024px) {
+                width: clamp(0px, 106vw, 2005px);
+                height: 600px;
+            }
 
-            @media screen and (min-width: 768px) {
-                width: clamp(72.27px,9.76vw,100px);
+            span {
+                display: block;
+                width: 72.27px;
+                aspect-ratio: 25 / 14;
+                background-position: center center;
+                background-size: cover;
+                border-radius: 3.69px;
+                opacity: 0;
+
+                @media screen and (min-width: 768px) {
+                    width: clamp(72.27px, 9.76vw, 100px);
+                }
             }
         }
-    }
 
 
-    @for $i from 1 through 36 {
-        .message__galleryList#{$i} {
-            background-image: url(../images/message-#{$i}.jpg);
+        @for $i from 1 through 36 {
+            .message__galleryList#{$i} {
+                background-image: url(../images/message-#{$i}.jpg);
+            }
         }
-    }
 
-    @for $i from 1 through 6 {
-        .message__galleryList#{$i} {
-            animation: gallery .8s linear forwards;
+        @for $i from 1 through 6 {
+            .message__galleryList#{$i} {
+                animation: gallery .8s linear forwards;
+            }
         }
-    }
 
-    @for $i from 7 through 12 {
-        .message__galleryList#{$i} {
-            animation: gallery .8s .2s linear forwards;
+        @for $i from 7 through 12 {
+            .message__galleryList#{$i} {
+                animation: gallery .8s .2s linear forwards;
+            }
         }
-    }
 
-    @for $i from 13 through 18 {
-        .message__galleryList#{$i} {
-            animation: gallery .8s .4s linear forwards;
+        @for $i from 13 through 18 {
+            .message__galleryList#{$i} {
+                animation: gallery .8s .4s linear forwards;
+            }
         }
-    }
 
-    @for $i from 19 through 24 {
-        .message__galleryList#{$i} {
-            animation: gallery .8s .6s linear forwards;
+        @for $i from 19 through 24 {
+            .message__galleryList#{$i} {
+                animation: gallery .8s .6s linear forwards;
+            }
         }
-    }
 
-    @for $i from 25 through 30 {
-        .message__galleryList#{$i} {
-            animation: gallery .8s .8s linear forwards;
+        @for $i from 25 through 30 {
+            .message__galleryList#{$i} {
+                animation: gallery .8s .8s linear forwards;
+            }
         }
-    }
 
-    @for $i from 31 through 36 {
-        .message__galleryList#{$i} {
-            animation: gallery .8s 1s linear forwards;
+        @for $i from 31 through 36 {
+            .message__galleryList#{$i} {
+                animation: gallery .8s 1s linear forwards;
+            }
         }
     }
 }

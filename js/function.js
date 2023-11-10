@@ -1,39 +1,10 @@
-//mvビデオ遅延読み込み
+//mvビデオ再生速度
 const video01 = document.querySelector('#mv__swiper-video-01');
 const video02 = document.querySelector('#mv__swiper-video-02');
 const video03 = document.querySelector('#mv__swiper-video-03');
-video01.videoplaybackRate = 0.02;
-video02.videoplaybackRate = 0.01;
-video03.videoplaybackRate = 0.01;
-
-document.addEventListener("DOMContentLoaded", function () {
-    var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
-
-    if ("IntersectionObserver" in window) {
-        var lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
-            entries.forEach(function (video) {
-                if (video.isIntersecting) {
-                    for (var source in video.target.children) {
-                        var videoSource = video.target.children[source];
-                        if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-                            videoSource.src = videoSource.dataset.src;
-                        }
-                    }
-
-                    video.target.load();
-                    video.target.classList.remove("lazy");
-                    lazyVideoObserver.unobserve(video.target);
-                }
-            });
-        });
-        lazyVideos.forEach(function (lazyVideo) {
-            lazyVideoObserver.observe(lazyVideo);
-        });
-    }
-});
-
-
-
+video01.videoplaybackRate = 0.5;
+video02.videoplaybackRate = 0.5;
+video03.videoplaybackRate = 0.5;
 
 // 画面下部の砂嵐の生成
 // const fixSunaarashi = document.querySelector('#fixed__sunaarashi');
@@ -147,11 +118,11 @@ const windowHeight = window.innerHeight;
 
 let numberOfElements;
 if (screenWidth < 500) {
-    numberOfElements = 54;
-} else if (screenWidth < 1000) {
-    numberOfElements = 90;
+    numberOfElements = 62;
+} else if (screenWidth < 800) {
+    numberOfElements = 100;
 } else {
-    numberOfElements = 170;
+    numberOfElements = 180;
 };
 
 
@@ -163,5 +134,3 @@ window.addEventListener('scroll', () => {
         if (flg) { generateAndAppendElements(); }
     }
 });
-
-

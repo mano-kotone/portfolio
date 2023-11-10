@@ -8,7 +8,7 @@ const mvSwiper = new Swiper('.mv__swiper', {
 
 
     autoplay: {
-        delay: 7000,
+        delay: 6000,
         disableOnInteraction: false,
     },
 
