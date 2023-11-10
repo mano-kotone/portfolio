@@ -2,6 +2,31 @@
 
 @use "../setting" as *;
 
+
+@keyframes sunaarashi{
+    0%{
+        background-image: url(../images/sunaarashi-01.jpg);
+    }
+    32%{
+        background-image: url(../images/sunaarashi-01.jpg);
+    }
+    33%{
+        background-image: url(../images/sunaarashi-02.jpg);
+    }
+    65%{
+        background-image: url(../images/sunaarashi-02.jpg);
+    }
+    66%{
+        background-image: url(../images/sunaarashi-03.jpg);
+    }
+    99%{
+        background-image: url(../images/sunaarashi-03.jpg);
+    }
+    100%{
+        background-image: url(../images/sunaarashi-04.jpg);
+    }
+}
+
 //arrowホバーアニメーション
 @keyframes arrow {
     29% {

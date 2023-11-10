@@ -7,43 +7,43 @@ video02.playbackRate = 0.9;
 video03.playbackRate = 0.8;
 
 // 画面下部の砂嵐の生成
-// const fixSunaarashi = document.querySelector('#fixed__sunaarashi');
-const sliderSunaarashi = document.querySelector('#gnavSlider');
+// // const fixSunaarashi = document.querySelector('#fixed__sunaarashi');
+// const sliderSunaarashi = document.querySelector('#gnavSlider');
 
 
-function sunaarashi() {
-    if (!!!document.createElement('canvas').getContext) {
-        return false;
-    }
-    var canvas = document.createElement('canvas'),
-        ctx = canvas.getContext('2d'),
-        x, y, c
+// function sunaarashi() {
+//     if (!!!document.createElement('canvas').getContext) {
+//         return false;
+//     }
+//     var canvas = document.createElement('canvas'),
+//         ctx = canvas.getContext('2d'),
+//         x, y, c
 
-    animationInterval = 30
-    canvas.width = 100;
-    canvas.height = 100;
-    let arry = [55, 100, 155]
+//     animationInterval = 30
+//     canvas.width = 100;
+//     canvas.height = 100;
+//     let arry = [55, 100, 155]
 
-    function draw() {
-        for (x = 0; x < canvas.width; x++) {
-            for (y = 0; y < canvas.height; y++) {
-                c = arry[Math.floor(Math.random() * arry.length)];
-                ctx.fillStyle = 'rgb(' + c + ',' + c + ',' + c + ')';
-                ctx.fillRect(x, y, 3, 3);
-            }
-        }
-        // fixSunaarashi.style.backgroundImage = "url(" + canvas.toDataURL("image/png") + ")";
-        sliderSunaarashi.style.backgroundImage = "url(" + canvas.toDataURL("image/png") + ")";
-        // requestAnimationFrame(draw);
-        setTimeout(() => {
-            requestAnimationFrame(draw);
-        }, animationInterval);
-    }
+//     function draw() {
+//         for (x = 0; x < canvas.width; x++) {
+//             for (y = 0; y < canvas.height; y++) {
+//                 c = arry[Math.floor(Math.random() * arry.length)];
+//                 ctx.fillStyle = 'rgb(' + c + ',' + c + ',' + c + ')';
+//                 ctx.fillRect(x, y, 3, 3);
+//             }
+//         }
+//         // fixSunaarashi.style.backgroundImage = "url(" + canvas.toDataURL("image/png") + ")";
+//         sliderSunaarashi.style.backgroundImage = "url(" + canvas.toDataURL("image/png") + ")";
+//         // requestAnimationFrame(draw);
+//         setTimeout(() => {
+//             requestAnimationFrame(draw);
+//         }, animationInterval);
+//     }
 
-    draw();
-}
+//     draw();
+// }
 
-sunaarashi()
+// sunaarashi()
 
 
 //スライドメニュー
