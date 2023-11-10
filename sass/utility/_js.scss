@@ -3,6 +3,7 @@
 @use "../global" as *;
 
 //スライドメニュー
+
 .header__fixed {
     position: fixed;
     top: 0;
@@ -121,27 +122,29 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8.67px;
-            width: 128.53vw;
+            width: 115%;
             height: 442px;
             margin-left: -29px;
             overflow: hidden;
 
             @media screen and (min-width: 1024px) {
-                width: clamp(0px, 106vw, 2005px);
+                // width: clamp(0px, 106vw, 2005px);
                 height: 600px;
             }
 
             span {
                 display: block;
                 width: 72.27px;
-                aspect-ratio: 25 / 14;
+                aspect-ratio: 100 / 56;
                 background-position: center center;
                 background-size: cover;
                 border-radius: 3.69px;
                 opacity: 0;
 
                 @media screen and (min-width: 768px) {
-                    width: clamp(72.27px, 9.76vw, 100px);
+                    width: 100px;
+                    height: 56px;
+                    border-radius: 5px;
                 }
             }
         }

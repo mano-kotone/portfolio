@@ -2,9 +2,9 @@
 const video01 = document.querySelector('#mv__swiper-video-01');
 const video02 = document.querySelector('#mv__swiper-video-02');
 const video03 = document.querySelector('#mv__swiper-video-03');
-video01.videoplaybackRate = 0.5;
-video02.videoplaybackRate = 0.5;
-video03.videoplaybackRate = 0.5;
+video01.playbackRate = 0.85;
+video02.playbackRate = 0.9;
+video03.playbackRate = 0.8;
 
 // 画面下部の砂嵐の生成
 // const fixSunaarashi = document.querySelector('#fixed__sunaarashi');
@@ -20,8 +20,8 @@ function sunaarashi() {
         x, y, c
 
     animationInterval = 30
-    canvas.width = 30;
-    canvas.height = 30;
+    canvas.width = 100;
+    canvas.height = 100;
     let arry = [55, 100, 155]
 
     function draw() {
@@ -122,7 +122,7 @@ if (screenWidth < 500) {
 } else if (screenWidth < 800) {
     numberOfElements = 100;
 } else {
-    numberOfElements = 180;
+    numberOfElements = 196;
 };
 
 
