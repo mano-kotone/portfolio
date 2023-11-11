@@ -1,6 +1,15 @@
 //各ファイルは必ず登録済みの変数を最初に読み込みます
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
+body {
+    -webkit-text-size-adjust: 100%;
+}
+
+.wrapper {
+    background: #fff;
+    overflow: hidden;
+}
+
 *{
     font-family: 'Be Vietnam Pro','Noto Sans JP',sans-serif;
     color: $black;

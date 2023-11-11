@@ -6,8 +6,8 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KOTONEMANOPortfolio.</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="">
+  <meta name="keywords" content="ポートフォリオ,眞野琴音">
+  <meta name="description" content="眞野琴音のポートフォリオです。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -20,7 +20,6 @@
 <body id="top">
   <div class="wrapper">
 
-
     <header id="header" class="header">
       <h1 class="header__ttl">
         <a href="#" class="header__link">
@@ -30,17 +29,17 @@
           </picture>
         </a>
       </h1>
-      
+
       <nav class="gnav">
         <ul class="gnav__ul">
           <li class="gnav__list"><a href="#" class="gnav__link">HOME<span class="arrow"></span></a></li>
-          <li class="gnav__list"><a href="" class="gnav__link">WORKS<span class="arrow"></span></a></li>
+          <li class="gnav__list"><a href="#works" class="gnav__link">WORKS<span class="arrow"></span></a></li>
           <li class="gnav__list"><a href="" class="gnav__link">HISTORY<span class="arrow"></span></a></li>
           <li class="gnav__list"><a href="" class="gnav__link">CONTACT<span class="arrow"></span></a></li>
         </ul>
       </nav>
     </header>
-    
+
     <div class="fixed__sunaarashi"></div>
 
     <!-- スライドメニュー -->
@@ -49,7 +48,7 @@
         <ul class="gnavSlider__ul">
           <li class="gnavSlider__list"><a href="#" class="gnavSlider__link gnavSlider__link-01">HOME<span
                 class="arrow"></span></a></li>
-          <li class="gnavSlider__list"><a href="" class="gnavSlider__link gnavSlider__link-02">WORKS<span
+          <li class="gnavSlider__list"><a href="#works" class="gnavSlider__link gnavSlider__link-02">WORKS<span
                 class="arrow"></span></a></li>
           <li class="gnavSlider__list"><a href="" class="gnavSlider__link gnavSlider__link-03">HISTORY<span
                 class="arrow"></span></a></li>
@@ -67,345 +66,351 @@
       <span id="gnavSlider__btnlineBottom" class="gnavSlider__btnline gnavSlider__btnlineBottom"></span>
     </div>
 
+    <main class="main">
+      <div id="mv" class="mv">
+        <div class="mv__wrap">
+          <!-- mv動画スワイパー -->
+          <div class="swiper mv__swiper">
+            <div class="swiper-wrapper mv__swiper-wrapper">
+              <div class="swiper-slide mv__swiper-slide"><video id="mv__swiper-video-01" class="mv__swiper-video lazy"
+                  src="videos/video-01.mp4" poster="" muted></video></div>
+              <div class="swiper-slide mv__swiper-slide"><video id="mv__swiper-video-02" class="mv__swiper-video lazy"
+                  src="videos/video-02.mp4" muted></video></div>
+              <div class="swiper-slide mv__swiper-slide"><video id="mv__swiper-video-03" class="mv__swiper-video lazy"
+                  src="videos/video-03.mp4" muted></video></div>
+            </div>
 
-    <div id="mv" class="mv">
-      <div class="mv__wrap">
-        <!-- mv動画スワイパー -->
-        <div class="swiper mv__swiper">
-          <div class="swiper-wrapper mv__swiper-wrapper">
-            <div class="swiper-slide mv__swiper-slide"><video id="mv__swiper-video-01" class="mv__swiper-video lazy"
-                src="videos/video-01.mp4" poster="" muted></video></div>
-            <div class="swiper-slide mv__swiper-slide"><video id="mv__swiper-video-02" class="mv__swiper-video lazy"
-                src="videos/video-02.mp4" muted></video></div>
-            <div class="swiper-slide mv__swiper-slide"><video id="mv__swiper-video-03" class="mv__swiper-video lazy"
-                src="videos/video-03.mp4" muted></video></div>
+            <div class="swiper-pagination mv__swiper-pagination"></div>
           </div>
 
-          <div class="swiper-pagination mv__swiper-pagination"></div>
-        </div>
+          <div class="mv__container">
+            <ul class="mv__ul">
+              <li class="mv__list">
+                <p class="mv__listTxt">1997~present</p>
+                <p class="mv__listTxt">眞野琴音</p>
+              </li>
+              <li class="mv__list">
+                <p class="mv__listTxt">aaaaaaaaaaaa</p>
+                <p class="mv__listTxt">あああああ</p>
+              </li>
+            </ul>
 
-        <div class="mv__container">
-          <ul class="mv__ul">
-            <li class="mv__list">
-              <p class="mv__listTxt">1997~present</p>
-              <p class="mv__listTxt">眞野琴音</p>
-            </li>
-            <li class="mv__list">
-              <p class="mv__listTxt">aaaaaaaaaaaa</p>
-              <p class="mv__listTxt">あああああ</p>
-            </li>
-          </ul>
-
-          <div class="mv__box">
-            <h2 class="mv__ttl">
-              <picture>
-                <source media="(min-width: 900px)" srcset="images/logo-white.svg">
-                <img src="images/logo-2lineWhite.svg" alt="KOTONE MANO Portfolio." class="header__img">
-              </picture>
-            </h2>
-            <p class="mv__txt">お客さまの、こころに響くコンテンツを。</p>
+            <div class="mv__box">
+              <h2 class="mv__ttl">
+                <picture>
+                  <source media="(min-width: 900px)" srcset="images/logo-white.svg">
+                  <img src="images/logo-2lineWhite.svg" alt="KOTONE MANO Portfolio." class="header__img">
+                </picture>
+              </h2>
+              <p class="mv__txt">お客さまの、こころに響くコンテンツを。</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <section id="message" class="message">
-      <div id="message__container" class="message__container">
-        <h2 id="message__ttl" class="message__ttl"><span class="message__ttl-01 fadeIn01">Life isn't </span><span
-            class="message__ttl-02 fadeIn01">finding</span><span class="message__ttl-03 fadeIn01">yourself.</span><span
-            class="message__ttl-04 fadeIn01">Life is about</span><span class="message__ttlSerif fadeIn">creating
-            youself.</span><span class="message__ttlRuby fadeIn">人生とは<br class="Rubybr">自分を見つけることではない。<br
-              class="Rubybr">人生とは自分を創ることである。</span></h2>
-        <div id="scaleAnimation" class="message__circle">
-          <span class="message__circlePic message__circlePic-01"></span>
-          <span class="message__circlePic message__circlePic-02"></span>
+      <section id="message" class="message">
+        <div id="message__container" class="message__container">
+          <h2 id="message__ttl" class="message__ttl"><span class="message__ttl-01 fadeIn01">Life isn't </span><span
+              class="message__ttl-02 fadeIn01">finding</span><span
+              class="message__ttl-03 fadeIn01">yourself.</span><span class="message__ttl-04 fadeIn01">Life is
+              about</span><span class="message__ttlSerif fadeIn">creating
+              youself.</span><span class="message__ttlRuby fadeIn">人生とは<br class="Rubybr">自分を見つけることではない。<br
+                class="Rubybr">人生とは自分を創ることである。</span></h2>
+          <div id="scaleAnimation" class="message__circle">
+            <span class="message__circlePic message__circlePic-01"></span>
+            <span class="message__circlePic message__circlePic-02"></span>
+          </div>
         </div>
-      </div>
 
-      <div class="message__gallery">
-        <div id="message__galleryContainer" class="message__galleryContainer"></div>
-      </div>
-
-      <div class="message__txtBox">
-        <p class="message__txt">The joy of writing code.<br class="br"> The sense of accomplishment of <br class="br">
-          implementation. wanted to become a coder because I <br class="br">wanted to implement more different kinds of coding.</p>
-        <p class="message__txtRuby">コードを書く楽しさや実装できた時の達成感を知り、さらに新しいことを知りたい、色々なものを作りたいと思いました。<br
-            class="br">デザインカンプ通りにコーディングが出来るように細部まで忠実に再現をめざしています。</p>
-      </div>
-    </section>
-
-    <section id="works" class="works">
-      <h2 class="h2 works__ttl"><span class="works__ttl-01">_</span><span class="works__ttl-02">W</span><span
-          class="works__ttl-03">o</span><span class="works__ttl-04">r</span><span class="works__ttl-05">k</span><span
-          class="works__ttl-06">s</span></h2>
-
-      <ul id="works__ul" class="works__ulBlock">
-        <li class="works__list">
-          <p class="works__listName">works</p>
-          <p class="works__listTime">time</p>
-          <p class="works__listResponsive">responsive</p>
-        </li>
-        <li class="works__list">
-          <a href="" class="works__link">
-            <p class="works__thum">
-              <img src="images/topCrepeKitchen.jpg" alt="Crepe Kitchen Choice!サムネイル" class="works__thumImg">
-            </p>
-            <p class="works__name">Crepe Kitchen<br class="br"> Choice!<span class="arrow"></span></p>
-            <p class="works__time">4日間</p>
-            <p class="works__responsive">非対応</p>
-          </a>
-          <div class="works__linkHoverBg"></div>
-        </li>
-        <li class="works__list">
-          <a href="" class="works__link">
-            <p class="works__thum">
-              <img src="images/topPremier.jpg" alt="Premierサムネイル" class="works__thumImg">
-            </p>
-            <p class="works__name">Premier<span class="arrow"></span></p>
-            <p class="works__time">4日間</p>
-            <p class="works__responsive">非対応</p>
-          </a>
-          <div class="works__linkHoverBg"></div>
-        </li>
-        <li class="works__list">
-          <a href="" class="works__link">
-            <p class="works__thum">
-              <img src="images/topKamuy.jpg" alt="Kamuyサムネイル" class="works__thumImg">
-            </p>
-            <p class="works__name">Kamuy<span class="arrow"></span></p>
-            <p class="works__time">4日間</p>
-            <p class="works__responsive">非対応</p>
-          </a>
-          <div class="works__linkHoverBg"></div>
-        </li>
-        <li class="works__list">
-          <a href="" class="works__link">
-            <p class="works__thum">
-              <img src="images/topAzito.jpg" alt="Cafe azitoサムネイル" class="works__thumImg">
-            </p>
-            <p class="works__name">Cafe azito<span class="arrow"></span></p>
-            <p class="works__time">4日間</p>
-            <p class="works__responsive">非対応</p>
-          </a>
-          <div class="works__linkHoverBg"></div>
-        </li>
-        <li class="works__list">
-          <a href="" class="works__link">
-            <p class="works__thum">
-              <img src="images/topWss.jpg" alt="WSS（ウェブスタディサッポロ）サムネイル" class="works__thumImg">
-            </p>
-            <p class="works__name">WSS(ウェブスタディ<br class="br">サッポロ)<span class="arrow"></span></p>
-            <p class="works__time">4日間</p>
-            <p class="works__responsive">非対応</p>
-          </a>
-          <div class="works__linkHoverBg"></div>
-        </li>
-        <li class="works__list">
-          <a href="" class="works__link">
-            <p class="works__thum">
-              <img src="images/topAi.jpg" alt="AI X ANIMETION PRODUCTサムネイル" class="works__thumImg">
-            </p>
-            <p class="works__name">AI X ANIMETION<br class="br"> PRODUCT<span class="arrow"></span></p>
-            <p class="works__time">4日間</p>
-            <p class="works__responsive">非対応</p>
-          </a>
-          <div class="works__linkHoverBg"></div>
-        </li>
-        <li class="works__list">
-          <a href="" class="works__link">
-            <p class="works__thum">
-              <img src="images/topCrepeKitchen.jpg" alt="Crepe Kitchen Choice!サムネイル" class="works__thumImg">
-            </p>
-            <p class="works__name">Crepe Kitchen<br class="br"> Choice!<span class="arrow"></span></p>
-            <p class="works__time">4日間</p>
-            <p class="works__responsive">非対応</p>
-          </a>
-          <div class="works__linkHoverBg"></div>
-        </li>
-        <li class="works__list">
-          <a href="" class="works__link">
-            <p class="works__thum">
-              <img src="images/topCrepeKitchen.jpg" alt="Crepe Kitchen Choice!サムネイル" class="works__thumImg">
-            </p>
-            <p class="works__name">Crepe Kitchen<br class="br"> Choice!<span class="arrow"></span></p>
-            <p class="works__time">4日間</p>
-            <p class="works__responsive">非対応</p>
-          </a>
-          <div class="works__linkHoverBg"></div>
-        </li>
-        <li class="works__list">
-          <a href="" class="works__link">
-            <p class="works__thum">
-              <img src="images/topCrepeKitchen.jpg" alt="Crepe Kitchen Choice!サムネイル" class="works__thumImg">
-            </p>
-            <p class="works__name">Crepe Kitchen<br class="br"> Choice!<span class="arrow"></span></p>
-            <p class="works__time">4日間</p>
-            <p class="works__responsive">非対応</p>
-          </a>
-          <div class="works__linkHoverBg"></div>
-        </li>
-      </ul>
-
-      <div id="works__switch" class="works__switch">
-        <div id="works__switchLine" class="works__switchLine">
-          <span class="works__switchLineTop"></span>
-          <span class="works__switchLineMiddum"></span>
-          <span class="works__switchLineBottom"></span>
+        <div class="message__gallery">
+          <div id="message__galleryContainer" class="message__galleryContainer"></div>
         </div>
-        <div id="works__switchBlock" class="works__switchBlock">
-          <span class="works__switchBlock-01"></span><span class="works__switchBlock-02"></span><span
-            class="works__switchBlock-03"></span><span class="works__switchBlock-04"></span><span
-            class="works__switchBlock-05"></span><span class="works__switchBlock-06"></span><span
-            class="works__switchBlock-07"></span><span class="works__switchBlock-08"></span><span
-            class="works__switchBlock-09"></span>
+
+        <div class="message__txtBox">
+          <p class="message__txt">The joy of writing code.<br class="br"> The sense of accomplishment of <br class="br">
+            implementation. wanted to become a coder because I <br class="br">wanted to implement more different kinds
+            of
+            coding.</p>
+          <p class="message__txtRuby">コードを書く楽しさや実装できた時の達成感を知り、さらに新しいことを知りたい、色々なものを作りたいと思いました。<br
+              class="br">デザインカンプ通りにコーディングが出来るように細部まで忠実に再現をめざしています。</p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="skill" class="skill">
-      <h2 class="h2 skill__ttl"><span class="skill__ttl-01">_</span><span class="skill__ttl-02">S</span><span
-          class="skill__ttl-03">k</span><span class="skill__ttl-04">i</span><span class="skill__ttl-05">l</span><span
-          class="skill__ttl-06">l</span><span class="skill__ttl-07">s</span></h2>
+      <section id="works" class="works">
+        <h2 class="h2 works__ttl"><span class="works__ttl-01">_</span><span class="works__ttl-02">W</span><span
+            class="works__ttl-03">o</span><span class="works__ttl-04">r</span><span class="works__ttl-05">k</span><span
+            class="works__ttl-06">s</span></h2>
 
-      <div class="skill__pic">
+        <ul id="works__ul" class="works__ulBlock">
+          <li class="works__list">
+            <p class="works__listName">works</p>
+            <p class="works__listTime">time</p>
+            <p class="works__listResponsive">responsive</p>
+          </li>
+          <li class="works__list">
+            <a href="works/worksCrepe.html" class="works__link">
+              <p class="works__thum">
+                <img src="images/topCrepeKitchen.jpg" alt="Crepe Kitchen Choice!サムネイル" class="works__thumImg">
+              </p>
+              <p class="works__name">Crepe Kitchen<br class="br"> Choice!<span class="arrow"></span></p>
+              <p class="works__time">4日間</p>
+              <p class="works__responsive">非対応</p>
+            </a>
+            <div class="works__linkHoverBg"></div>
+          </li>
+          <li class="works__list">
+            <a href="" class="works__link">
+              <p class="works__thum">
+                <img src="images/topPremier.jpg" alt="Premierサムネイル" class="works__thumImg">
+              </p>
+              <p class="works__name">Premier<span class="arrow"></span></p>
+              <p class="works__time">4日間</p>
+              <p class="works__responsive">非対応</p>
+            </a>
+            <div class="works__linkHoverBg"></div>
+          </li>
+          <li class="works__list">
+            <a href="" class="works__link">
+              <p class="works__thum">
+                <img src="images/topKamuy.jpg" alt="Kamuyサムネイル" class="works__thumImg">
+              </p>
+              <p class="works__name">Kamuy<span class="arrow"></span></p>
+              <p class="works__time">4日間</p>
+              <p class="works__responsive">非対応</p>
+            </a>
+            <div class="works__linkHoverBg"></div>
+          </li>
+          <li class="works__list">
+            <a href="" class="works__link">
+              <p class="works__thum">
+                <img src="images/topAzito.jpg" alt="Cafe azitoサムネイル" class="works__thumImg">
+              </p>
+              <p class="works__name">Cafe azito<span class="arrow"></span></p>
+              <p class="works__time">4日間</p>
+              <p class="works__responsive">非対応</p>
+            </a>
+            <div class="works__linkHoverBg"></div>
+          </li>
+          <li class="works__list">
+            <a href="" class="works__link">
+              <p class="works__thum">
+                <img src="images/topWss.jpg" alt="WSS（ウェブスタディサッポロ）サムネイル" class="works__thumImg">
+              </p>
+              <p class="works__name">WSS(ウェブスタディ<br class="br">サッポロ)<span class="arrow"></span></p>
+              <p class="works__time">4日間</p>
+              <p class="works__responsive">非対応</p>
+            </a>
+            <div class="works__linkHoverBg"></div>
+          </li>
+          <li class="works__list">
+            <a href="" class="works__link">
+              <p class="works__thum">
+                <img src="images/topAi.jpg" alt="AI X ANIMETION PRODUCTサムネイル" class="works__thumImg">
+              </p>
+              <p class="works__name">AI X ANIMETION<br class="br"> PRODUCT<span class="arrow"></span></p>
+              <p class="works__time">4日間</p>
+              <p class="works__responsive">非対応</p>
+            </a>
+            <div class="works__linkHoverBg"></div>
+          </li>
+          <li class="works__list">
+            <a href="" class="works__link">
+              <p class="works__thum">
+                <img src="images/topCrepeKitchen.jpg" alt="Crepe Kitchen Choice!サムネイル" class="works__thumImg">
+              </p>
+              <p class="works__name">Crepe Kitchen<br class="br"> Choice!<span class="arrow"></span></p>
+              <p class="works__time">4日間</p>
+              <p class="works__responsive">非対応</p>
+            </a>
+            <div class="works__linkHoverBg"></div>
+          </li>
+          <li class="works__list">
+            <a href="" class="works__link">
+              <p class="works__thum">
+                <img src="images/topCrepeKitchen.jpg" alt="Crepe Kitchen Choice!サムネイル" class="works__thumImg">
+              </p>
+              <p class="works__name">Crepe Kitchen<br class="br"> Choice!<span class="arrow"></span></p>
+              <p class="works__time">4日間</p>
+              <p class="works__responsive">非対応</p>
+            </a>
+            <div class="works__linkHoverBg"></div>
+          </li>
+          <li class="works__list">
+            <a href="" class="works__link">
+              <p class="works__thum">
+                <img src="images/topCrepeKitchen.jpg" alt="Crepe Kitchen Choice!サムネイル" class="works__thumImg">
+              </p>
+              <p class="works__name">Crepe Kitchen<br class="br"> Choice!<span class="arrow"></span></p>
+              <p class="works__time">4日間</p>
+              <p class="works__responsive">非対応</p>
+            </a>
+            <div class="works__linkHoverBg"></div>
+          </li>
+        </ul>
+
+        <div id="works__switch" class="works__switch">
+          <div id="works__switchLine" class="works__switchLine">
+            <span class="works__switchLineTop"></span>
+            <span class="works__switchLineMiddum"></span>
+            <span class="works__switchLineBottom"></span>
+          </div>
+          <div id="works__switchBlock" class="works__switchBlock">
+            <span class="works__switchBlock-01"></span><span class="works__switchBlock-02"></span><span
+              class="works__switchBlock-03"></span><span class="works__switchBlock-04"></span><span
+              class="works__switchBlock-05"></span><span class="works__switchBlock-06"></span><span
+              class="works__switchBlock-07"></span><span class="works__switchBlock-08"></span><span
+              class="works__switchBlock-09"></span>
+          </div>
+        </div>
+      </section>
+
+      <section id="skill" class="skill">
+        <h2 class="h2 skill__ttl"><span class="skill__ttl-01">_</span><span class="skill__ttl-02">S</span><span
+            class="skill__ttl-03">k</span><span class="skill__ttl-04">i</span><span class="skill__ttl-05">l</span><span
+            class="skill__ttl-06">l</span><span class="skill__ttl-07">s</span></h2>
+
+        <div class="skill__pic">
           <img src="images/skill-roop.jpg" alt="worksサムネイル1" class="skill__pic-01">
           <img src="images/skill-roop.jpg" alt="worksサムネイル2" class="skill__pic-02">
-      </div>
-
-      <div class="skill__wrap">
-        <div class="skill__kinds-01">
-          <p class="skill__kindsTtl">Coding</p>
-
-          <ul class="skill__kindsUl">
-            <li class="skill__kindsList">
-              <div class="skill__kindsBox">
-                <p class="skill__kindsName skill__kindsNameHtml">HTML LS</p>
-                <p class="skill__kindsName skill__kindsNameCss">CSS 3</p>
-              </div>
-              <p class="skill__kindsTxt">Sass(scss)を使用した基本的なコーディング、<br class="br">レスポンシブ対応や簡単なアニメーション制作が可能</p>
-            </li>
-            <li class="skill__kindsList">
-              <p class="skill__kindsName skill__kindsNameJs">JavaScript</p>
-              <p class="skill__kindsTxt">JQuery、swiper.jsを使用したアニメーションやクラス付与などが可能。<br class="br">vanillaJSへの書き換えなど勉強中</p>
-            </li>
-            <li class="skill__kindsList">
-              <p class="skill__kindsName skill__kindsNameCms">CMS(Word Press)</p>
-              <p class="skill__kindsTxt"></p>
-            </li>
-            <li class="skill__kindsList">
-              <p class="skill__kindsName skill__kindsNameGit">GitHub</p>
-              <p class="skill__kindsTxt">一人で制作するうえでのバージョン管理が可能</p>
-            </li>
-          </ul>
         </div>
 
-        <div class="skill__kindsContainer">
-          <div class="skill__kinds-02">
-            <p class="skill__kindsTtl">DesignTours</p>
+        <div class="skill__wrap">
+          <div class="skill__kinds-01">
+            <p class="skill__kindsTtl">Coding</p>
+
             <ul class="skill__kindsUl">
               <li class="skill__kindsList">
                 <div class="skill__kindsBox">
-                  <p class="skill__kindsName skill__kindsNameFigma">Figma</p>
-                  <p class="skill__kindsName skill__kindsNameXd">Adobe XD</p>
+                  <p class="skill__kindsName skill__kindsNameHtml">HTML LS</p>
+                  <p class="skill__kindsName skill__kindsNameCss">CSS 3</p>
                 </div>
-                <p class="skill__kindsTxt">基本的な操作や画像のエクスポート等で使用</p>
+                <p class="skill__kindsTxt">Sass(scss)を使用した基本的なコーディング、<br class="br">レスポンシブ対応や簡単なアニメーション制作が可能</p>
               </li>
               <li class="skill__kindsList">
-                <p class="skill__kindsName skill__kindsNamePs">Adobe Photoshop CC</p>
-                <p class="skill__kindsTxt">画像の簡単な加工やリサイズが可能</p>
+                <p class="skill__kindsName skill__kindsNameJs">JavaScript</p>
+                <p class="skill__kindsTxt">JQuery、swiper.jsを使用したアニメーションやクラス付与などが可能。<br class="br">vanillaJSへの書き換えなど勉強中
+                </p>
+              </li>
+              <li class="skill__kindsList">
+                <p class="skill__kindsName skill__kindsNameCms">CMS(Word Press)</p>
+                <p class="skill__kindsTxt"></p>
+              </li>
+              <li class="skill__kindsList">
+                <p class="skill__kindsName skill__kindsNameGit">GitHub</p>
+                <p class="skill__kindsTxt">一人で制作するうえでのバージョン管理が可能</p>
               </li>
             </ul>
           </div>
 
-          <div class="skill__kinds-03">
-            <p class="skill__kindsTtl">Others</p>
-            <ul class="skill__kindsUl">
-              <li class="skill__kindsList">
-                <p class="skill__kindsName skill__kindsNameVscode">VisualStudioCode</p>
-                <p class="skill__kindsTxt">プラグインなどを使いVSCodeでの制作</p>
-              </li>
-              <li class="skill__kindsList">
-                <p class="skill__kindsName skill__kindsNameChat">Chatwork</p>
-                <p class="skill__kindsTxt">連絡や画像・データの送受信で使用</p>
-              </li>
-              <li class="skill__kindsList">
-                <p class="skill__kindsName skill__kindsNameQuip">Quip</p>
-                <p class="skill__kindsTxt">普段のメモやメモの共有が可能</p>
-              </li>
-            </ul>
+          <div class="skill__kindsContainer">
+            <div class="skill__kinds-02">
+              <p class="skill__kindsTtl">DesignTours</p>
+              <ul class="skill__kindsUl">
+                <li class="skill__kindsList">
+                  <div class="skill__kindsBox">
+                    <p class="skill__kindsName skill__kindsNameFigma">Figma</p>
+                    <p class="skill__kindsName skill__kindsNameXd">Adobe XD</p>
+                  </div>
+                  <p class="skill__kindsTxt">基本的な操作や画像のエクスポート等で使用</p>
+                </li>
+                <li class="skill__kindsList">
+                  <p class="skill__kindsName skill__kindsNamePs">Adobe Photoshop CC</p>
+                  <p class="skill__kindsTxt">画像の簡単な加工やリサイズが可能</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="skill__kinds-03">
+              <p class="skill__kindsTtl">Others</p>
+              <ul class="skill__kindsUl">
+                <li class="skill__kindsList">
+                  <p class="skill__kindsName skill__kindsNameVscode">VisualStudioCode</p>
+                  <p class="skill__kindsTxt">プラグインなどを使いVSCodeでの制作</p>
+                </li>
+                <li class="skill__kindsList">
+                  <p class="skill__kindsName skill__kindsNameChat">Chatwork</p>
+                  <p class="skill__kindsTxt">連絡や画像・データの送受信で使用</p>
+                </li>
+                <li class="skill__kindsList">
+                  <p class="skill__kindsName skill__kindsNameQuip">Quip</p>
+                  <p class="skill__kindsTxt">普段のメモやメモの共有が可能</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="history" class="history">
-      <h2 class="h2 history__ttl"><span class="history__ttl-01">_</span><span class="history__ttl-02">H</span><span
-          class="history__ttl-03">i</span><span class="history__ttl-04">s</span><span
-          class="history__ttl-05">t</span><span class="history__ttl-06">o</span><span
-          class="history__ttl-07">r</span><span class="history__ttl-08">y</span></h2>
+      <section id="history" class="history">
+        <h2 class="h2 history__ttl"><span class="history__ttl-01">_</span><span class="history__ttl-02">H</span><span
+            class="history__ttl-03">i</span><span class="history__ttl-04">s</span><span
+            class="history__ttl-05">t</span><span class="history__ttl-06">o</span><span
+            class="history__ttl-07">r</span><span class="history__ttl-08">y</span></h2>
 
-      <div class="history__bgPic history__bgPic-01"></div>
-      <div class="history__bgPic history__bgPic-02"></div>
+        <div class="history__bgPic history__bgPic-01"></div>
+        <div class="history__bgPic history__bgPic-02"></div>
 
-      <dl class="history__dl">
-        <div class="history__dlBox">
-          <dt class="history__dd">since</dt>
-          <dd class="history__dt">1997</dd>
-          <dd class="history__dt">生まれ</dd>
+        <dl class="history__dl">
+          <div class="history__dlBox">
+            <dt class="history__dd">since</dt>
+            <dd class="history__dt">1997</dd>
+            <dd class="history__dt">生まれ</dd>
+          </div>
+          <div class="history__dlBox">
+            <dt class="history__dd">years</dt>
+            <dd class="history__dt">26</dd>
+            <dd class="history__dt">歳</dd>
+          </div>
+          <div class="history__dlBox">
+            <dt class="history__dd">aaaaaa</dt>
+            <dd class="history__dt">000000</dd>
+            <dd class="history__dt">ああああ</dd>
+          </div>
+        </dl>
+
+        <p class="history__txt">
+          前職ではパティシエをしていました。<br class="br">
+          もともとモノづくりが好きで自分の手で作り、それを誰かに喜んでもらえることを仕事にしたいと思っています。コーディングでは実装する楽しさだけでなく、自分で作ったサイトが沢山のエンドユーザーのもとに届き、見てもらえる、使ってもらえるということが目指したきっかけです。
+        </p>
+
+        <p class="history__more"><a href="history/" class="history__link">View More<span class="arrow"></span></a></p>
+
+        <div class="history__item"><span class="history__ttl-01">_</span><span class="history__ttl-02">H</span><span
+            class="history__ttl-03">i</span><span class="history__ttl-04">s</span><span
+            class="history__ttl-05">t</span><span class="history__ttl-06">o</span><span
+            class="history__ttl-07">r</span><span class="history__ttl-08">y</span>
         </div>
-        <div class="history__dlBox">
-          <dt class="history__dd">years</dt>
-          <dd class="history__dt">26</dd>
-          <dd class="history__dt">歳</dd>
-        </div>
-        <div class="history__dlBox">
-          <dt class="history__dd">aaaaaa</dt>
-          <dd class="history__dt">000000</dd>
-          <dd class="history__dt">ああああ</dd>
-        </div>
-      </dl>
+      </section>
 
-      <p class="history__txt">
-        前職ではパティシエをしていました。<br class="br">
-        もともとモノづくりが好きで自分の手で作り、それを誰かに喜んでもらえることを仕事にしたいと思っています。コーディングでは実装する楽しさだけでなく、自分で作ったサイトが沢山のエンドユーザーのもとに届き、見てもらえる、使ってもらえるということが目指したきっかけです。
-      </p>
-
-      <p class="history__more"><a href="history/" class="history__link">View More<span class="arrow"></span></a></p>
-
-      <div class="history__item"><span class="history__ttl-01">_</span><span class="history__ttl-02">H</span><span
-          class="history__ttl-03">i</span><span class="history__ttl-04">s</span><span
-          class="history__ttl-05">t</span><span class="history__ttl-06">o</span><span
-          class="history__ttl-07">r</span><span class="history__ttl-08">y</span>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <a href="" class="contact__link">
-        <h3 class="contact__subTtl">Get In Touch<span class="arrow"></span></h3>
-        <div class="contact__container">
-          <p class="contact__txt">ここまで見ていただき、ありがとうございました。<br class="br">
-            これからも色々なことを学びスキルを磨いていきます。<br class="br">
-            就職し、たくさんの仕事をして、エンドユーザーに届ける<br class="br">ことを目標に頑張ります。
-          </p>
-          <h2 class="contact__ttl">Contact<span class="arrow"></span></h2>
-          <p class="contact__mail">Gmail:mano.kotone@gmail.com</p>
-        </div>
-      </a>
-    </section>
-
+      <section id="contact" class="contact">
+        <a href="contact/contact.html" class="contact__link">
+          <h3 class="contact__subTtl">Get In Touch<span class="arrow"></span></h3>
+          <div class="contact__container">
+            <p class="contact__txt">ここまで見ていただき、ありがとうございました。<br class="br">
+              これからも色々なことを学びスキルを磨いていきます。<br class="br">
+              就職し、たくさんの仕事をして、エンドユーザーに届ける<br class="br">ことを目標に頑張ります。
+            </p>
+            <h2 class="contact__ttl">Contact<span class="arrow"></span></h2>
+            <p class="contact__mail">Gmail:mano.kotone@gmail.com</p>
+          </div>
+        </a>
+      </section>
+    </main>
+    
     <footer class="footer">
       <div class="footer__pic">
         <div class="footer__siteNameTop">
-          <img class="footer__siteNameRoop footer__siteNameRoop-01"
-            src="images/footer-roopRogo-tab.svg" alt="KOTONE MANO Portfolio.">
-            <img
-            class="footer__siteNameRoop footer__siteNameRoop-02" src="images/footer-roopRogo-tab.svg" alt="KOTONE MANO Portfolio.">
+          <img class="footer__siteNameRoop footer__siteNameRoop-01" src="images/footer-roopRogo-tab.svg"
+            alt="KOTONE MANO Portfolio.">
+          <img class="footer__siteNameRoop footer__siteNameRoop-02" src="images/footer-roopRogo-tab.svg"
+            alt="KOTONE MANO Portfolio.">
         </div>
 
         <div class="footer__siteNameBottom">
-          <img class="footer__siteNameRoop footer__siteNameRoop-01"
-            src="images/footer-roopRogo-tab.svg" alt="KOTONE MANO Portfolio.">
-            <img class="footer__siteNameRoop footer__siteNameRoop-02" src="images/footer-roopRogo-tab.svg" alt="KOTONE MANO Portfolio." loading="lazy">
+          <img class="footer__siteNameRoop footer__siteNameRoop-01" src="images/footer-roopRogo-tab.svg"
+            alt="KOTONE MANO Portfolio.">
+          <img class="footer__siteNameRoop footer__siteNameRoop-02" src="images/footer-roopRogo-tab.svg"
+            alt="KOTONE MANO Portfolio." loading="lazy">
         </div>
       </div>
 
@@ -417,7 +422,7 @@
           </a>
         </li>
         <li class="footer__list">
-          <a href="" class="footer__link">
+          <a href="#works" class="footer__link">
             <p class="footer__linkNumber">_02</p>
             <p class="footer__linkName" data-txt="WORKS">WORKS</p><span class="arrow"></span>
           </a>
@@ -457,6 +462,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 
   <script src="js/function.js"></script>
+  <script src="js/functionTop.js"></script>
   <script src="js/swiper.js"></script>
   <script src="js/gsap.js"></script>
 </body>

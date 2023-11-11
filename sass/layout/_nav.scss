@@ -1,3 +1,144 @@
 //各ファイルは必ず登録済みの変数を最初に読み込みます
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
+.gnav {
+    display: none;
+
+    @media screen and (min-width: 900px) {
+        display: block;
+    }
+
+    &__ul {
+        display: flex;
+        gap: 67px;
+    }
+
+    &__link {
+        color: #fff;
+    }
+}
+
+//スライド後は_js.scssファイル
+.gnavSlider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    height: 100dvh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateY(100%);
+    transition: 1s;
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        height: 100%;
+    }
+
+    &__ul {
+        margin-bottom: 99px;
+        line-height: 1.65;
+    }
+
+    &__list {
+        margin-top: -20px;
+    }
+
+    &__link {
+        @include navfont;
+
+        .arrow {
+            @include arrow(#fff);
+        }
+
+        &:hover {
+            @include arrowHover;
+        }
+
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+            .arrow {
+                @media screen and (min-width: 768px) {
+                    margin-left: $arrowMargin-01-02; //_mixin.scssファイル内
+                }
+            }
+        }
+
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+            .arrow {
+                margin-left: $arrowMargin-03-04; //_mixin.scssファイル内
+            }
+        }
+    }
+
+    @for $i from 1 through 4 {
+        .gnavSlider__link-0#{$i}::before {
+            content: "_0#{$i}";
+            margin-right: 3px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: -0.08em;
+        }
+    }
+
+    &__small {
+        color: #fff;
+        font-size: 11px;
+        letter-spacing: -0.09em;
+
+        @media screen and (min-width: 1024px) {
+            position: absolute;
+            bottom: clamp(0px, 1.82vw, 36px);
+            right: clamp(0px, 3.68vw, 73px);
+            font-size: 14px;
+        }
+    }
+
+
+    //クリック後のｘは_js.scssファイルに記述
+    &__btn {
+        @extend %slide__btn; //_placeholderに記述
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        mix-blend-mode: difference;
+        cursor: pointer;
+
+        &line {
+            display: block;
+            height: 2px;
+            background: #fff;
+            transition: .3s;
+
+            @media screen and (min-width: 900px) {
+                height: 3px;
+            }
+
+            &Top {
+                transform: scale(100%);
+                transform-origin: 0;
+            }
+
+            &Bottom {
+                transform: scale(50%);
+                transform-origin: 0;
+            }
+        }
+
+        &:hover {
+            .gnavSlider__btnlineTop {
+                transform: scale(50%);
+            }
+
+            .gnavSlider__btnlineBottom {
+                transform: scale(100%);
+            }
+        }
+
+    }
+}

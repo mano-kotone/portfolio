@@ -1,3 +1,42 @@
 //各ファイルは必ず登録済みの変数を最初に読み込みます
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
+.header {
+    position: absolute;
+    z-index: 10;
+    margin-top: 15px;
+    @include padding;
+    mix-blend-mode: difference;
+
+    @media screen and (min-width: 900px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 42px;
+        padding-left: $mvPaddingPc;
+        width: 85%;
+    }
+
+    &__ttl {
+        width: 215px;
+        height: fit-content;
+
+        @media screen and (min-width: 900px) {
+            width: clamp(91px, 5.65vw, 112px);
+        }
+    }
+
+}
+
+.fixed__sunaarashi {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 20px;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../images/sunaarashi-01.jpg);
+    animation: sunaarashi .5s linear infinite;
+}
