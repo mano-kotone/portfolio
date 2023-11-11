@@ -39,6 +39,19 @@ body {
 
 }
 
+.fixed__sunaarashi {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 20px;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../images/sunaarashi-01.jpg);
+    animation: sunaarashi .5s linear infinite;
+}
+
 .gnav {
     display: none;
 
@@ -56,40 +69,31 @@ body {
     }
 }
 
+
+//スライド後は_js.scssファイル
 .gnavSlider {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 20;
-    margin-top: -20px;
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
+    background: rgba(0, 0, 0, 0.9);
     transform: translateY(100%);
     transition: 1s;
-    background-size: 10%;
-
-    &__bg{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100dvh;
-        background-position:center center;
-        background-size:cover;
-        background-image: url(../images/sunaarashi-01.jpg);
-        animation: sunaarashi 1s linear infinite;
-    }
 
     &__wrap {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 20px;
         height: 100%;
     }
 
     &__ul {
         margin-bottom: 99px;
+        line-height: 1.65;
     }
 
     &__list {
@@ -725,6 +729,30 @@ body {
                     }
                 }
 
+                &__link {
+                    position: relative;
+                    z-index: 3;
+
+                    &HoverBg {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        z-index: -1;
+                        width: 100vw;
+                        height: 100vh;
+                        background: rgba(0, 0, 0, 0.4);
+                    }
+
+
+                    &:hover {
+                        z-index: 5;
+                        transform: scale(1.2);
+                        &+.works__linkHoverBg{
+                            z-index: 4;
+                        }
+                    }
+                }
+
                 &__thum {
                     width: 100%;
                     aspect-ratio: 126 / 79;
@@ -955,7 +983,7 @@ body {
                     background: #757575;
 
                     @media screen and (min-width: 1024px) {
-                      height: 6px;
+                        height: 6px;
                     }
                 }
             }
@@ -977,6 +1005,7 @@ body {
                     width: 4px;
                     height: 4px;
                     background: #757575;
+
                     @media screen and (min-width: 1024px) {
                         width: 6px;
                         height: 6px;

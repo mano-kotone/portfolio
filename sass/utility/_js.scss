@@ -3,6 +3,9 @@
 @use "../global" as *;
 
 //スライドメニュー
+.body{
+    overflow: hidden;
+}
 
 .header__fixed {
     position: fixed;
@@ -22,7 +25,7 @@
 
 .gnavSlider {
     &__slide {
-        transform: translateY(20px);
+        transform: translateY(0);
     }
 
     &-click {
@@ -123,19 +126,19 @@
             flex-wrap: wrap;
             gap: 8.67px;
             width: 115%;
-            height: 442px;
+            height: 441px;
             margin-left: -29px;
             overflow: hidden;
 
             @media screen and (min-width: 1024px) {
-                // width: clamp(0px, 106vw, 2005px);
                 height: 600px;
+                gap: 12px;
             }
 
             span {
                 display: block;
                 width: 72.27px;
-                aspect-ratio: 100 / 56;
+                aspect-ratio: 50 / 28;
                 background-position: center center;
                 background-size: cover;
                 border-radius: 3.69px;
@@ -145,6 +148,10 @@
                     width: 100px;
                     height: 56px;
                     border-radius: 5px;
+                }
+                @media screen and (min-width: 1980px) {
+                    width: 9.76vw;
+                    height: 5.46vw;
                 }
             }
         }

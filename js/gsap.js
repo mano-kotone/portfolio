@@ -96,7 +96,7 @@ secTtl.forEach(target => {
         secTtlTxt,
         {
             autoAlpha: 0,
-            y: '-20%',
+            y: '20%',
         },
         {
             autoAlpha: 1,
@@ -117,7 +117,7 @@ secTtl.forEach(target => {
                 trigger: char,
                 ease: 'dounce.out',
                 start: 'top 80%',
-                end: 'bottom 40%',
+                end: 'bottom 30%',
                 scrub: true,
                 // markers: true,
             },
