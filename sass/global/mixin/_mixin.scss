@@ -6,6 +6,10 @@
     padding: 0 20px;
 }
 
+@mixin paddingTab{
+    padding: 0 40px;
+}
+
 @mixin paddingPc {
     padding-left: clamp(20px,7.57vw,150px);
     padding-right: clamp(20px,7.57vw,150px);

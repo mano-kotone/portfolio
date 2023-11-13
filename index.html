@@ -34,8 +34,8 @@
         <ul class="gnav__ul">
           <li class="gnav__list"><a href="#" class="gnav__link">HOME<span class="arrow"></span></a></li>
           <li class="gnav__list"><a href="#works" class="gnav__link">WORKS<span class="arrow"></span></a></li>
-          <li class="gnav__list"><a href="" class="gnav__link">HISTORY<span class="arrow"></span></a></li>
-          <li class="gnav__list"><a href="" class="gnav__link">CONTACT<span class="arrow"></span></a></li>
+          <li class="gnav__list"><a href="history/history.html" class="gnav__link">HISTORY<span class="arrow"></span></a></li>
+          <li class="gnav__list"><a href="contact/contact.html" class="gnav__link">CONTACT<span class="arrow"></span></a></li>
         </ul>
       </nav>
     </header>
@@ -50,9 +50,9 @@
                 class="arrow"></span></a></li>
           <li class="gnavSlider__list"><a href="#works" class="gnavSlider__link gnavSlider__link-02">WORKS<span
                 class="arrow"></span></a></li>
-          <li class="gnavSlider__list"><a href="" class="gnavSlider__link gnavSlider__link-03">HISTORY<span
+          <li class="gnavSlider__list"><a href="history/history.html" class="gnavSlider__link gnavSlider__link-03">HISTORY<span
                 class="arrow"></span></a></li>
-          <li class="gnavSlider__list"><a href="" class="gnavSlider__link gnavSlider__link-04">CONTACT<span
+          <li class="gnavSlider__list"><a href="contact/contact.html" class="gnavSlider__link gnavSlider__link-04">CONTACT<span
                 class="arrow"></span></a></li>
         </ul>
         <p class="gnavSlider__copyright"><small class="gnavSlider__small">Copyright 2023 KOTONE MANO Portfolio. All
@@ -67,17 +67,18 @@
     </div>
 
     <main class="main">
+      <!-- TOPメインビジュアル -->
       <div id="mv" class="mv">
         <div class="mv__wrap">
           <!-- mv動画スワイパー -->
           <div class="swiper mv__swiper">
             <div class="swiper-wrapper mv__swiper-wrapper">
               <div class="swiper-slide mv__swiper-slide"><video id="mv__swiper-video-01" class="mv__swiper-video lazy"
-                  src="videos/video-01.mp4" poster="" muted></video></div>
+                  src="videos/video-01.mp4" poster="" muted playsinline webkit-playsinline></video></div>
               <div class="swiper-slide mv__swiper-slide"><video id="mv__swiper-video-02" class="mv__swiper-video lazy"
-                  src="videos/video-02.mp4" muted></video></div>
+                  src="videos/video-02.mp4" muted playsinline webkit-playsinline></video></div>
               <div class="swiper-slide mv__swiper-slide"><video id="mv__swiper-video-03" class="mv__swiper-video lazy"
-                  src="videos/video-03.mp4" muted></video></div>
+                  src="videos/video-03.mp4" muted playsinline webkit-playsinline></video></div>
             </div>
 
             <div class="swiper-pagination mv__swiper-pagination"></div>
@@ -90,8 +91,8 @@
                 <p class="mv__listTxt">眞野琴音</p>
               </li>
               <li class="mv__list">
-                <p class="mv__listTxt">aaaaaaaaaaaa</p>
-                <p class="mv__listTxt">あああああ</p>
+                <p class="mv__listTxt">Life is about</p>
+                <p class="mv__listTxt">creating youself.</p>
               </li>
             </ul>
 
@@ -102,12 +103,13 @@
                   <img src="images/logo-2lineWhite.svg" alt="KOTONE MANO Portfolio." class="header__img">
                 </picture>
               </h2>
-              <p class="mv__txt">お客さまの、こころに響くコンテンツを。</p>
+              <p class="mv__txt">こころに響くコンテンツを。</p>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- TOPmessage セクション -->
       <section id="message" class="message">
         <div id="message__container" class="message__container">
           <h2 id="message__ttl" class="message__ttl"><span class="message__ttl-01 fadeIn01">Life isn't </span><span
@@ -136,6 +138,7 @@
         </div>
       </section>
 
+      <!-- TOP works セクション -->
       <section id="works" class="works">
         <h2 class="h2 works__ttl"><span class="works__ttl-01">_</span><span class="works__ttl-02">W</span><span
             class="works__ttl-03">o</span><span class="works__ttl-04">r</span><span class="works__ttl-05">k</span><span
@@ -250,20 +253,15 @@
 
         <div id="works__switch" class="works__switch">
           <div id="works__switchLine" class="works__switchLine">
-            <span class="works__switchLineTop"></span>
-            <span class="works__switchLineMiddum"></span>
-            <span class="works__switchLineBottom"></span>
+            <span></span><span></span><span></span>
           </div>
           <div id="works__switchBlock" class="works__switchBlock">
-            <span class="works__switchBlock-01"></span><span class="works__switchBlock-02"></span><span
-              class="works__switchBlock-03"></span><span class="works__switchBlock-04"></span><span
-              class="works__switchBlock-05"></span><span class="works__switchBlock-06"></span><span
-              class="works__switchBlock-07"></span><span class="works__switchBlock-08"></span><span
-              class="works__switchBlock-09"></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
           </div>
         </div>
       </section>
 
+      <!-- TOP skill セクション -->
       <section id="skill" class="skill">
         <h2 class="h2 skill__ttl"><span class="skill__ttl-01">_</span><span class="skill__ttl-02">S</span><span
             class="skill__ttl-03">k</span><span class="skill__ttl-04">i</span><span class="skill__ttl-05">l</span><span
@@ -341,6 +339,7 @@
         </div>
       </section>
 
+      <!-- TOP history セクション -->
       <section id="history" class="history">
         <h2 class="h2 history__ttl"><span class="history__ttl-01">_</span><span class="history__ttl-02">H</span><span
             class="history__ttl-03">i</span><span class="history__ttl-04">s</span><span
@@ -382,6 +381,7 @@
         </div>
       </section>
 
+      <!-- contact セクション -->
       <section id="contact" class="contact">
         <a href="contact/contact.html" class="contact__link">
           <h3 class="contact__subTtl">Get In Touch<span class="arrow"></span></h3>
@@ -396,7 +396,7 @@
         </a>
       </section>
     </main>
-    
+
     <footer class="footer">
       <div class="footer__pic">
         <div class="footer__siteNameTop">
@@ -410,7 +410,7 @@
           <img class="footer__siteNameRoop footer__siteNameRoop-01" src="images/footer-roopRogo-tab.svg"
             alt="KOTONE MANO Portfolio.">
           <img class="footer__siteNameRoop footer__siteNameRoop-02" src="images/footer-roopRogo-tab.svg"
-            alt="KOTONE MANO Portfolio." loading="lazy">
+            alt="KOTONE MANO Portfolio.">
         </div>
       </div>
 
@@ -428,13 +428,13 @@
           </a>
         </li>
         <li class="footer__list">
-          <a href="" class="footer__link">
+          <a href="history/history.html" class="footer__link">
             <p class="footer__linkNumber">_03</p>
             <p class="footer__linkName" data-txt="HISTORY">HISTORY</p><span class="arrow"></span>
           </a>
         </li>
         <li class="footer__list">
-          <a href="" class="footer__link">
+          <a href="contact/contact.html" class="footer__link">
             <p class="footer__linkNumber">_04</p>
             <p class="footer__linkName" data-txt="CONTACT">CONTACT</p><span class="arrow"></span>
           </a>

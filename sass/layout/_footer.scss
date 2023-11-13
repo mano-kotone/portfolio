@@ -178,20 +178,20 @@
     &__siteName {
         &Top {
             display: flex;
-            height: 18px;
+            height: 16px;
 
             @media screen and (min-width: 768px) {
                 height: clamp(0px, 2.34vw, 46px);
             }
 
             .footer__siteNameRoop {
-
+                width: 120%;
                 &-01 {
-                    animation: roop1 100s -55s linear infinite;
+                    animation: roop1 100s -60s linear infinite;
                 }
 
                 &-02 {
-                    animation: roop2 100s -5s linear infinite;
+                    animation: roop2 100s -10s linear infinite;
                 }
             }
         }
@@ -200,7 +200,7 @@
             @extend .footer__siteNameTop;
 
             .footer__siteNameRoop {
-
+                width: 120%;
                 &-01 {
                     animation: roop1 100s -50s linear infinite;
                 }

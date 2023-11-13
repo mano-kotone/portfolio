@@ -150,8 +150,8 @@
                     border-radius: 5px;
                 }
                 @media screen and (min-width: 1980px) {
-                    width: 9.76vw;
-                    height: 5.46vw;
+                    width: 5.05vw;
+                    height: 2.82vw;
                 }
             }
         }
@@ -200,3 +200,8 @@
         }
     }
 }
+
+    //works gsap
+    .pin-spacer{
+        pointer-events: none;
+    }

@@ -1,6 +1,7 @@
 //各ファイルは必ず登録済みの変数を最初に読み込みます
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
+
 #top {
     .mv {
         position: relative;
@@ -121,6 +122,7 @@
 
     }
 
+    // messageセクション------------------
     .message {
         position: relative;
         z-index: 3;
@@ -398,6 +400,7 @@
         }
     }
 
+    //worksセクション------------------
     .works {
         position: relative;
         padding-top: clamp(0px, calc(58.125px - 4vw), 43.12px);
@@ -491,12 +494,6 @@
             }
         }
 
-        &__link {
-            &:hover {
-                @include arrowHover;
-            }
-        }
-
         ul {
             margin-bottom: 13vw;
         }
@@ -552,7 +549,9 @@
                     &:hover {
                         z-index: 5;
                         transform: scale(1.2);
-                        &+.works__linkHoverBg{
+                        @include arrowHover;
+
+                        &+.works__linkHoverBg {
                             z-index: 4;
                         }
                     }
@@ -662,6 +661,28 @@
                     padding-top: 7px;
                     padding-bottom: 18px;
 
+                    &:hover {
+                        @include arrowHover;
+                        background: rgba(0, 0, 0, 0.6);
+
+                        .works__name,
+                        .works__time,
+                        .works__responsive {
+                            color: #fff;
+                        }
+
+                        .arrow {
+                            &::before {
+                                background: #fff;
+                            }
+
+                            &::after {
+                                border-top: 2px solid #fff;
+                                border-right: 2px solid #fff;
+                            }
+                        }
+                    }
+
                     @media screen and (min-width: 768px) {
                         @include paddingPc;
                     }
@@ -761,6 +782,7 @@
             height: 45px;
             background: #fff;
             border-radius: 999px;
+            pointer-events: auto;
 
             @media screen and (min-width: 1024px) {
                 width: 262px;
@@ -820,6 +842,7 @@
         }
     }
 
+    //skillセクション--------------------
     .skill {
         position: relative;
         padding-top: 22.93vw;
@@ -970,10 +993,15 @@
                 }
             }
 
+            &-02 {
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 62px;
+                }
+            }
+
             &Ttl {
                 margin-bottom: 26px;
                 padding-bottom: 16px;
-                padding-left: 20px;
                 color: $gold;
                 border-bottom: 1px solid $gold;
                 letter-spacing: -0.07em;
@@ -985,6 +1013,10 @@
 
             &List {
                 margin-bottom: 31px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
             }
 
             &Box {
@@ -994,11 +1026,13 @@
 
             &Name {
                 display: flex;
+                align-items: center;
                 gap: 5px;
                 margin-bottom: 10px;
                 color: #fff;
                 font-size: 21px;
                 letter-spacing: -0.07em;
+                line-height: 1;
 
                 @media screen and (min-width: 768px) {
                     font-size: clamp(21px, 2.73vw, 30px);
@@ -1090,6 +1124,8 @@
         }
     }
 
+
+    //historyセクション-------------------
     .history {
         position: relative;
         padding-top: clamp(0px, 26.6vw, 178px);
@@ -1333,5 +1369,5 @@
         }
     }
 
-  //.contactはfooter内に記載
+    //.contactはfooter内に記載-------------
 }
