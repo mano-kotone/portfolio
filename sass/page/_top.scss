@@ -38,7 +38,6 @@
                 flex-direction: row-reverse;
                 padding-left: $mvPaddingPc;
                 padding-right: $mvPaddingPc;
-                // width: %;
             }
         }
 
@@ -250,7 +249,7 @@
             left: 15.68vw;
             width: clamp(0px, 136vw, 535px);
             aspect-ratio: 1 / 1;
-            border: 3px solid #E8E8E8;
+            border: 3px solid $gray;
             border-radius: 50%;
 
             @media screen and (min-width:415px) {

@@ -33,7 +33,6 @@ $mvPaddingPc: 60px;
     }
 }
 
-
 @mixin ttl {
     span {
         display: inline-block;
@@ -97,3 +96,30 @@ $mvPaddingPc: 60px;
 
 $arrowMargin-01-02:3px;
 $arrowMargin-03-04:-10px;
+
+
+@mixin historyLine($r:0,$l:auto){
+    position: relative;
+    width: 52px;
+    height: 10px;
+    &::before{
+        @include content;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 47px;
+        height: 1px;
+        background: $gray;
+    }
+    &::after{
+        @include content;
+        position: absolute;
+        top: 0;
+        right: $r;
+        left:$l;
+        width: 10px;//pc15px
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        background: $gray;
+    }
+}

@@ -24,7 +24,8 @@
     color: rgba(0, 0, 0, 0.4);
     font-weight: 500;
     letter-spacing: -0.07em;
+
     @media screen and (min-width: 1024px) {
-      color: $black;
+        color: $black;
     }
 }

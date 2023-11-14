@@ -1,5 +1,291 @@
-//各ファイルは必ず登録済みの変数を最初に読み込みます
-//as *で読み込みファイル名を省略することができます
 @use "../global" as *;
 
+#history {
+    .mv {
+        position: relative;
+        width: 100%;
+        height: 482px;
+        background: $blue;
 
+        &__ttl {
+            position: absolute;
+            top: 125px;
+            left: 0;
+            z-index: 3;
+
+            span {
+                display: inline-block;
+                color: $black;
+                font-size: 85px;
+                font-weight: 400;
+
+                &:first-of-type {
+                    font-size: 58px;
+                    font-weight: 300;
+
+                    @media screen and (min-width: 768px) {
+                        font-size: clamp(115px, 14.97vw, 214px);
+                    }
+                }
+
+                @media screen and (min-width:768px) {
+                    font-size: clamp(160px, 20.83vw, 326px);
+                }
+            }
+
+
+            &-01 {
+                transform: translateX(-2vw);
+
+                @media screen and (min-width: 1024px) {
+                    transform: translateX(0vw);
+                }
+            }
+
+            &-02 {
+                transform: translateX(-4vw);
+
+                @media screen and (min-width: 1024px) {
+                    transform: translateX(-1vw);
+                }
+            }
+
+            &-03 {
+                transform: translateX(-6.5vw);
+
+                @media screen and (min-width: 1024px) {
+                    transform: translateX(8vw);
+                }
+            }
+
+            &-04 {
+                @media screen and (min-width: 1024px) {
+                    transform: translateX(21vw);
+                }
+            }
+
+            &-05 {
+                transform: translateX(-1.3vw);
+
+                @media screen and (min-width: 1024px) {
+                    transform: translateX(20vw);
+                }
+            }
+
+            &-06 {
+                transform: translateX(7vw);
+
+                @media screen and (min-width: 1024px) {
+                    transform: translateX(23vw);
+                }
+            }
+
+            &-07 {
+                transform: translateX(6vw);
+
+                @media screen and (min-width: 1024px) {
+                    transform: translateX(22vw);
+                }
+            }
+
+            &-08 {
+                transform: translateX(9.5vw);
+
+                @media screen and (min-width: 1024px) {
+                    transform: translateX(30vw);
+                }
+            }
+        }
+    }
+
+    .message {
+        position: relative;
+
+        &__container {
+            padding-top: 22px;
+            padding-bottom: 47px;
+            height: 434px;
+            overflow: hidden;
+            background: #fff;
+
+            //背景のcircle
+            &::before {
+                @include content;
+                position: absolute;
+                top: -30px;
+                left: 62px;
+                width: 507px;
+                aspect-ratio: 1 / 1;
+                border: 3px solid $gray ;
+                border-radius: 50%;
+            }
+
+        }
+
+        &__txt {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            font-size: 37px;
+            font-weight: 500;
+            line-height: 1.6;
+            letter-spacing: -0.03em;
+
+            .historyLine {
+                display: block;
+                @include historyLine;
+            }
+
+            &--01 {
+                transform: translateX(28vw)
+            }
+
+            &--02 {
+                transform: translateX(26vw);
+
+                .historyLine {
+                    @include historyLine(auto, 0);
+                }
+            }
+
+            &--03 {
+                transform: translateX(25.5vw);
+            }
+
+            &--04 {
+                transform: translateX(19vw);
+            }
+
+            &--05 {
+                transform: translateX(15vw);
+
+                .historyLine {
+                    @include historyLine(auto, 0);
+                }
+            }
+
+            &--06 {
+                display: block;
+                width: fit-content;
+                transform: translateX(3vw);
+
+                .historyLine {
+                    margin-left: auto;
+                    margin-right: -15px;
+                }
+            }
+        }
+
+        &__gallery {
+            padding-top: 62px;
+            padding-bottom: 84px;
+            background: $blue;
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: clamp(70.08px, 9.1vw, 176px);
+            }
+
+            //container内_js.scssに記述
+            &Container {
+                margin-bottom: 70px;
+            }
+        }
+
+        &__ttl {
+            @include padding;
+            width: 207px;
+        }
+
+    }
+
+    .history {
+        @include padding;
+        padding-top: 29px;
+        background: #000;
+
+        * {
+            color: #fff;
+        }
+
+        &__ttl {
+            margin-bottom: 46px;
+            font-size: 39px;
+            font-weight: 400;
+            letter-spacing: -0.03em;
+        }
+
+        &__dl {
+            position: relative;
+            z-index: 3;
+                display: flex;
+                justify-content: flex-end;
+                gap: 106px;
+
+            &Box {
+                margin-bottom: clamp(0px, 4.53vw, 27px);
+            }
+        }
+
+        &__dd {
+            color: hsla(0, 0%, 100%, 0.5);
+            letter-spacing: -0.07em;
+
+            @media screen and (min-width: 768px) {
+                font-size: clamp(16px, 2.08vw, 22px);
+            }
+        }
+
+        &__dt {
+            color: #fff;
+
+            &:nth-of-type(1) {
+                margin-top: -13px;
+                font-size: 45px;
+                letter-spacing: -0.07em;
+
+                @media screen and (min-width: 768px) {
+                    font-size: clamp(45px, 5.85vw, 108px);
+                }
+            }
+
+            &:nth-of-type(2) {
+                margin-top: -12px;
+                font-size: 10px;
+
+                @media screen and (min-width: 768px) {
+                    font-size: clamp(10px, 1.3vw, 18px);
+                }
+            }
+        }
+
+        &__txt {
+            position: relative;
+            z-index: 3;
+            margin-bottom: clamp(0px, 5vw, 23px);
+            @include padding;
+            max-width: 700px;
+            margin-left: auto;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 12px;
+            letter-spacing: .06em;
+
+            @media screen and (min-width: 1024px) {
+                margin-left: auto;
+                margin-right: $mvPaddingPc;
+                padding: 0;
+                width: 422px;
+                font-size: clamp(12px, 1.56vw, 17px);
+            }
+
+            .br {
+                display: none;
+
+                @media screen and (min-width: 1024px) {
+                    display: block;
+                }
+            }
+        }
+    }
+}
