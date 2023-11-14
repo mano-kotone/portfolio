@@ -27,7 +27,7 @@
     height: 100dvh;
     width: 100%;
     background: rgba(0, 0, 0, 0.9);
-    transform: translateY(100%);
+    transform: translateY(102%);
     transition: 1s;
 
     &__wrap {
@@ -115,28 +115,25 @@
             background: #fff;
             transition: .3s;
 
-            @media screen and (min-width: 900px) {
-                height: 3px;
-            }
 
             &Top {
-                transform: scale(100%);
+                width: 100%;
                 transform-origin: 0;
             }
 
             &Bottom {
-                transform: scale(50%);
+                width: 50%;
                 transform-origin: 0;
             }
         }
 
         &:hover {
             .gnavSlider__btnlineTop {
-                transform: scale(50%);
+                width: 50%;
             }
 
             .gnavSlider__btnlineBottom {
-                transform: scale(100%);
+                width: 100%;
             }
         }
 

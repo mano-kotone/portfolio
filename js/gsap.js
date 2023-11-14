@@ -111,49 +111,49 @@ secTtl.forEach(target => {
         },
     );
     //スクロールアニメーション
-    secTtlTxt.forEach((char, index) => {
-        const tlDown = gsap.timeline({
-            scrollTrigger: {
-                trigger: char,
-                ease: 'dounce.out',
-                start: 'top 80%',
-                end: 'bottom 30%',
-                scrub: true,
-                // markers: true,
-            },
-        });
-        tlDown.to(
-            char, {
+//     secTtlTxt.forEach((char, index) => {
+//         const tlDown = gsap.timeline({
+//             scrollTrigger: {
+//                 trigger: char,
+//                 ease: 'dounce.out',
+//                 start: 'top 80%',
+//                 end: 'bottom 30%',
+//                 scrub: true,
+//                 // markers: true,
+//             },
+//         });
+//         tlDown.to(
+//             char, {
 
-            y: index * 10,
-            stagger: 0.8,
-        })
-            .to(
-                char, {
-                y: 0,
-            })
+//             y: index * 10,
+//             stagger: 0.8,
+//         })
+//             .to(
+//                 char, {
+//                 y: 0,
+//             })
 
-        const tlUp = gsap.timeline({
-            scrollTrigger: {
-                trigger: char,
-                ease: 'dounce.out',
-                start: 'bottom 90%',
-                end: 'top 30%',
-                scrub: true,
-                // markers: true,
-            },
-        });
-        tlUp.to(
-            char, {
+//         const tlUp = gsap.timeline({
+//             scrollTrigger: {
+//                 trigger: char,
+//                 ease: 'dounce.out',
+//                 start: 'bottom 90%',
+//                 end: 'top 30%',
+//                 scrub: true,
+//                 // markers: true,
+//             },
+//         });
+//         tlUp.to(
+//             char, {
 
-            y: index * -10,
-            stagger: 0.8,
-        })
-            .to(
-                char, {
-                y: 0,
-            })
-    });
+//             y: index * -10,
+//             stagger: 0.8,
+//         })
+//             .to(
+//                 char, {
+//                 y: 0,
+//             })
+//     });
 });
 
 

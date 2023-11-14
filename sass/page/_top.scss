@@ -226,7 +226,7 @@
 
             &Ruby {
                 display: block;
-                color: $gray03;
+                color: #949494;
                 font-size: 14px;
                 letter-spacing: normal;
                 line-height: 1.5;
@@ -250,7 +250,7 @@
             left: 15.68vw;
             width: clamp(0px, 136vw, 535px);
             aspect-ratio: 1 / 1;
-            border: 3px solid $gray01;
+            border: 3px solid #E8E8E8;
             border-radius: 50%;
 
             @media screen and (min-width:415px) {
@@ -319,7 +319,7 @@
                 @include content;
                 margin-bottom: clamp(0px, 2.93vw, 15px);
                 height: 18px;
-                background: $gray02;
+                background: #b9b9b9;
 
                 @media screen and (min-width: 1024px) {
                     height: 22px;
@@ -380,7 +380,7 @@
             }
 
             &Ruby {
-                color: $gray03;
+                color: #949494;
                 font-size: 11px;
                 font-weight: 500;
                 line-height: 181.8%;
@@ -539,20 +539,39 @@
                         position: fixed;
                         top: 0;
                         left: 0;
-                        z-index: -1;
+                        z-index: 4;
                         width: 100vw;
                         height: 100vh;
                         background: rgba(0, 0, 0, 0.4);
+                        opacity: 0;
+                        pointer-events: none;
                     }
 
 
                     &:hover {
-                        z-index: 5;
-                        transform: scale(1.2);
-                        @include arrowHover;
+                        @media screen and (min-width: 1024px) {
+                            z-index: 5;
+                            transform: scale(1.2);
+                            @include arrowHover;
 
-                        &+.works__linkHoverBg {
-                            z-index: 4;
+                            &+.works__linkHoverBg {
+                                opacity: 1;
+                            }
+
+                            .works__name {
+                                color: #fff;
+                            }
+
+                            .arrow {
+                                &::before {
+                                    background: #fff;
+                                }
+
+                                &::after {
+                                    border-top: 2px solid #fff;
+                                    border-right: 2px solid #fff;
+                                }
+                            }
                         }
                     }
                 }
@@ -563,7 +582,7 @@
                     margin-bottom: 8px;
 
                     @media screen and (min-width: 900px) {
-                        margin-bottom: clamp(0px, 2vw, 30px);
+                        margin-bottom: clamp(0px, 1.01vw, 20px);
                     }
 
                     &Img {
@@ -663,22 +682,25 @@
 
                     &:hover {
                         @include arrowHover;
-                        background: rgba(0, 0, 0, 0.6);
 
-                        .works__name,
-                        .works__time,
-                        .works__responsive {
-                            color: #fff;
-                        }
+                        @media screen and (min-width: 1024px) {
+                            background: rgba(0, 0, 0, 0.6);
 
-                        .arrow {
-                            &::before {
-                                background: #fff;
+                            .works__name,
+                            .works__time,
+                            .works__responsive {
+                                color: #fff;
                             }
 
-                            &::after {
-                                border-top: 2px solid #fff;
-                                border-right: 2px solid #fff;
+                            .arrow {
+                                &::before {
+                                    background: #fff;
+                                }
+
+                                &::after {
+                                    border-top: 2px solid #fff;
+                                    border-right: 2px solid #fff;
+                                }
                             }
                         }
                     }
@@ -770,7 +792,7 @@
         //切り替えボタン
         &__switch {
             position: absolute;
-            z-index: 3;
+            z-index: 10;
             top: 20%;
             left: 50%;
             transform: translateX(-50%);
@@ -846,8 +868,8 @@
     .skill {
         position: relative;
         padding-top: 22.93vw;
-        padding-bottom: 13vw;
-        background: $bgGray;
+        padding-bottom: 14vw;
+        background: #515151;
 
         &__ttl {
             position: absolute;
@@ -982,6 +1004,12 @@
 
         &__kinds {
             &-01 {
+                margin-bottom: 58px;
+
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 0;
+                }
+
                 @media screen and (min-width: 1024px) {
                     width: 48%;
                 }
@@ -994,6 +1022,8 @@
             }
 
             &-02 {
+                margin-bottom: 58px;
+
                 @media screen and (min-width: 768px) {
                     margin-bottom: 62px;
                 }

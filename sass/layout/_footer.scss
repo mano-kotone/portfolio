@@ -1,6 +1,7 @@
 //各ファイルは必ず登録済みの変数を最初に読み込みます
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
+
 .contact {
     background: $bgBlack;
 
@@ -186,6 +187,7 @@
 
             .footer__siteNameRoop {
                 width: 120%;
+
                 &-01 {
                     animation: roop1 100s -60s linear infinite;
                 }
@@ -201,6 +203,7 @@
 
             .footer__siteNameRoop {
                 width: 120%;
+
                 &-01 {
                     animation: roop1 100s -50s linear infinite;
                 }
@@ -311,12 +314,14 @@
         }
 
         &:hover {
-            .footer__link {
-                &Name {
-                    transform: rotateX(90deg) translateY(50%);
+            @media screen and (min-width: 1024px) {
+                .footer__link {
+                    &Name {
+                        transform: rotateX(90deg) translateY(50%);
 
-                    &::after {
-                        opacity: 1;
+                        &::after {
+                            opacity: 1;
+                        }
                     }
                 }
             }

@@ -121,6 +121,27 @@
     }
 }
 
+//ループアニメーションvertical
+@keyframes roopVer1 {
+    0% {
+        transform: translateY(-103%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes roopVer2 {
+    0% {
+        transform: translateY(-203%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
 //history画像アニメーション
 @keyframes history1 {
     15% {
