@@ -1289,8 +1289,8 @@
             }
         }
 
-        &__dd {
-            color: hsla(0, 0%, 100%, 0.5);
+        &__dt {
+            color: rgba(255, 255, 255, 0.5);
             letter-spacing: -0.07em;
 
             @media screen and (min-width: 768px) {
@@ -1298,7 +1298,7 @@
             }
         }
 
-        &__dt {
+        &__dd {
             color: #fff;
 
             &:nth-of-type(1) {

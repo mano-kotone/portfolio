@@ -6,13 +6,13 @@
     padding: 0 20px;
 }
 
-@mixin paddingTab{
+@mixin paddingTab {
     padding: 0 40px;
 }
 
 @mixin paddingPc {
-    padding-left: clamp(20px,7.57vw,150px);
-    padding-right: clamp(20px,7.57vw,150px);
+    padding-left: clamp(20px, 7.57vw, 150px);
+    padding-right: clamp(20px, 7.57vw, 150px);
 }
 
 $mvPaddingPc: 60px;
@@ -94,15 +94,16 @@ $mvPaddingPc: 60px;
     }
 }
 
-$arrowMargin-01-02:3px;
-$arrowMargin-03-04:-10px;
+$arrowMargin-01-02: 3px;
+$arrowMargin-03-04: -10px;
 
 
-@mixin historyLine($r:0,$l:auto){
+@mixin historyLine($r: 0, $l: auto) {
     position: relative;
     width: 52px;
     height: 10px;
-    &::before{
+
+    &::before {
         @include content;
         position: absolute;
         top: 50%;
@@ -111,15 +112,59 @@ $arrowMargin-03-04:-10px;
         height: 1px;
         background: $gray;
     }
-    &::after{
+
+    &::after {
         @include content;
         position: absolute;
         top: 0;
         right: $r;
-        left:$l;
-        width: 10px;//pc15px
+        left: $l;
+        width: 10px; //pc15px
         aspect-ratio: 1 / 1;
         border-radius: 50%;
         background: $gray;
+    }
+}
+
+@mixin plus($ccircle: #fff, $c: #fff) {
+    position: relative;
+    display: block;
+    width: 38px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 1px solid $ccircle;
+
+    @media screen and (min-width: 768px) {
+        width: 40px;
+    }
+
+    &::before {
+        @include content;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 1.9px;
+        background: $c;
+
+        @media screen and (min-width: 768px) {
+            width: 13px;
+        }
+    }
+
+    &::after {
+        @include content;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1.9px;
+        height: 12px;
+        background: $c;
+
+        @media screen and (min-width: 768px) {
+            height: 13px;
+        }
     }
 }

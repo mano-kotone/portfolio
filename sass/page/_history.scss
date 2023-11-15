@@ -9,27 +9,27 @@
 
         &__ttl {
             position: absolute;
-            top: 125px;
+            top: clamp(60px, calc(181.25px - 15vw), 125px);
             left: 0;
             z-index: 3;
 
             span {
                 display: inline-block;
                 color: $black;
-                font-size: 85px;
+                font-size: clamp(0px, 22.66vw, 183px);
                 font-weight: 400;
 
+                @media screen and (min-width: 768px) {
+                    font-size: 183px;
+                }
+
                 &:first-of-type {
-                    font-size: 58px;
+                    font-size: clamp(0px, 15.5vw, 112px);
                     font-weight: 300;
 
                     @media screen and (min-width: 768px) {
                         font-size: clamp(115px, 14.97vw, 214px);
                     }
-                }
-
-                @media screen and (min-width:768px) {
-                    font-size: clamp(160px, 20.83vw, 326px);
                 }
             }
 
@@ -75,24 +75,24 @@
             &-06 {
                 transform: translateX(7vw);
 
-                @media screen and (min-width: 1024px) {
-                    transform: translateX(23vw);
+                @media screen and (min-width: 600px) {
+                    transform: translateX(4vw);
                 }
             }
 
             &-07 {
                 transform: translateX(6vw);
 
-                @media screen and (min-width: 1024px) {
-                    transform: translateX(22vw);
+                @media screen and (min-width: 600px) {
+                    transform: translateX(3vw);
                 }
             }
 
             &-08 {
                 transform: translateX(9.5vw);
 
-                @media screen and (min-width: 1024px) {
-                    transform: translateX(30vw);
+                @media screen and (min-width: 600px) {
+                    transform: translateX(6vw);
                 }
             }
         }
@@ -128,7 +128,7 @@
             display: flex;
             align-items: baseline;
             gap: 6px;
-            font-size: 37px;
+            font-size: clamp(0px, 9.86vw, 40px);
             font-weight: 500;
             line-height: 1.6;
             letter-spacing: -0.03em;
@@ -139,7 +139,7 @@
             }
 
             &--01 {
-                transform: translateX(28vw)
+                transform: translateX(105px)
             }
 
             &--02 {
@@ -148,14 +148,18 @@
                 .historyLine {
                     @include historyLine(auto, 0);
                 }
+
+                @media screen and (min-width: 600px) {
+                    transform: translateX(clamp(0px, 57vw, 437px));
+                }
             }
 
             &--03 {
-                transform: translateX(25.5vw);
+                transform: translateX(95.6px);
             }
 
             &--04 {
-                transform: translateX(19vw);
+                transform: translateX(71.25px);
             }
 
             &--05 {
@@ -164,12 +168,16 @@
                 .historyLine {
                     @include historyLine(auto, 0);
                 }
+
+                @media screen and (min-width: 600px) {
+                    transform: translateX(clamP(0px, 53vw, 407px));
+                }
             }
 
             &--06 {
                 display: block;
                 width: fit-content;
-                transform: translateX(3vw);
+                transform: translateX(11.25px);
 
                 .historyLine {
                     margin-left: auto;
@@ -180,112 +188,327 @@
 
         &__gallery {
             padding-top: 62px;
-            padding-bottom: 84px;
+            padding-bottom: clamp(0px, 22.4vw, 170px);
             background: $blue;
-
-            @media screen and (min-width: 1024px) {
-                margin-bottom: clamp(70.08px, 9.1vw, 176px);
-            }
 
             //container内_js.scssに記述
             &Container {
-                margin-bottom: 70px;
+                margin-bottom: clamp(0px, 18.66vw, 75px);
             }
         }
 
         &__ttl {
-            @include padding;
+            margin-left: 20px;
             width: 207px;
+
+            img {
+                object-fit: contain;
+            }
+
+            @media screen and (min-width: 768px) {
+                margin-left: 40px;
+            }
         }
 
     }
 
     .history {
-        @include padding;
-        padding-top: 29px;
+        margin-bottom: 24px;
+        padding-top: clamp(0px, 7.73vw, 43px);
         background: #000;
 
         * {
             color: #fff;
         }
 
+        //historyセクション下の画像
+        &::after {
+            @include content;
+            height: 375px;
+            width: 100%;
+            background: url(../images/historyImg.jpg)center center / cover;
+        }
+
         &__ttl {
             margin-bottom: 46px;
+            @include padding;
             font-size: 39px;
             font-weight: 400;
             letter-spacing: -0.03em;
-        }
-
-        &__dl {
-            position: relative;
-            z-index: 3;
-                display: flex;
-                justify-content: flex-end;
-                gap: 106px;
-
-            &Box {
-                margin-bottom: clamp(0px, 4.53vw, 27px);
-            }
-        }
-
-        &__dd {
-            color: hsla(0, 0%, 100%, 0.5);
-            letter-spacing: -0.07em;
 
             @media screen and (min-width: 768px) {
-                font-size: clamp(16px, 2.08vw, 22px);
+                @include paddingTab;
             }
         }
 
-        &__dt {
-            color: #fff;
+        &__wrap {
+            position: relative;
+            z-index: 3;
+            @include padding;
+            padding-bottom: 79px;
 
-            &:nth-of-type(1) {
-                margin-top: -13px;
-                font-size: 45px;
+            @media screen and (min-width: 768px) {
+                @include paddingTab;
+                padding-bottom: 47px;
+            }
+        }
+
+        &__about {
+            &Dl {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 43px;
+
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 45px;
+                }
+            }
+
+            &Dt {
+                color: rgba(255, 255, 255, 0.5);
                 letter-spacing: -0.07em;
 
                 @media screen and (min-width: 768px) {
-                    font-size: clamp(45px, 5.85vw, 108px);
+                    font-size: 18px;
+                }
+
+                &Ruby {
+                    display: block;
+                    margin-top: 2px;
+                    font-size: 9px;
+                    color: #fff;
+                    letter-spacing: normal;
+
+                    @media screen and (min-width: 768px) {
+                        padding-top: 0;
+                        font-size: 11px;
+                    }
                 }
             }
 
-            &:nth-of-type(2) {
-                margin-top: -12px;
-                font-size: 10px;
+            &Dd {
+                font-size: 36px;
 
                 @media screen and (min-width: 768px) {
-                    font-size: clamp(10px, 1.3vw, 18px);
+                    font-size: 38px;
+                    line-height: 1;
                 }
+            }
+
+            &Txt {
+                position: relative;
+                z-index: 3;
+                margin-bottom: clamp(0px, 4.53vw, 41px);
+                font-size: 14px;
+
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 41px;
+                    font-size: 15px;
+                }
+
+                @media screen and (min-width: 1024px) {
+                    margin-right: $mvPaddingPc;
+                    padding: 0;
+                    width: 422px;
+                    font-size: clamp(12px, 1.56vw, 17px);
+                }
+
+                .br {
+                    display: none;
+
+                    @media screen and (min-width: 1024px) {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        &__head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 34px 0;
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            cursor: pointer;
+
+            &:first-of-type {
+                border-top: none;
+            }
+        }
+
+        &__year {
+            font-size: 23px;
+            letter-spacing: -0.07em;
+
+            @media screen and (min-width: 768px) {
+                font-size: 25px;
+            }
+        }
+
+        &__view {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 15px;
+            letter-spacing: -0.02em;
+
+            .btn {
+                @include plus;
+            }
+        }
+
+        &__list {
+            display: flex;
+            align-items: baseline;
+            padding: 13px 0;
+            border-bottom: 1px solid #fff;
+        }
+
+        &__item {
+            @extend .history__list;
+        }
+
+        &__year02 {
+            width: clamp(0px, 26.66vw, 130px);
+            font-size: 14px;
+        }
+
+        &__name {
+            font-size: 14px;
+
+        }
+
+        &__place {
+            padding-top: 8px;
+            font-size: 11px;
+        }
+    }
+
+    .profile {
+        margin-bottom: 97px;
+
+        &__roop {
+            position: relative;
+            display: flex;
+            margin-bottom: 46px;
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 40px;
+            }
+
+            span {
+                display: flex;
+                font-size: 78px;
+                letter-spacing: -0.02em;
+                color: $gray;
+                margin-left: .2em;
+            }
+
+            &Txt--01 {
+                animation: roop1 50s -23.8s linear infinite;
+            }
+
+            &Txt--02 {
+                animation: roop2 50s linear infinite;
+            }
+
+            &::after {
+                @include content;
+                position: absolute;
+                top: 60%;
+                left: 0;
+                height: 1.46px;
+                background: $gray;
+            }
+        }
+
+        &__wrap {
+            @include padding;
+
+            @media screen and (min-width: 768px) {
+                @include paddingTab;
+            }
+        }
+
+        &__ttl {
+            margin-bottom: 32px;
+            font-size: 41px;
+            letter-spacing: -0.02em;
+        }
+
+        &__container{
+            @media screen and (min-width: 500px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-left: 47px;
+            }
+        }
+        &__box {
+            width: fit-content;
+            margin-left: auto;
+            margin-bottom: 31px;
+            @media screen and (min-width: 500px) {
+              margin-left: 0;
+            }
+        }
+
+        &__pic {
+            position: relative;
+            width: clamp(0px, 79.46vw, 593px);
+            margin-bottom: 16px;
+            aspect-ratio: 298 / 191;
+            background: #ccc;
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 11px;
+            }
+
+            img {
+                object-fit: cover;
+            }
+
+            &::after {
+                @include content;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                transform: translateY(100%);
+                width: 98px;
+                height: 11px;
+                background: #0092FF;
+            }
+        }
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__name {
+            font-size: 19px;
+            letter-spacing: -0.07em;
+
+            &Ruby {
+                display: block;
+                font-size: 11px;
+                letter-spacing: normal;
+                color: #868686;
+            }
+        }
+
+        &__view {
+            display: none;
+
+            &Btn {
+                @include plus($gray, $black);
             }
         }
 
         &__txt {
-            position: relative;
-            z-index: 3;
-            margin-bottom: clamp(0px, 5vw, 23px);
-            @include padding;
-            max-width: 700px;
-            margin-left: auto;
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 12px;
-            letter-spacing: .06em;
-
-            @media screen and (min-width: 1024px) {
-                margin-left: auto;
-                margin-right: $mvPaddingPc;
-                padding: 0;
-                width: 422px;
-                font-size: clamp(12px, 1.56vw, 17px);
-            }
-
-            .br {
-                display: none;
-
-                @media screen and (min-width: 1024px) {
-                    display: block;
-                }
-            }
+            font-size: 13px;
         }
     }
 }
