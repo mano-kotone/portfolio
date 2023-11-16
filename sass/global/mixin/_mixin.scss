@@ -3,11 +3,13 @@
 @use "../setting" as *;
 
 @mixin padding {
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 @mixin paddingTab {
-    padding: 0 40px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 @mixin paddingPc {

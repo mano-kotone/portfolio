@@ -530,10 +530,7 @@
         }
 
         &__accordion {
-            opacity: 0;
-            transform: translateY(-10%);
-            height: 0;
-            transition: .5s;
+            display: none;
         }
 
 
@@ -793,11 +790,8 @@
         }
 
         &__txt {
-            opacity: 0;
-            height: 0;
+            display: none;
             font-size: 13px;
-            transition: .5s;
-            transform: translateY(-10%);
 
             @media screen and (min-width: 768px) {
                 font-size: clamp(13px, 0.89vw, 17px);

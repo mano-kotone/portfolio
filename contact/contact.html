@@ -23,24 +23,24 @@
     <header id="header" class="header">
       <h1 class="header__ttl">
         <a href="#" class="header__link">
-          <picture>
-            <source media="(min-width: 900px)" srcset="../images/logo-verticalWhite.svg">
-            <img src="../images/logo-white.svg" alt="KOTONE MANO Portfolio." class="header__img">
-          </picture>
+          <img src="../images/logo-white.svg" alt="KOTONE MANO Portfolio." class="header__img">
         </a>
       </h1>
 
       <nav class="gnav">
         <ul class="gnav__ul">
           <li class="gnav__list"><a href="../index.html" class="gnav__link">HOME<span class="arrow"></span></a></li>
-          <li class="gnav__list"><a href="../index.html#works" class="gnav__link">WORKS<span class="arrow"></span></a></li>
-          <li class="gnav__list"><a href="../history/history.html" class="gnav__link">HISTORY<span class="arrow"></span></a></li>
-          <li class="gnav__list"><a href="contact/contact.html" class="gnav__link">CONTACT<span class="arrow"></span></a></li>
+          <li class="gnav__list"><a href="../index.html#works" class="gnav__link">WORKS<span class="arrow"></span></a>
+          </li>
+          <li class="gnav__list"><a href="../history/history.html" class="gnav__link">HISTORY<span
+                class="arrow"></span></a></li>
+          <li class="gnav__list"><a href="contact/contact.html" class="gnav__link">CONTACT<span
+                class="arrow"></span></a></li>
         </ul>
       </nav>
     </header>
 
-    <div class="fixed__sunaarashi"></div>
+    <div id="sunaarashi" class="fixed__sunaarashi"></div>
 
     <!-- スライドメニュー -->
     <nav id="gnavSlider" class="gnavSlider">
@@ -48,12 +48,12 @@
         <ul class="gnavSlider__ul">
           <li class="gnavSlider__list"><a href="../index.html" class="gnavSlider__link gnavSlider__link-01">HOME<span
                 class="arrow"></span></a></li>
-          <li class="gnavSlider__list"><a href="../index.html#works" class="gnavSlider__link gnavSlider__link-02">WORKS<span
-                class="arrow"></span></a></li>
-          <li class="gnavSlider__list"><a href="../history/history.html" class="gnavSlider__link gnavSlider__link-03">HISTORY<span
-                class="arrow"></span></a></li>
-          <li class="gnavSlider__list"><a href="contact/contact.html" class="gnavSlider__link gnavSlider__link-04">CONTACT<span
-                class="arrow"></span></a></li>
+          <li class="gnavSlider__list"><a href="../index.html#works"
+              class="gnavSlider__link gnavSlider__link-02">WORKS<span class="arrow"></span></a></li>
+          <li class="gnavSlider__list"><a href="../history/history.html"
+              class="gnavSlider__link gnavSlider__link-03">HISTORY<span class="arrow"></span></a></li>
+          <li class="gnavSlider__list"><a href="contact/contact.html"
+              class="gnavSlider__link gnavSlider__link-04">CONTACT<span class="arrow"></span></a></li>
         </ul>
         <p class="gnavSlider__copyright"><small class="gnavSlider__small">Copyright 2023 KOTONE MANO Portfolio. All
             right
@@ -69,45 +69,37 @@
     <main class="main">
 
       <section class="contact">
-        <h2 class="contact__ttl">CONTACT</h2>
-  
-        <!-- actionはGoogleで作ったフォームのフォーム属性のactionを持ってくる -->
-        <!-- target～ thanksページに飛ばす -->
-        <form id="contactForm" class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfNDiU6CEkQlJO8yO2OqN5uzOWCb7uoPpoeyNjln0WqFqERCg/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
-  
+        <h2 class="contact__ttl">Contact</h2>
+
+        <form id="contactForm" class="form"
+          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfRr7OjrL5GdB5-2HsosuPUfocBPhCjzJDtMO_lUrHhgL2Uhg/formResponse"
+          method="post" target="hidden_iframe" onsubmit="submitted=true;">
+
           <div class="form__box">
             <label class="form__label" for="name">Company name</label>
-            <!-- nameはgoogleのform下のdiv内から持ってくる -->
-            <input id="name" class="form__input" type="text" name="entry.433553480" required>
-          </div>
-  
-          <div class="form__box">
-            <label class="form__label" for="email">E-mail</label>
-            <input id="email" class="form__input"  type="email" name="entry.2021093352" required>
+            <input id="name" class="form__input" type="text" name="entry.77237244" required>
           </div>
 
           <div class="form__box">
-            <label class="form__label" for="tell">Phone number</label>
-            <input id="tell" class="form__input"  type="tell" name="entry.2021093352">
+            <label class="form__label" for="email">E-mail</label>
+            <input id="email" class="form__input" type="email" name="entry.624731427" required>
           </div>
-  
+
+          <div class="form__box">
+            <label class="form__label" for="tel">Phone number</label>
+            <input id="tel" class="form__input" type="tel" name="entry.90233964">
+          </div>
+
           <div class="form__box">
             <label for="message" class="form__label">Content of inquiry</label>
-            <textarea id="message" class="form__message"  name="entry.1082506166" required></textarea>
+            <textarea id="message" class="form__message" name="entry.325495532" required></textarea>
           </div>
-  
+
           <div class="form__box">
-            <input type="submit" class="form__submit" value="送信">
-            <!-- <input type="image" src="" alt="送信">ボタンを画像で表示したいとき -->
+            <input type="submit" class="form__submit" value="Submit"><span class="arrow"></span>
           </div>
-  
         </form>
       </section>
-    </div>
-      
-    <!-- Thanksページがある場合、下記の２行をhtml内に追記。 -->
-    <script>var submitted=false;</script>
-  <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='thanks.html';}"></iframe>
     </main>
 
     <footer class="footer">
@@ -166,14 +158,13 @@
 
   </div>
 
+  <script>var submitted = false;</script>
+  <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;"
+    onload="if(submitted)  {window.location='thanks.html';}"></iframe>
+
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-
   <script src="../js/function.js"></script>
-  <script src="../js/gsap.js"></script>
 </body>
 
 </html>

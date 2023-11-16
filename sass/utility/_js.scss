@@ -239,12 +239,5 @@
                 opacity: 0;
             }
         }
-
-        //historyページのアコーディオン表示
-        .show {
-            opacity: 1;
-            transform: translateY(0);
-            height: 100%;
-        }
     }
 }

@@ -2,4 +2,140 @@
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
 
+#contact {
+    .header {
+        mix-blend-mode: normal;
 
+        @media screen and (min-width: 900px) {
+            justify-content: flex-end;
+        }
+
+        &__ttl {
+            @media screen and (min-width: 900px) {
+                display: none;
+            }
+        }
+    }
+
+    .gnavSlider__btn {
+        mix-blend-mode: normal;
+    }
+
+    .contact {
+        @include padding;
+        padding-top: 110px;
+        padding-bottom: clamp(0px, 12vw, 188px);
+        background: $blue;
+
+        @media screen and (min-width: 500px) {
+            padding-bottom: clamp(0px, 24.47vw, 188px);
+        }
+
+        @media screen and (min-width: 768px) {
+            @include paddingTab;
+            padding-bottom: 188px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 219px clamp(40px, 8.85vw, 170px) 130px;
+        }
+
+        @media screen and (min-width: 1700px) {
+            align-items: baseline;
+        }
+
+        &__ttl {
+            margin-bottom: clamp(0px, 9.33vw, 40px);
+            font-size: 40px;
+            font-weight: 400;
+            letter-spacing: -0.05em;
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 0;
+                font-size: clamp(40px, 3.75vw, 72px);
+            }
+        }
+    }
+
+    .form {
+
+        &__box {
+            margin-bottom: 22px;
+
+            @media screen and (min-width: 1700px) {
+                display: flex;
+                align-items: baseline;
+                margin-bottom: 35px;
+            }
+
+            &:nth-of-type(4) {
+                margin-bottom: 64px;
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+                width: fit-content;
+                margin-left: auto;
+
+                @media screen and (min-width: 1024px) {
+                    display: flex;
+                    align-items: baseline;
+
+                    &:hover {
+                        @include arrowHover;
+                    }
+                }
+            }
+        }
+
+        &__label {
+            display: block;
+            margin-bottom: 16px;
+            font-size: 15px;
+            letter-spacing: -0.08em;
+
+            @media screen and (min-width: 1700px) {
+                margin-bottom: 0;
+                width: 241px;
+                font-size: 17px;
+            }
+        }
+
+        &__input {
+            @extend %form;
+            height: 50px;
+
+            @media screen and (min-width: 1024px) {
+                height: 72px;
+            }
+        }
+
+        &__message {
+            @extend %form;
+            height: 236px;
+
+            @media screen and (min-width: 1024px) {
+                height: 288px;
+            }
+        }
+
+        &__submit {
+            background: none;
+            border: none;
+            font-size: 33px;
+            letter-spacing: -0.05em;
+            cursor: pointer;
+
+            @media screen and (min-width: 768px) {
+                font-size: clamp(33px, 3.125vw, 60px);
+            }
+        }
+
+        .arrow {
+            @include arrow($black);
+        }
+    }
+}
