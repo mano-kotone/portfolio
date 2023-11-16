@@ -23,6 +23,24 @@
     }
 }
 
+#history {
+    .header__fixed {
+        position: fixed;
+        top: 0;
+        left: 20px;
+        z-index: 25;
+
+        @media screen and (min-width: 900px) {
+            top: 42px;
+            left: $mvPaddingPc;
+        }
+
+        .gnav {
+            display: none;
+        }
+    }
+}
+
 .gnavSlider {
     &__slide {
         transform: translateY(0);
@@ -202,7 +220,31 @@
 }
 
 
-//works gsap
+//topページのworks gsap
 .pin-spacer {
     pointer-events: none;
+}
+
+
+#history {
+    .wrapper {
+
+        //プラス、マイナスの切り替え
+        .minus {
+            &::after{
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+            &::before {
+                transform: translate(-50%, -50%) rotate(90deg);
+                opacity: 0;
+            }
+        }
+
+        //historyページのアコーディオン表示
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+            height: 100%;
+        }
+    }
 }

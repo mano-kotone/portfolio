@@ -201,41 +201,33 @@
             &Txt {
                 &--01 {
                     display: block;
-                    animation: roop1 30s -15s linear infinite;
+                    animation: roop1 80s -40s linear infinite;
 
                     @media screen and (min-width: 1024px) {
                         display: flex;
                         height: max-content;
                         animation: roopVer1 100s -50s linear infinite;
                     }
-
-                    &-2,
-                    &-3 {
-                        display: none;
-
-                        @media screen and (min-width: 1024px) {
-                            display: block;
-                        }
-                    }
                 }
 
                 &--02 {
                     display: block;
-                    animation: roop2 30s linear infinite;
+                    animation: roop2 80s linear infinite;
 
                     @media screen and (min-width: 1024px) {
                         display: flex;
                         height: max-content;
                         animation: roopVer2 100s linear infinite;
                     }
+                }
 
-                    &-2,
-                    &-3 {
-                        display: none;
+                &--03 {
+                    display: none;
 
-                        @media screen and (min-width: 1024px) {
-                            display: block;
-                        }
+                    @media screen and (min-width: 1024px) {
+                        display: flex;
+                        height: max-content;
+                        animation: roopVer1 100s linear infinite;
                     }
                 }
 
@@ -400,6 +392,10 @@
         @media screen and (min-width: 1024px) {
             padding-left: clamp(0px, 25.6vw, 491px);
             padding-right: clamp(0px, 31vw, 595px);
+
+            &:hover {
+                @include arrowHover;
+            }
         }
 
         &__link {
@@ -491,6 +487,9 @@
             padding-top: 0;
             padding-right: clamp(40px, 9.89vw, 190px);
             font-size: clamp(13px, 3.125vw, 60px);
+            &:hover{
+                @include arrowHover;
+            }
         }
     }
 

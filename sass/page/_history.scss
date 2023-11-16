@@ -7,11 +7,26 @@
         height: 482px;
         background: $blue;
 
+        @media screen and (min-width: 768px) {
+            height: clamp(482px, 42.55vw, 817px);
+        }
+
         &__ttl {
             position: absolute;
             top: clamp(60px, calc(181.25px - 15vw), 125px);
             left: 0;
             z-index: 3;
+
+            @media screen and (min-width: 1024px) {
+                top: auto;
+                left: auto;
+                right: 6vw;
+                bottom: 130px;
+            }
+
+            @media screen and (min-width: 1100px) {
+                right: 0;
+            }
 
             span {
                 display: inline-block;
@@ -19,8 +34,8 @@
                 font-size: clamp(0px, 22.66vw, 183px);
                 font-weight: 400;
 
-                @media screen and (min-width: 768px) {
-                    font-size: 183px;
+                @media screen and (min-width: 1024px) {
+                    font-size: clamp(183px, 11.56vw, 222px);
                 }
 
                 &:first-of-type {
@@ -28,7 +43,7 @@
                     font-weight: 300;
 
                     @media screen and (min-width: 768px) {
-                        font-size: clamp(115px, 14.97vw, 214px);
+                        font-size: clamp(112px, 7.65vw, 147px);
                     }
                 }
             }
@@ -37,38 +52,38 @@
             &-01 {
                 transform: translateX(-2vw);
 
-                @media screen and (min-width: 1024px) {
-                    transform: translateX(0vw);
+                @media screen and (min-width: 1100px) {
+                    transform: translateX(-22vw);
                 }
             }
 
             &-02 {
                 transform: translateX(-4vw);
 
-                @media screen and (min-width: 1024px) {
-                    transform: translateX(-1vw);
+                @media screen and (min-width: 1100px) {
+                    transform: translateX(-23vw);
                 }
             }
 
             &-03 {
                 transform: translateX(-6.5vw);
 
-                @media screen and (min-width: 1024px) {
-                    transform: translateX(8vw);
+                @media screen and (min-width: 1100px) {
+                    transform: translateX(-16.5vw);
                 }
             }
 
             &-04 {
-                @media screen and (min-width: 1024px) {
-                    transform: translateX(21vw);
+                @media screen and (min-width: 1100px) {
+                    transform: translateX(-7.5vw);
                 }
             }
 
             &-05 {
                 transform: translateX(-1.3vw);
 
-                @media screen and (min-width: 1024px) {
-                    transform: translateX(20vw);
+                @media screen and (min-width: 1100px) {
+                    transform: translateX(-8vw);
                 }
             }
 
@@ -78,6 +93,10 @@
                 @media screen and (min-width: 600px) {
                     transform: translateX(4vw);
                 }
+
+                @media screen and (min-width: 1100px) {
+                    transform: translateX(-5.5vw);
+                }
             }
 
             &-07 {
@@ -86,6 +105,10 @@
                 @media screen and (min-width: 600px) {
                     transform: translateX(3vw);
                 }
+
+                @media screen and (min-width: 1100px) {
+                    transform: translateX(-6vw);
+                }
             }
 
             &-08 {
@@ -93,6 +116,10 @@
 
                 @media screen and (min-width: 600px) {
                     transform: translateX(6vw);
+                }
+
+                @media screen and (min-width: 1100px) {
+                    transform: translateX(-1vw);
                 }
             }
         }
@@ -108,6 +135,10 @@
             overflow: hidden;
             background: #fff;
 
+            @media screen and (min-width: 768px) {
+                height: clamp(434px, 43.6vw, 837px);
+            }
+
             //背景のcircle
             &::before {
                 @include content;
@@ -118,6 +149,11 @@
                 aspect-ratio: 1 / 1;
                 border: 3px solid $gray ;
                 border-radius: 50%;
+
+                @media screen and (min-width: 900px) {
+                    left: clamp(62px, 42.8vw, 822px);
+                    width: clamp(507px, 51vw, 980px);
+                }
             }
 
         }
@@ -133,45 +169,120 @@
             line-height: 1.6;
             letter-spacing: -0.03em;
 
+            @media screen and (min-width: 768px) {
+                font-size: clamp(40px, 4.68vw, 90px);
+                line-height: 1.3;
+            }
+
             .historyLine {
                 display: block;
                 @include historyLine;
             }
 
             &--01 {
-                transform: translateX(105px)
+                transform: translateX(105px);
+
+                @media screen and (min-width: 900px) {
+                    transform: translateX(33vw);
+                }
+
+                .historyLine {
+                    @media screen and (min-width: 900px) {
+                        width: clamp(52px, 17vw, 328px);
+                    }
+                }
             }
 
             &--02 {
                 transform: translateX(26vw);
 
-                .historyLine {
-                    @include historyLine(auto, 0);
-                }
-
                 @media screen and (min-width: 600px) {
                     transform: translateX(clamp(0px, 57vw, 437px));
+                }
+
+                @media screen and (min-width: 900px) {
+                    transform: translateX(44.5vw)
+                }
+
+                .historyLine {
+                    @include historyLine(auto, 0);
+
+                    @media screen and (min-width: 900px) {
+                        display: none;
+                    }
+
+                    &:nth-of-type(2) {
+                        display: none;
+
+                        @media screen and (min-width: 900px) {
+                            display: block;
+                            @include historyLine;
+                            width: clamp(52px, 15.8vw, 304px);
+                        }
+                    }
                 }
             }
 
             &--03 {
                 transform: translateX(95.6px);
+
+                @media screen and (min-width: 900px) {
+                    transform: translateX(58vw)
+                }
+
+                .historyLine {
+                    display: none;
+
+                    @media screen and (min-width: 900px) {
+                        display: block;
+                        @include historyLine(auto, 0);
+                        width: clamp(52px, 5.4vw, 104px);
+                    }
+
+                    &:nth-of-type(2) {
+                        display: block;
+                        @include historyLine;
+
+                        @media screen and (min-width: 900px) {
+                            display: none;
+                        }
+                    }
+                }
             }
 
             &--04 {
                 transform: translateX(71.25px);
+
+                @media screen and (min-width: 900px) {
+                    transform: translateX(27.5vw)
+                }
+
+                .historyLine {
+                    @media screen and (min-width: 900px) {
+                        width: clamp(52px, 16.25vw, 312px);
+                    }
+                }
             }
 
             &--05 {
                 transform: translateX(15vw);
 
-                .historyLine {
-                    @include historyLine(auto, 0);
-                }
-
                 @media screen and (min-width: 600px) {
                     transform: translateX(clamP(0px, 53vw, 407px));
                 }
+
+                @media screen and (min-width: 900px) {
+                    transform: translateX(40vw)
+                }
+
+                .historyLine {
+                    @include historyLine(auto, 0);
+
+                    @media screen and (min-width: 900px) {
+                        width: clamp(52px, 5.83vw, 112px);
+                    }
+                }
+
             }
 
             &--06 {
@@ -179,9 +290,20 @@
                 width: fit-content;
                 transform: translateX(11.25px);
 
+                @media screen and (min-width: 900px) {
+                    display: flex;
+                    width: auto;
+                    transform: translateX(21vw)
+                }
+
                 .historyLine {
                     margin-left: auto;
                     margin-right: -15px;
+
+                    @media screen and (min-width: 900px) {
+                        margin: 0;
+                        width: clamp(52px, 8vw, 154px);
+                    }
                 }
             }
         }
@@ -191,9 +313,18 @@
             padding-bottom: clamp(0px, 22.4vw, 170px);
             background: $blue;
 
+            @media screen and (min-width: 768px) {
+                padding-top: clamp(62px, 5.73vw, 110px);
+                padding-bottom: clamp(170px, 14.8vw, 285px);
+            }
+
             //container内_js.scssに記述
             &Container {
                 margin-bottom: clamp(0px, 18.66vw, 75px);
+
+                @media screen and (min-width: 768px) {
+                    margin-bottom: clamp(75px, 7vw, 134px);
+                }
             }
         }
 
@@ -208,12 +339,16 @@
             @media screen and (min-width: 768px) {
                 margin-left: 40px;
             }
+
+            @media screen and (min-width: 1024px) {
+                margin-left: 169px;
+                width: clamp(207px, 14.6vw, 280px);
+            }
         }
 
     }
 
     .history {
-        margin-bottom: 24px;
         padding-top: clamp(0px, 7.73vw, 43px);
         background: #000;
 
@@ -221,12 +356,15 @@
             color: #fff;
         }
 
-        //historyセクション下の画像
-        &::after {
-            @include content;
-            height: 375px;
-            width: 100%;
-            background: url(../images/historyImg.jpg)center center / cover;
+        @media screen and (min-width: 1024px) {
+            @include paddngHistoryPc;
+
+        }
+
+        @media screen and (min-width: 1400px) {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 125px;
         }
 
         &__ttl {
@@ -238,6 +376,11 @@
 
             @media screen and (min-width: 768px) {
                 @include paddingTab;
+                font-size: clamp(39px, 3.65vw, 70px);
+            }
+
+            @media screen and (min-width: 1024px) {
+                padding: 0;
             }
         }
 
@@ -246,10 +389,22 @@
             z-index: 3;
             @include padding;
             padding-bottom: 79px;
+            max-width: 838px;
+            margin: 0 auto;
 
             @media screen and (min-width: 768px) {
                 @include paddingTab;
-                padding-bottom: 47px;
+                padding-bottom: clamp(47px, 7.45vw, 143px);
+            }
+
+            @media screen and (min-width: 1024px) {
+                padding-top: 1vw;
+                padding-right: 0;
+                padding-left: 0;
+            }
+
+            @media screen and (min-width: 1400px) {
+                margin: 0;
             }
         }
 
@@ -260,7 +415,18 @@
                 margin-bottom: 43px;
 
                 @media screen and (min-width: 768px) {
-                    margin-bottom: 45px;
+                    margin-bottom: clamp(45px, 4vw, 80px);
+                }
+
+                @media screen and (min-width: 1024px) {
+                    gap: 113px;
+                }
+
+                &Box {
+                    @media screen and (min-width: 1024px) {
+                        display: flex;
+                        gap: 16px;
+                    }
                 }
             }
 
@@ -270,6 +436,10 @@
 
                 @media screen and (min-width: 768px) {
                     font-size: 18px;
+                }
+
+                @media screen and (min-width: 1024px) {
+                    font-size: 21px;
                 }
 
                 &Ruby {
@@ -290,7 +460,7 @@
                 font-size: 36px;
 
                 @media screen and (min-width: 768px) {
-                    font-size: 38px;
+                    font-size: clamp(38px, 3vw, 60px);
                     line-height: 1;
                 }
             }
@@ -300,6 +470,7 @@
                 z-index: 3;
                 margin-bottom: clamp(0px, 4.53vw, 41px);
                 font-size: 14px;
+                color: rgb(255, 255, 255, 0.6);
 
                 @media screen and (min-width: 768px) {
                     margin-bottom: 41px;
@@ -307,18 +478,8 @@
                 }
 
                 @media screen and (min-width: 1024px) {
-                    margin-right: $mvPaddingPc;
-                    padding: 0;
-                    width: 422px;
-                    font-size: clamp(12px, 1.56vw, 17px);
-                }
-
-                .br {
-                    display: none;
-
-                    @media screen and (min-width: 1024px) {
-                        display: block;
-                    }
+                    font-size: 17px;
+                    margin-bottom: clamp(80px, 11.3vw, 217px);
                 }
             }
         }
@@ -342,7 +503,7 @@
             letter-spacing: -0.07em;
 
             @media screen and (min-width: 768px) {
-                font-size: 25px;
+                font-size: clamp(25px, 1.87vw, 36px);
             }
         }
 
@@ -353,35 +514,84 @@
             font-size: 15px;
             letter-spacing: -0.02em;
 
-            .btn {
-                @include plus;
+            @media screen and (min-width: 768px) {
+                font-size: clamp(15px, 1.25vw, 24px);
+                gap: clamp(9px, 0.83vw, 16px);
+            }
+
+        }
+
+        .btn {
+            @include plus;
+
+            @media screen and (min-width: 768px) {
+                width: clamp(38px, 3.12vw, 60px);
             }
         }
 
-        &__list {
+        &__accordion {
+            opacity: 0;
+            transform: translateY(-10%);
+            height: 0;
+            transition: .5s;
+        }
+
+
+        &__item {
             display: flex;
             align-items: baseline;
             padding: 13px 0;
             border-bottom: 1px solid #fff;
         }
 
-        &__item {
-            @extend .history__list;
-        }
-
         &__year02 {
             width: clamp(0px, 26.66vw, 130px);
             font-size: 14px;
+
+            @media screen and (min-width: 1024px) {
+                font-size: 17px;
+            }
+        }
+
+        &__itemBox {
+            @media screen and (min-width: 1024px) {
+                display: grid;
+                grid-template-columns: 2fr;
+                justify-content: space-between;
+                align-items: baseline;
+                flex: 1;
+                width: 100%;
+            }
         }
 
         &__name {
             font-size: 14px;
 
+            @media screen and (min-width: 1024px) {
+                font-size: 17px;
+                grid-column: 1;
+            }
         }
 
         &__place {
             padding-top: 8px;
             font-size: 11px;
+
+            @media screen and (min-width: 1024px) {
+                font-size: 17px;
+                grid-column: 2;
+            }
+        }
+    }
+
+    .history__pic {
+        margin-bottom: 24px;
+        height: 375px;
+        width: 100%;
+        background: url(../images/historyImg.jpg)center center / cover;
+
+        @media screen and (min-width: 768px) {
+            height: clamp(375px, 38vw, 730px);
         }
     }
 
@@ -402,15 +612,19 @@
                 font-size: 78px;
                 letter-spacing: -0.02em;
                 color: $gray;
-                margin-left: .2em;
+                padding-left: .2em;
+
+                @media screen and (min-width: 768px) {
+                    font-size: clamp(78px, 8.33vw, 160px);
+                }
             }
 
             &Txt--01 {
-                animation: roop1 50s -23.8s linear infinite;
+                animation: roop1 100s -50s linear infinite;
             }
 
             &Txt--02 {
-                animation: roop2 50s linear infinite;
+                animation: roop2 100s linear infinite;
             }
 
             &::after {
@@ -429,28 +643,70 @@
             @media screen and (min-width: 768px) {
                 @include paddingTab;
             }
+
+            @media screen and (min-width: 1024px) {
+                display: flex;
+                justify-content: space-between;
+                @include paddngHistoryPc;
+            }
         }
 
         &__ttl {
             margin-bottom: 32px;
             font-size: 41px;
+            font-weight: 500;
             letter-spacing: -0.02em;
+
+            @media screen and (min-width: 768px) {
+                font-size: clamp(41px, 3.64vw, 70px);
+            }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 0;
+            }
         }
 
-        &__container{
+        &__container {
             @media screen and (min-width: 500px) {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
+                margin: 0 auto;
                 padding-left: 47px;
+                width: fit-content;
+            }
+
+            @media screen and (min-width: 768px) {
+                width: clamp(593px, 43.54vw, 836px);
+            }
+
+            @media screen and (min-width: 1024px) {
+                padding-left: 0;
+                margin: 0;
             }
         }
+
         &__box {
             width: fit-content;
             margin-left: auto;
             margin-bottom: 31px;
+            cursor: pointer;
+
             @media screen and (min-width: 500px) {
-              margin-left: 0;
+                margin-left: 0;
+            }
+
+            @media screen and (min-width: 768px) {
+                width: 100%;
+            }
+
+            @media screen and (min-width: 1024px) {
+                &:hover {
+                    .profile__pic::after {
+                        left: 100%;
+                        transform: translateY(100%) translateX(-100%);
+                    }
+                }
             }
         }
 
@@ -463,6 +719,7 @@
 
             @media screen and (min-width: 768px) {
                 margin-bottom: 11px;
+                width: 100%;
             }
 
             img {
@@ -478,6 +735,11 @@
                 width: 98px;
                 height: 11px;
                 background: #0092FF;
+                transition: 1s;
+
+                @media screen and (min-width: 768px) {
+                    width: clamp(98px, 10.9vw, 210px);
+                }
             }
         }
 
@@ -491,16 +753,39 @@
             font-size: 19px;
             letter-spacing: -0.07em;
 
+            @media screen and (min-width: 768px) {
+                font-size: clamp(19px, 1.7vw, 33px);
+            }
+
             &Ruby {
                 display: block;
                 font-size: 11px;
                 letter-spacing: normal;
                 color: #868686;
+
+                @media screen and (min-width: 768px) {
+                    font-size: clamp(11px, 0.88vw, 17px);
+                }
+            }
+        }
+
+        &__viewBox {
+            @media screen and (min-width: 1024px) {
+                display: flex;
+                align-items: center;
+                gap: 16px;
             }
         }
 
         &__view {
             display: none;
+
+            @media screen and (min-width: 1024px) {
+                display: block;
+                font-size: 24px;
+                font-weight: 500;
+                letter-spacing: -0.07em;
+            }
 
             &Btn {
                 @include plus($gray, $black);
@@ -508,7 +793,16 @@
         }
 
         &__txt {
+            opacity: 0;
+            height: 0;
             font-size: 13px;
+            transition: .5s;
+            transform: translateY(-10%);
+
+            @media screen and (min-width: 768px) {
+                font-size: clamp(13px, 0.89vw, 17px);
+                font-weight: 500;
+            }
         }
     }
 }

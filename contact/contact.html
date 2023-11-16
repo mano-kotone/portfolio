@@ -68,20 +68,46 @@
 
     <main class="main">
 
-
-      <section id="contact" class="contact">
-        <a href="../contact/contact.html" class="contact__link">
-          <h3 class="contact__subTtl">Get In Touch<span class="arrow"></span></h3>
-          <div class="contact__container">
-            <p class="contact__txt">ここまで見ていただき、ありがとうございました。<br class="br">
-              これからも色々なことを学びスキルを磨いていきます。<br class="br">
-              就職し、たくさんの仕事をして、エンドユーザーに届ける<br class="br">ことを目標に頑張ります。
-            </p>
-            <h2 class="contact__ttl">Contact<span class="arrow"></span></h2>
-            <p class="contact__mail">Gmail:mano.kotone@gmail.com</p>
+      <section class="contact">
+        <h2 class="contact__ttl">CONTACT</h2>
+  
+        <!-- actionはGoogleで作ったフォームのフォーム属性のactionを持ってくる -->
+        <!-- target～ thanksページに飛ばす -->
+        <form id="contactForm" class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfNDiU6CEkQlJO8yO2OqN5uzOWCb7uoPpoeyNjln0WqFqERCg/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+  
+          <div class="form__box">
+            <label class="form__label" for="name">Company name</label>
+            <!-- nameはgoogleのform下のdiv内から持ってくる -->
+            <input id="name" class="form__input" type="text" name="entry.433553480" required>
           </div>
-        </a>
+  
+          <div class="form__box">
+            <label class="form__label" for="email">E-mail</label>
+            <input id="email" class="form__input"  type="email" name="entry.2021093352" required>
+          </div>
+
+          <div class="form__box">
+            <label class="form__label" for="tell">Phone number</label>
+            <input id="tell" class="form__input"  type="tell" name="entry.2021093352">
+          </div>
+  
+          <div class="form__box">
+            <label for="message" class="form__label">Content of inquiry</label>
+            <textarea id="message" class="form__message"  name="entry.1082506166" required></textarea>
+          </div>
+  
+          <div class="form__box">
+            <input type="submit" class="form__submit" value="送信">
+            <!-- <input type="image" src="" alt="送信">ボタンを画像で表示したいとき -->
+          </div>
+  
+        </form>
       </section>
+    </div>
+      
+    <!-- Thanksページがある場合、下記の２行をhtml内に追記。 -->
+    <script>var submitted=false;</script>
+  <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='thanks.html';}"></iframe>
     </main>
 
     <footer class="footer">

@@ -1,6 +1,7 @@
 //各ファイルは必ず登録済みの変数を最初に読み込みます
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
+
 .gnav {
     display: none;
 
@@ -15,6 +16,18 @@
 
     &__link {
         color: #fff;
+    }
+}
+
+#history {
+    .gnav {
+        @media screen and (min-width: 900px) {
+            display: none;
+        }
+
+        @media screen and (min-width: 1024px) {
+            display: block;
+        }
     }
 }
 
@@ -115,7 +128,6 @@
             background: #fff;
             transition: .3s;
 
-
             &Top {
                 width: 100%;
                 transform-origin: 0;
@@ -136,6 +148,5 @@
                 width: 100%;
             }
         }
-
     }
 }

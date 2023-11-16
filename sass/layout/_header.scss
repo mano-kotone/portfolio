@@ -1,6 +1,7 @@
 //各ファイルは必ず登録済みの変数を最初に読み込みます
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
+
 .header {
     position: absolute;
     z-index: 10;
@@ -25,8 +26,20 @@
             width: clamp(91px, 5.65vw, 112px);
         }
     }
-
 }
+
+#history {
+    .header__ttl {
+        @media screen and (min-width: 900px) {
+            width: 215px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: clamp(91px, 5.65vw, 112px);
+        }
+    }
+}
+
 
 .fixed__sunaarashi {
     position: fixed;
