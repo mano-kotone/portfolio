@@ -1,0 +1,13 @@
+@use "../global" as *;
+
+.footer {
+    padding: 48px 0;
+    background: $bg;
+    color: $mc;
+    text-align: center;
+
+    &__copy {
+        font-size: 23px;
+        font-weight: bold;
+    }
+}

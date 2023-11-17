@@ -1,4 +1,6 @@
-// //スライドメニュー
+//historyページ用フォルダ
+
+//スライドメニュー
 const accordion = document.querySelectorAll('.history__btn');
 
 accordion.forEach(show => {

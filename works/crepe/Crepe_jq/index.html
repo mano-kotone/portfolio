@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Crepe Kitchen Choice! クレープキッチンチョイス！</title>
+  <meta name="keywords" content="クレープ屋 キッチンカー 札幌 道産食材 ">
+  <meta name="description"
+    content="クレープキッチンチョイス！の公式サイトです。こだわりの道産食材を使ったクレープ生地。パリパリ・もちもち２種類から選べるクレープ屋さん。札幌市内をキッチンカーで移動販売！">
+  <link rel="stylesheet" href="https://use.typekit.net/frr7yzs.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;0,700;1,700&family=Noto+Sans+JP:wght@300;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" media="all">
+</head>
+
+<body id="top">
+  <div class="wrapper">
+
+    <div id="mv" class="mv"></div>
+
+    <header id="header" class="header">
+      <h1 id="header__ttl" class="header__ttl"><a href="#top" class="header__link">
+          <img src="images/rogo.png" alt="crepe Kitchen Choice!"></a>
+      </h1>
+    </header>
+
+    <nav class="gnav">
+      <ul id="gnav__ul" class="gnav__ul">
+        <li class="gnav__list"><a href="#about" class="gnav__link">About</a></li>
+        <li class="gnav__list"><a href="#crepe" class="gnav__link">Crepe</a></li>
+        <li class="gnav__list"><a href="#menu" class="gnav__link">Menu</a></li>
+        <li class="gnav__list"><a href="#custom" class="gnav__link">CustomMenu</a></li>
+        <li class="gnav__list"><a href="#shop" class="gnav__link">ShopInfo</a></li>
+        <li class="gnav__list"><a href="#sns" class="gnav__link">SNS</a></li>
+      </ul>
+      <!-- ハンバーガーボタン -->
+      <div id="gnav__btn" class="gnav__btn">
+        <div id="gnav__btnTop" class="gnav__btnTop"></div>
+        <div id="gnav__btnMiddle" class="gnav__btnMiddle"></div>
+        <div id="gnav__btnBottom" class="gnav__btnBottom"></div>
+      </div>
+    </nav>
+
+    <main class="main">
+      <section id="about" class="about">
+        <div class="about__bg"></div>
+        <h2 class="about__ttl"><img src="images/rogo.png" alt="Crepe Kitchen Choice!" class="about__img"></h2>
+        <p class="about__txt">みんなのもとまで楽しい、おいしいを！！<br>
+          道産の小麦とバターを使った美味しい生地を<br>
+          パリパリ、もちもちの２種類から選ぶことができるクレープ屋さん。<br>
+          生クリームや牛乳も濃厚な道産のものを使用。<br>
+          そのままの生地を味わえるバターシュガーも<br>
+          クリームやフルーツをお好みに合わせてのカスタマイズも！<br>
+          季節によって変わるクレープもご用意。選べる美味しさをお届けします。</p>
+      </section>
+
+      <section id="crepe" class="crepe">
+        <div class="crepe__item"></div>
+        <h2 class="crepe__ttl">CHOICE CREPE!</h2>
+        <h3 class="crepe__ttlSub">選べる２種類の生地</h3>
+        <ul class="crepe__ul">
+          <li class="crepe__list">
+            <p class="crepe__listTtl">パリパリ生地</p>
+            <p class="crepe__pic">
+              <img src="images/pate1.jpg" alt="パリパリ生地" class="crepe__img">
+            </p>
+            <p class="crepe__txt">道産のバターの香りが引き立つ<br>
+              パリパリに焼き上げたクレープ生地。<br>
+              そのまま食感と香りを楽しんでも<br>
+              具材と食べてもおいしい！</p>
+          </li>
+          <li class="crepe__list">
+            <p class="crepe__listTtl">もちもち生地</p>
+            <p class="crepe__pic">
+              <img src="images/pate2.jpg" alt="もちもち生地" class="crepe__img">
+            </p>
+            <p class="crepe__txt">道産のミルク感を味わえる<br>
+              しっとりもちもちのクレープ生地。<br>
+              滑らかクリームとの相性抜群！<br>
+              もちろんプレーンでもおいしい！</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="menu" class="menu">
+        <div class="menu__item"></div>
+        <h2 class="menu__ttl">CHOICE CREPE!</h2>
+        <h3 class="menu__ttlSub">季節によって変わるメニューといつも食べられる定番メニュー</h3>
+        <div class="menu__season">
+          <div class="menu__seasonPic"></div>
+          <h4 class="menu__seasonTtl">Seasons Menu</h4>
+          <p class="menu__seasonRuby">季節のクレープ</p>
+
+          <ul class="menu__seasonUl">
+            <li class="menu__seasonList--01">
+              <p class="menu__seasonPic02 menu__click" data-modal="#modal__season--01"><img src="images/seasonMenu1.jpg" alt="スイートポテトクレープ" class="menu__seasonImg">
+              </p>
+              <p class="menu__seasonSub">Sweet Potato</p>
+              <p class="menu__seasonTxt">紅あずまの濃厚ペースト</p>
+              <p class="menu__seasonSubRuby">スイートポテト</p>
+            </li>
+            <li class="menu__seasonList--02">
+              <p class="menu__seasonPic02 menu__click" data-modal="#modal__season--02"><img src="images/seasonMenu2.jpg" alt="モンブランクレープ" class="menu__seasonImg">
+              </p>
+              <p class="menu__seasonSub">Tarte Tatin</p>
+              <p class="menu__seasonTxt">イタリア産のコクのあるマロン</p>
+              <p class="menu__seasonSubRuby">モンブラン</p>
+            </li>
+          </ul>
+        </div>
+        <!-- モーダル記述 -->
+        <div id="modal__season--01" class="modal__season--01">
+          <div class="modal__wrap">
+            <div class="modal__container">
+              <p class="modal__pic"><img src="images/modal1.png" alt="スイートポテトクレープ" class="modal__img"></p>
+              <div class="modal__box">
+                <p class="modal__ttl">スイートポテト</p>
+                <p class="modal__txt">紅あずまをじっくりと蒸し焼きにして<br>
+                  くちどけ滑らかなさつまいものクリーム。<br>
+                  ゴロゴロの角切りのさつまいもを<br>
+                  たっぷりと入れシナモンの香りと一緒に<br>
+                  包みました。<br>
+                  秋の味覚をChoice！で</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="modal__season--02" class="modal__season--02">
+          <div class="modal__wrap">
+            <div class="modal__container">
+              <p class="modal__pic"><img src="images/modal2.png" alt="モンブランクレープ" class="modal__img"></p>
+              <div class="modal__box">
+                <p class="modal__ttl">モンブラン</p>
+                <p class="modal__txt">イタリア産の風味の豊かなマロンを使用。<br>
+                  ゴロゴロの栗の甘露煮をたっぷりと一緒に<br>
+                  包み込みました。<br>
+                  なめらかなクリームとホクホクの甘露煮<br>
+                  ２種類のマロンを楽しめます。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu__every">
+          <div class="menu__everyPic"></div>
+          <h4 class="menu__everyTtl">Everytime Menu</h4>
+          <p class="menu__everyRuby">通常メニュー</p>
+
+          <ul class="menu__everyUl">
+            <li class="menu__everyList--01">
+              <p class="menu__everyPic02 menu__click" data-modal="#modal__every--01"><img src="images/everyMenu1.jpg" alt="シュガーバタークレープ" class="menu__everyImg"></p>
+              <p class="menu__everySub">Sugar Butter</p>
+              <p class="menu__everyTxt">こだわりの生地を味わえる</p>
+              <p class="menu__everySubRuby">シュガーバター</p>
+            </li>
+            <li class="menu__everyList--02">
+              <p class="menu__everyPic02 menu__click" data-modal="#modal__every--02"><img src="images/everyMenu2.jpg" alt="チョコバナナクレープ" class="menu__everyImg">
+              </p>
+              <p class="menu__everySub">Chocolate<span class="menu__everySubBr">Banana</span></p>
+              <p class="menu__everyTxt">チョコレートソースとバナナを濃厚クリームで</p>
+              <p class="menu__everySubRuby">チョコバナナ</p>
+            </li>
+            <li class="menu__everyList--03">
+              <p class="menu__everyPic02 menu__click" data-modal=" #modal__every--03"><img src="images/everyMenu3.jpg" alt="イチゴチョコクレープ" class="menu__everyImg"></p>
+              <p class="menu__everySub">Srawberry<span class="menu__everySubBr">Chocolate</span></p>
+              <div class="" ></div>
+              <p class="menu__everyTxt">甘酸っぱいイチゴをたっぷりのクリームで</p>
+              <p class="menu__everySubRuby">イチゴチョコレート</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- モーダル記述 -->
+        <div id="modal__every--01" class="modal__every--01">
+          <div class="modal__wrap">
+            <div class="modal__container">
+              <p class="modal__pic"><img src="images/modal3.png" alt="シュガーバタークレープ" class="modal__img"></p>
+              <div class="modal__box">
+                <p class="modal__ttl">シュガーバター</p>
+                <p class="modal__txt">こだわりの生地をそのまま楽しめるプレーン<br>
+                  なクレープ。<br>
+                  もちもちでもパリパリでも生地の香ばしさや<br>
+                  ミルキー感をしっかりと味わえます。<br>
+                  何個でも食べたくなるおいしさ！</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="modal__every--02" class="modal__every--02">
+          <div class="modal__wrap">
+            <div class="modal__container">
+              <p class="modal__pic"><img src="images/modal4.png" alt="チョコバナナクレープ" class="modal__img"></p>
+              <div class="modal__box">
+                <p class="modal__ttl">チョコバナナ</p>
+                <p class="modal__txt">みんなが大好きなチョコバナナ。<br>
+                  コクのあるクリームと自家製チョコレート<br>
+                  ソースでリッチな味わいに。<br>
+                  しっかりと熟したおいしいバナナと<br>
+                  包み込みました。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="modal__every--03" class="modal__every--03">
+          <div class="modal__wrap">
+            <div class="modal__container">
+              <p class="modal__pic"><img src="images/modal1.png" alt="イチゴチョコクレープ" class="modal__img"></p>
+              <div class="modal__box">
+                <p class="modal__ttl">イチゴチョコ</p>
+                <p class="modal__txt">甘酸っぱいイチゴと軽いのにコクのある<br>
+                  カスタードクリームと生クリームを合わせました。<br>
+                  自家製のチョコレートソースと一緒にたっぷりの<br>
+                  イチゴと包み込みました。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="custom" class="custom">
+        <h2 class="custom__ttl">Custom Menu</h2>
+        <p class="custom__ttlSub">自分好みのクレープにカスタム！</p>
+        <div class="custom__mPic"></div>
+        <ul class="custom__ul">
+          <li class="custom__list--01">
+            <p class="custom__listTtl">Fresh Cream</p>
+            <div class="custom__box">
+              <div class="custom__pic"></div>
+              <!-- hoverボックス -->
+              <div class="custom__hover">
+                <p class="custom__hoverTtl">クリーム</p>
+                <div class="custom__hoverContainer">
+                  <div class="custom__hoverBox">
+                    <p class="custom__hoverTxt">生クリーム</p>
+                    <p class="custom__hoverTxtSub">道産のフレッシュでコクのあるクリーム</p>
+                  </div>
+                  <div class="custom__hoverBox">
+                    <p class="custom__hoverTxt">カスタードクリーム</p>
+                    <p class="custom__hoverTxtSub">自家製のカスタードクリームに生クリームを<br>
+                      合わせた濃厚なのに軽いカスタード</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p class="custom__txt">道産の牛乳と生クリームで作る濃厚なのにくどくない</p>
+            <p class="custom__ruby">こだわりのクリーム</p>
+          </li>
+          <li class="custom__list--02">
+            <p class="custom__listTtl">Sauce</p>
+            <div class="custom__box">
+              <div class="custom__pic"></div>
+              <!-- hoverボックス -->
+              <div class="custom__hover">
+                <p class="custom__hoverTtl">自家製ソース</p>
+                <div class="custom__hoverContainer">
+                  <p class="custom__hoverTxt">チョコレート</p>
+                  <p class="custom__hoverTxt">キャラメル</p>
+                  <p class="custom__hoverTxt">レモン</p>
+                  <p class="custom__hoverTxt">みたらし</p>
+                  <p class="custom__hoverTxt">黒蜜</p>
+                  <p class="custom__hoverTxt">抹茶</p>
+                </div>
+              </div>
+
+            </div>
+            <p class="custom__txt">定番のチョコレートから和風、柑橘まで色々！</p>
+            <p class="custom__ruby">選べるソース</p>
+          </li>
+          <li class="custom__list--03">
+            <p class="custom__listTtl">Fruit</p>
+            <div class="custom__box">
+              <div class="custom__pic"></div>
+              <!-- hoverボックス -->
+              <div class="custom__hover">
+                <p class="custom__hoverTtl">フルーツ</p>
+                <div class="custom__hoverContainer">
+                  <div class="custom__hoverBox">
+                    <p class="custom__hoverTxt">イチゴ</p>
+                    <p class="custom__hoverTxt">バナナ</p>
+                    <p class="custom__hoverTxt">キウイ</p>
+                  </div>
+                  <div class="custom__hoverBox">
+                    <p class="custom__hoverTxt">パイナップル</p>
+                    <p class="custom__hoverTxt">ブルーべリー</p>
+                  </div>
+                  <p class="custom__hoverTxt">リンゴのコンポート</p>
+                  <p class="custom__hoverTxt">旬のフルーツ</p>
+                </div>
+              </div>
+
+            </div>
+            <p class="custom__txt">イチゴやバナナだけでなく旬のフルーツも</p>
+            <p class="custom__ruby">おいしいフルーツ</p>
+          </li>
+          <li class="custom__list--04">
+            <p class="custom__listTtl">Others</p>
+            <div class="custom__box">
+              <div class="custom__pic"></div>
+              <!-- hoverボックス -->
+              <div class="custom__hover">
+                <p class="custom__hoverTtl">他にもいろいろ！</p>
+                <div class="custom__hoverContainer">
+                  <div class="custom__hoverWrap">
+                    <p class="custom__hoverTxt">ナッツ</p>
+                    <div class="custom__hoverBox">
+                      <p class="custom__hoverTxtSub">カシューナッツ</p>
+                      <p class="custom__hoverTxtSub">アーモンドスライス</p>
+                    </div>
+                  </div>
+                  <div class="custom__hoverBox">
+                    <p class="custom__hoverTxt">ブラウニー</p>
+                    <p class="custom__hoverTxt">チーズケーキ</p>
+                  </div>
+                  <div class="custom__hoverBox">
+                    <p class="custom__hoverTxt">あんこ</p>
+                    <p class="custom__hoverTxt">ごま餡</p>
+                    <p class="custom__hoverTxt">白玉</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="custom__txt">ガトーショコラやチーズケーキ、アイスも！</p>
+            <p class="custom__ruby">ほかにも色々な具材</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="shop" class="shop">
+        <h2 class="shop__ttl">Shop Info</h2>
+        <p class="shop__txt">出店スケジュール</p>
+        <p class="shop__time">10:00~17:30</p>
+        <dl class="shop__dl">
+          <div class="shop__dlBox">
+            <dt class="shop__dt">月曜日</dt>
+            <dd class="shop__dd">お休み</dd>
+          </div>
+          <div class="shop__dlBox">
+            <dt class="shop__dt">火曜日</dt>
+            <dd class="shop__dd">お休み</dd>
+          </div>
+          <div class="shop__dlBox">
+            <dt class="shop__dt">水曜日</dt>
+            <dd class="shop__dd">大通り公園</dd>
+          </div>
+          <div class="shop__dlBox">
+            <dt class="shop__dt">木曜日</dt>
+            <dd class="shop__dd">円山公園</dd>
+          </div>
+          <div class="shop__dlBox">
+            <dt class="shop__dt">金曜日</dt>
+            <dd class="shop__dd">アリオ札幌</dd>
+          </div>
+          <div class="shop__dlBox">
+            <dt class="shop__dt">土曜日</dt>
+            <dd class="shop__dd">札幌ドーム</dd>
+          </div>
+          <div class="shop__dlBox">
+            <dt class="shop__dt">日曜日</dt>
+            <dd class="shop__dd">札幌さとランド</dd>
+          </div>
+        </dl>
+        <div class="shop__line"></div>
+      </section>
+
+      <section id="sns" class="sns">
+        <h2 class="sns__ttl">SNS</h2>
+        <p class="sns__txt">どこでなに食べた？</p>
+        <ul class="sns__ul">
+          <li class="sns__list"><img src="images/sns1.jpg" alt="イチゴチョコクレープ" class="sns__img"></li>
+          <li class="sns__list"><img src="images/sns2.jpg" alt="クレープを頬張る男の子" class="sns__img"></li>
+          <li class="sns__list"><img src="images/sns3.jpg" alt="ブルーベリークレープとイチゴクレープ" class="sns__img"></li>
+          <li class="sns__list"><img src="images/sns4.jpg" alt="イチゴクレープと景色" class="sns__img"></li>
+          <li class="sns__list"><img src="images/sns5.jpg" alt="チョコバナナクレープ" class="sns__img"></li>
+          <li class="sns__list"><img src="images/sns6.jpg" alt="イチゴレープと公園" class="sns__img"></li>
+          <li class="sns__list"><img src="images/sns7.jpg" alt="スイートポテトクレープ" class="sns__img"></li>
+          <li class="sns__list"><img src="images/sns8.jpg" alt="クレープを頬張る男の子" class="sns__img"></li>
+        </ul>
+        <div class="sns__btn">
+          <a href="#" class="sns__link">
+            <p class="sns__inst"><img src="images/instagram.svg" alt="インスタグラム" class="sns__img"></p>
+            <p class="sns__share">Let’t Share!</p>
+          </a>
+        </div>
+      </section>
+
+    </main>
+    <footer class="footer">
+      <p class="footer__copy"><small class="footer__small">&copy;Crepe Kitchen Choice! 2023</small></p>
+    </footer>
+  </div>
+
+  <!-- jQuery本体 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/function.js"></script>
+</body>
+
+</html>

@@ -1,12 +1,10 @@
-//各ファイルは必ず登録済みの変数を最初に読み込みます
-//as *で読み込みファイル名を省略することができます
 @use "../global" as *;
 
 //スライドメニュー
 .body {
     overflow: hidden;
 }
-
+//hoverなくしたクラス
 .header__fixed {
     position: fixed;
     top: 0;
@@ -52,6 +50,7 @@
         align-items: center;
         justify-content: center;
         color: #fff;
+        cursor: pointer;
 
         //Xボタン
         .gnavSlider__btnline {
@@ -67,8 +66,6 @@
             }
         }
     }
-
-
 }
 
 .btnTop-click {
@@ -83,7 +80,7 @@
 
 
 
-// mv背景動画
+//topページmv背景動画
 #top {
     .mv__swiper {
         height: 100vh;
@@ -137,7 +134,7 @@
 }
 
 
-// messageギャラリー画像
+//topページ・historyページのmessageギャラリー画像
 .message__gallery {
     &Container {
         display: flex;
@@ -225,7 +222,7 @@
     pointer-events: none;
 }
 
-
+//historyページ
 #history {
     .wrapper {
 

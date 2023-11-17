@@ -121,7 +121,6 @@
 
     }
 
-    // messageセクション------------------
     .message {
         position: relative;
         z-index: 3;
@@ -399,7 +398,6 @@
         }
     }
 
-    //worksセクション------------------
     .works {
         position: relative;
         padding-top: clamp(0px, calc(58.125px - 4vw), 43.12px);
@@ -863,9 +861,9 @@
         }
     }
 
-    //skillセクション--------------------
     .skill {
         position: relative;
+        z-index: 4;
         padding-top: 22.93vw;
         padding-bottom: 14vw;
         background: #515151;
@@ -1154,23 +1152,24 @@
         }
     }
 
-
-    //historyセクション-------------------
     .history {
         position: relative;
-        padding-top: clamp(0px, 26.6vw, 178px);
+        margin-top: clamp(-103px, -21.5vw, 0px);
         padding-bottom: clamp(0px, 3vw, 15px);
         background: #000;
 
+        @media screen and (min-width: 1024px) {
+            margin-top: clamp(-278px, -14.5vw, 0px);
+        }
+
         &__ttl {
-            position: absolute;
-            top: clamp(-103px, -21.5vw, 0px);
-            left: 0;
-            z-index: 3;
+            position: relative;
+            z-index: 5;
+            margin-bottom: clamp(0px, 13.3vw, 100px);
             @include ttl;
 
             @media screen and (min-width: 900px) {
-                top: clamp(-275px, -15vw, 0px);
+                margin-bottom: clamp(100px, 6.66vw, 128px);
             }
 
             &-01 {
@@ -1238,7 +1237,7 @@
 
         &__bgPic {
             position: absolute;
-            top: clamp(0px, 50vw, 100px);
+            top: clamp(0px, 37vw, 138px);
             left: clamp(-101px, -138.75px - 10vw, -49px);
             z-index: 2;
             width: clamp(0px, 132vw, 801px);
@@ -1247,6 +1246,7 @@
 
             @media screen and (min-width: 1024px) {
                 width: clamp(801px, 78.25vw, 1638px);
+                top: clamp(0px, 23.8vw, 457px);
             }
 
             &::after {

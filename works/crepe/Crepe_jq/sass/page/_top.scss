@@ -1,0 +1,723 @@
+@use "../global" as *;
+
+#top {
+    .wrapper {
+        position: relative;
+    }
+
+    .mv {
+        margin-bottom: 40px;
+        width: 100%;
+        height: 100vh;
+        background: url(../images/MV.jpg) center center / cover;
+    }
+
+    .about {
+        position: relative;
+        z-index: 0;
+        padding: 80px 0 300px;
+
+        &__bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 1285px;
+            background: url(../images/about_bg.png)center center / cover;
+        }
+
+        &__ttl {
+            margin: 0 auto 60px;
+            width: 167px;
+            height: 154px;
+        }
+
+        &__img {
+            object-fit: contain;
+        }
+
+        &__txt {
+            margin: 0 auto;
+            color: $mc;
+            line-height: 2.2em;
+            font-size: 23px;
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+
+    .crepe {
+        position: relative;
+        padding: 60px 0 150px;
+
+        &__item {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 795px;
+            height: 202px;
+            background: url(../images/crepe_CrepeKitchenChoice!.png) center center / contain no-repeat;
+        }
+
+        &__ttl {
+            margin-bottom: 20px;
+            text-align: center;
+            color: $mc;
+            font-style: italic;
+            font-size: 41px;
+            font-weight: bold;
+
+            &Sub {
+                text-align: center;
+                color: $mc;
+                font-size: 46px;
+                font-weight: bold;
+            }
+        }
+
+        &__ul {
+            display: flex;
+            justify-content: center;
+            gap: 158px;
+            position: relative;
+            z-index: -2;
+            padding: 110px 0 82px;
+            margin-bottom: -15px;
+            background: $bg;
+            transform: translateY(-15px);
+        }
+
+        &__list {
+            width: 500px;
+
+            &Ttl {
+                margin-bottom: 24px;
+                text-align: center;
+                font-size: 42px;
+                font-weight: bold;
+            }
+        }
+
+        &__pic {
+            margin-bottom: 36px;
+        }
+
+        &__txt {
+            text-align: center;
+            font-size: 23px;
+            font-weight: 500;
+            line-height: 1.8em;
+        }
+    }
+
+    .menu {
+        margin-bottom: 100px;
+        position: relative;
+        padding-top: 40px;
+
+        &__item {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 730px;
+            height: 190px;
+            background: url(../images/menu_CrepeChoice!Menu.png) center center / contain no-repeat;
+        }
+
+        &__ttl {
+            margin-bottom: 20px;
+            text-align: center;
+            color: $mc;
+            font-style: italic;
+            font-size: 41px;
+            font-weight: bold;
+
+            &Sub {
+                margin-bottom: 70px;
+                color: $mc;
+                text-align: center;
+                font-size: 46px;
+                font-weight: bold;
+            }
+        }
+
+        &__season {
+            margin-bottom: 90px;
+            position: relative;
+            z-index: 0;
+
+            &Pic {
+                width: 880px;
+                height: 700px;
+                background: url(../images/seazonMenu.jpg) center center / cover;
+            }
+
+            &Ttl {
+                position: absolute;
+                top: 0;
+                left: 563px;
+                transform: rotate(-14deg);
+                font-family: $mf;
+                font-size: 175px;
+                font-weight: bold;
+            }
+
+            &Ruby {
+                position: absolute;
+                top: 120px;
+                left: 924px;
+                transform: rotate(-14deg);
+                letter-spacing: 3px;
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            &Ul {
+                transform: translateY(-200px);
+                display: flex;
+                justify-content: space-between;
+                padding: 0 280px;
+                height: 1105px;
+            }
+
+            &List--01 {
+                position: relative;
+                order: 1;
+                color: #e1af00;
+
+                & .menu__seasonPic02 {
+                    margin-bottom: 70px;
+                }
+
+                & .menu__seasonSub {
+                    top: 420px;
+                    left: -35px;
+                }
+
+                & .menu__seasonTxt,
+                .menu__seasonSubRuby {
+                    margin-left: 43px;
+                }
+            }
+
+            &List--02 {
+                position: relative;
+                align-self: flex-end;
+                color: #e63118;
+
+                & .menu__seasonSub {
+                    top: 405px;
+                    left: -90px;
+                }
+            }
+
+            &Pic02 {
+                margin-bottom: 50px;
+                width: 600px;
+                height: 470px;
+                cursor: pointer;
+            }
+
+            &Sub {
+                position: absolute;
+                font-family: $mf;
+                font-size: 130px;
+                font-weight: 400;
+                transform: rotate(-10deg);               
+                pointer-events: none;
+
+                &Ruby {
+                    font-size: 38px;
+                    font-weight: bold;
+                }
+            }
+
+            &Txt {
+                margin-bottom: 18px;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+        }
+
+        &__every {
+            position: relative;
+            z-index: 0;
+
+            &Pic {
+                margin-left: auto;
+                width: 880px;
+                height: 700px;
+                background: url(../images/everyMenu.jpg) center center / cover;
+            }
+
+            &Ttl {
+                position: absolute;
+                top: 55px;
+                left: 580px;
+                transform: rotate(-14deg);
+                font-family: $mf;
+                font-size: 175px;
+                font-weight: bold;
+            }
+
+            &Ruby {
+                position: absolute;
+                top: 200px;
+                left: 880px;
+                transform: rotate(-14deg);
+                letter-spacing: 3px;
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            &Ul {
+                transform: translateY(-200px);
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                row-gap: 260px;
+                padding: 0 280px;
+                margin-bottom: -200px;
+            }
+
+            &List--01 {
+                position: relative;
+                color: #ffa800;
+
+                .menu__everySub {
+                    position: absolute;
+                    top: -20px;
+                    left: -44px;
+                }
+            }
+
+            &List--02 {
+                position: relative;
+                transform: translateY(425px);
+                color: #ae0000;
+
+                .menu__everySub {
+                    position: absolute;
+                    top: 295px;
+                    left: -70px;
+
+                    &Br {
+                        position: absolute;
+                        top: 80px;
+                        left: 122px;
+                    }
+                }
+            }
+
+            &List--03 {
+                position: relative;
+                color: #ff1f00;
+
+                .menu__everySub {
+                    position: absolute;
+                    top: -73px;
+                    left: 0;
+
+                    &Br {
+                        position: absolute;
+                        top: 115px;
+                        left: 138px;
+                    }
+                }
+            }
+
+            &Pic02 {
+                margin-bottom: 50px;
+                width: 600px;
+                height: 470px;
+                cursor: pointer;
+            }
+
+            &Sub,
+            &SubBr {
+                position: absolute;
+                font-family: $mf;
+                font-size: 130px;
+                font-weight: 400;
+                transform: rotate(-10deg);
+                pointer-events: none;
+
+                &Ruby {
+                    font-size: 38px;
+                    font-weight: bold;
+                }
+            }
+
+            &SubBr{
+                transform: rotate(-5deg);
+            }
+
+            &Txt {
+                margin-bottom: 18px;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+        }
+    }
+
+    .modal {
+        &__season--01,
+        &__season--02 ,
+        &__every--01,
+        &__every--02,
+        &__every--03 {
+            display: none;
+        }
+
+        &__wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background: $bg;
+        }
+
+        &__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            width: 1331px;
+            height: 770px;
+            border-radius: 50px;
+            background: #fff;
+        }
+
+        &__pic {
+            width: 726px;
+            height: 620px;
+        }
+
+        &__img {
+            object-fit: cover;
+        }
+
+        &__box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__ttl {
+            margin-bottom: 48px;
+            padding: 30px 0;
+            width: 304px;
+            background: #ffb74b;
+            border-radius: 50px;
+            text-align: center;
+            color: #fff;
+        }
+
+        &__txt {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 2em;
+        }
+    }
+
+    .custom {
+        position: relative;
+        z-index: 0;
+        margin-bottom: 300px;
+        padding-top: 190px;//スムーススクロール位置調節用
+
+        &__ttl {
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            transform: rotate(-14deg);
+            font-family: $mf;
+            font-size: 175px;
+            font-weight: bold;
+
+            &Sub {
+                position: absolute;
+                top: 200px;
+                left: 127px;
+                transform: rotate(-14deg);
+                letter-spacing: 3px;
+                font-size: 30px;
+                font-weight: bold;
+            }
+        }
+
+        &__mPic {
+            margin-bottom: 145px;
+            width: 100%;
+            height: 700px;
+            background: url(../images/custom.jpg)center center / cover;
+        }
+
+        &__ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            row-gap: 61px;
+            padding: 0 280px;
+        }
+
+        &__list {
+            width: 600px;
+
+            &Ttl {
+                position: relative;
+                z-index: 2;
+                text-shadow: 2px 2px 1px #FFF;
+                font-family: $mf;
+                font-weight: 400;
+                font-size: 130px;
+            }
+
+            &--01 {
+                color: #FFA800;
+
+                .custom__pic {
+                    background: url(../images/custom1.jpg);
+                }
+
+                .custom__hoverTxt {
+                    margin-bottom: 10px;
+                }
+            }
+
+            &--02 {
+                color: #850000;
+
+                .custom__pic {
+                    background: url(../images/custom2.jpg);
+                }
+            }
+
+            &--03 {
+                color: #ff6b00;
+
+                .custom__pic {
+                    background: url(../images/custom3.jpg);
+                }
+
+                .custom__hoverBox {
+                    display: flex;
+                    gap: 39px;
+                }
+            }
+
+            &--04 {
+                color: #fda521;
+
+                .custom__pic {
+                    background: url(../images/custom4.jpg);
+                }
+
+                .custom__hoverBox {
+                    display: flex;
+                    gap: 34px;
+                }
+            }
+        }
+
+        &__box {
+            position: relative;
+            top: -50px;
+            margin-bottom: -50px;
+        }
+
+        &__pic {
+            width: 600px;
+            height: 470px;
+            left: 0;
+            z-index: 1;
+            margin-bottom: 43px;
+        }
+
+        &__txt {
+            margin-bottom: 21px;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        &__ruby {
+            font-weight: 600;
+            font-size: 38px;
+        }
+
+        &__hover {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            padding-top: 54px;
+            width: 600px;
+            height: 470px;
+            background: $bg;
+            color: #000;
+            text-align: center;
+            text-shadow: 1px 1px 1px #FFF;
+            opacity: 0;
+            transition: .5s;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &Container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                height: 258px;
+            }
+
+            &Ttl {
+                margin-bottom: 42px;
+                font-size: 35px;
+                font-weight: 700;
+            }
+
+            &Txt {
+                font-size: 23px;
+                font-weight: 700;
+
+                &Sub {
+                    font-size: 23px;
+                    font-weight: 500;
+                    line-height: 2em;
+                }
+            }
+        }
+    }
+
+    .shop {
+        margin-bottom: 300px;
+        color: $mc;
+        text-align: center;
+
+        &__ttl {
+            margin-bottom: 40px;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 41px;
+        }
+
+        &__txt {
+            margin-bottom: 40px;
+            font-weight: 600;
+            font-size: 46px;
+        }
+
+        &__time {
+            margin-bottom: 71px;
+            font-family: "Noto Sans JP";
+            font-size: 46px;
+            font-weight: bold;
+        }
+
+        &__dl {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            width: 1405px;
+            color: #000;
+        }
+
+        &__dt {
+            margin-bottom: 40px;
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        &__dd {
+            font-size: 25px;
+            font-weight: 400;
+        }
+
+        &__line {
+            position: relative;
+            top: -50px;
+            margin: 0 auto;
+            width: 1514px;
+            height: 1px;
+            background: $mc;
+        }
+    }
+
+    .sns {
+        margin-bottom: 261px;
+        padding: 0 280px;
+        color: $mc;
+        text-align: center;
+
+        &__ttl {
+            margin-bottom: 40px;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 41px;
+        }
+
+        &__txt {
+            margin-bottom: 90px;
+            font-weight: 600;
+            font-size: 40px;
+        }
+
+        &__ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            row-gap: 23px;
+            margin-bottom: 42px;
+        }
+
+        &__list {
+            width: 320px;
+            height: 320px;
+        }
+
+        &__btn {
+            width: 390px;
+            margin: 0 auto;
+        }
+        
+        &__link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+            text-decoration: none;
+            padding: 18px 0;
+            background: $mc;
+            border-radius: 78px;
+            transition: .4s;
+            &:hover{
+                background: #ff8800;
+            }
+        }
+
+        &__inst {
+            width: 65px;
+            height: 65px;
+        }
+
+        &__share {
+            color: #fff;
+            font-style: italic;
+            font-size: 35px;
+            font-weight: bold;
+        }
+    }
+
+}

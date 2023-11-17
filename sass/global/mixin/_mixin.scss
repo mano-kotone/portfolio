@@ -2,34 +2,40 @@
 
 @use "../setting" as *;
 
+//padding
+//sp用
 @mixin padding {
     padding-left: 20px;
     padding-right: 20px;
 }
-
+//tab用
 @mixin paddingTab {
     padding-left: 40px;
     padding-right: 40px;
 }
-
+//pc用
 @mixin paddingPc {
     padding-left: clamp(20px, 7.57vw, 150px);
     padding-right: clamp(20px, 7.57vw, 150px);
 }
-
+//pc用
 $mvPaddingPc: 60px;
-
+//historyPc用
 @mixin paddngHistoryPc {
     padding-right: clamp(40px,8.8vw,169px);
     padding-left: clamp(40px,10.9vw,210px);
 }
 
+
+//befor,after用
 @mixin content($c: "", $w: 100%) {
     content: $c;
     display: block;
     width: $w;
 }
 
+
+//font用
 @mixin navfont {
     color: #fff;
     font-size: 45px;
@@ -62,6 +68,8 @@ $mvPaddingPc: 60px;
     }
 }
 
+
+//アイコン
 @mixin arrow($c: #fff) {
     position: relative;
     display: inline-block;
@@ -103,43 +111,6 @@ $mvPaddingPc: 60px;
 
 $arrowMargin-01-02: 3px;
 $arrowMargin-03-04: -10px;
-
-
-@mixin historyLine($r: 0, $l: auto) {
-    position: relative;
-    width: 52px;
-    height: 10px;
-
-    @media screen and (min-width: 768px) {
-        height: 15px;
-    }
-
-    &::before {
-        @include content;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 100%;
-        height: 1px;
-        background: $gray;
-    }
-
-    &::after {
-        @include content;
-        position: absolute;
-        top: 0;
-        right: $r;
-        left: $l;
-        width: 10px; //pc15px
-        aspect-ratio: 1 / 1;
-        border-radius: 50%;
-        background: $gray;
-
-        @media screen and (min-width: 768px) {
-            width: 15px;
-        }
-    }
-}
 
 @mixin plus($ccircle: #fff, $c: #fff) {
     position: relative;
@@ -186,6 +157,43 @@ $arrowMargin-03-04: -10px;
 
         @media screen and (min-width: 768px) {
             height: 13px;
+        }
+    }
+}
+
+//historyメッセージのアイテム
+@mixin historyLine($r: 0, $l: auto) {
+    position: relative;
+    width: 52px;
+    height: 10px;
+
+    @media screen and (min-width: 768px) {
+        height: 15px;
+    }
+
+    &::before {
+        @include content;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 1px;
+        background: $gray;
+    }
+
+    &::after {
+        @include content;
+        position: absolute;
+        top: 0;
+        right: $r;
+        left: $l;
+        width: 10px; //pc15px
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        background: $gray;
+
+        @media screen and (min-width: 768px) {
+            width: 15px;
         }
     }
 }

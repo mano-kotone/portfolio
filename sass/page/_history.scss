@@ -318,7 +318,7 @@
                 padding-bottom: clamp(170px, 14.8vw, 285px);
             }
 
-            //container内_js.scssに記述
+            //container内_js.scssフォルダに記述
             &Container {
                 margin-bottom: clamp(0px, 18.66vw, 75px);
 
@@ -529,6 +529,7 @@
             }
         }
 
+        //jQスライドトグル用
         &__accordion {
             display: none;
         }
@@ -798,6 +799,7 @@
         }
 
         &__txt {
+            //jQスライドトグル
             display: none;
             font-size: 13px;
 

@@ -1,3 +1,5 @@
+//topページ用フォルダ
+
 //mvビデオ再生速度
 const video01 = document.querySelector('#mv__swiper-video-01');
 const video02 = document.querySelector('#mv__swiper-video-02');

@@ -1,5 +1,5 @@
 
-//mv動画
+//topページのmv動画
 const mvSwiper = new Swiper('.mv__swiper', {
 
     slidesPerGroup: 1,

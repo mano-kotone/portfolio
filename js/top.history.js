@@ -1,3 +1,5 @@
+//topページ・historyページ用フォルダ
+
 // message__gallery内の要素の記述
 let flg = 1;
 
@@ -52,8 +54,14 @@ const today = new Date();
 const since = new Date('1997-01-04T16:34:00');
 
 const count = today - since;
-const countTime = count / (60 * 60 * 1000);
-const countHour = Math.trunc(countTime);
+const countTimeHour = count / (60 * 60 * 1000);
+const countTimeYear = count / (365.25 * 24 * 60 * 60 * 1000);
 
-const nunber = document.querySelector('#sinceTime');
-nunber.textContent = countHour
+const countHour = Math.trunc(countTimeHour);
+const countYear = Math.trunc(countTimeYear);
+
+const timeNunber = document.querySelector('#sinceTime');
+const yearNunber = document.querySelector('#sinceYear')
+
+timeNunber.textContent = countHour;
+yearNunber.textContent = countYear;

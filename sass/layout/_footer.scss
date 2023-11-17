@@ -183,7 +183,7 @@
     &__siteName {
         &Roop {
             width: 120%;
-            padding-left: 30px;
+            padding-left: clamp(0px,1.56vw,30px);
         }
 
         &Top {

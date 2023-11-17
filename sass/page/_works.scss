@@ -1,6 +1,6 @@
 @use "../global" as *;
 
-#works{
+#works {
     .wrapper {
         position: relative;
         overflow: hidden;
@@ -65,7 +65,7 @@
             position: absolute;
             bottom: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, 50%);
             width: max-content;
             font-family: $serif;
             font-style: italic;
@@ -302,16 +302,19 @@
                 }
             }
 
-            &Url::after {
-                content: "";
-                display: inline-block;
-                margin-bottom: -0.2em;
-                margin-left: 3px;
-                width: 21px;
-                aspect-ratio: 1 / 1;
-                background: url(../images/worksLink-icon.svg) center center / contain;
+            &Url {
+                display: flex;
+                align-items: baseline;
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    margin-bottom: -0.2em;
+                    margin-left: 3px;
+                    width: 21px;
+                    aspect-ratio: 1 / 1;
+                    background: url(../images/worksLink-icon.svg) center center / contain;
+                }
             }
-
         }
     }
 
@@ -488,7 +491,8 @@
             padding-top: 0;
             padding-right: clamp(40px, 9.89vw, 190px);
             font-size: clamp(13px, 3.125vw, 60px);
-            &:hover{
+
+            &:hover {
                 @include arrowHover;
             }
         }

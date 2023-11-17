@@ -1,0 +1,23 @@
+@use "../global" as *;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+    padding: 28px 62px;
+    width: 100%;
+
+    &__ttl {
+        width: 264px;
+        height: 67px;
+    }
+
+    &__img {
+        object-fit: contain;
+    }
+}

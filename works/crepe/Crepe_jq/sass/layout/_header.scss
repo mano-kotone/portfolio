@@ -1,0 +1,15 @@
+@use "../global" as *;
+
+.header {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    z-index: 4;
+    transform: translateX(-50%);
+    transition: 1s;
+
+    &__ttl {
+        width: 219px;
+        height: 202px;
+    }
+}

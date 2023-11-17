@@ -3,6 +3,7 @@
 @use "../setting" as *;
 @use"../mixin" as *;
 
+//スライドメニューのline
 %slide__btn {
     position: fixed;
     z-index: 21;
@@ -20,6 +21,7 @@
     }
 }
 
+//worksページ
 %worksDlTtl {
     color: rgba(0, 0, 0, 0.4);
     font-weight: 500;

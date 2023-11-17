@@ -2,4 +2,12 @@
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
 
-
+#thanks{
+    .thanks{
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $blue;
+    }
+}

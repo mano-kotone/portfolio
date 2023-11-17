@@ -1,0 +1,17 @@
+@use "../global" as *;
+
+#top {
+    //newsのすべて、お知らせの切り替え
+    .display-block {
+        display: block;
+    }
+
+    .display-none {
+        display: none;
+    }
+
+    .before{
+        @include pTtl(15px,3);
+        color: $mc;
+    }
+}

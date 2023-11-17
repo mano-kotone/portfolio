@@ -1,0 +1,67 @@
+@use "../global" as *;
+
+.footer {
+    padding: 104px 434px 53px;
+    background: $bg;
+
+    &__ul {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 64px;
+    }
+
+    &__list {
+        &Link {
+            margin-bottom: 60px;
+            color: $mc;
+            font-size: 30px;
+            font-weight: bold;
+            transition: .4s;
+
+            &:hover {
+                color: $mcH;
+            }
+        }
+
+        &Ul {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        &Link02 {
+            padding: 10px 0;
+            color: $mc;
+            font-size: 15px;
+            font-weight: bold;
+            transition: .4s;
+
+            &:hover {
+                color: $mcH;
+            }
+        }
+    }
+
+    &__ttl {
+        margin: 0 auto 8px;
+        width: 264px;
+        height: 67px;
+
+        &Img {
+            object-fit: contain;
+        }
+    }
+
+    &__copy {
+        text-align: center;
+    }
+
+    &__small {
+        color: $mc;
+    }
+
+    &__2023 {
+        font-family: $ffz;
+        color: $mc;
+    }
+}

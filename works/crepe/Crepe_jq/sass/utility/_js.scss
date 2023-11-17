@@ -1,0 +1,52 @@
+@use "../global" as *;
+
+// ハンバーガーボタン
+.rotateTop {
+    transform: rotate(45deg);
+}
+
+.hideMiddle {
+    transform: translateX(300%);
+}
+
+.rotateBottom {
+    transform: rotate(-45deg);
+}
+
+//スライドメニュー
+.nav {
+    width: 962px;
+}
+
+//リサイズヘッダー
+.resizeheader {
+    position: fixed;
+    top: 45px;
+    left: 280px;
+    transform: translateX(0);
+}
+
+.resizeTtl {
+    width: 79px;
+    height: 73px;
+}
+
+.recolor {
+    background: $mc;
+    border: 1px solid #fff;
+}
+
+.recolorLink{
+    color: #fff;
+    &::before{content: "";
+        display: block;
+        width: 5px;
+        height: 7px;
+        background: url(../images/nav_item.png)center center / contain;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(188deg) brightness(101%) contrast(102%);
+    }
+}
+
+.recolorBtn{
+    background: #fff;
+}

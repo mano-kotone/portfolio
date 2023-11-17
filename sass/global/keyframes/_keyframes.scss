@@ -2,7 +2,7 @@
 
 @use "../setting" as *;
 
-
+//画面下部の砂嵐
 @keyframes sunaarashi{
     0%{
         background-image: url(../images/sunaarashi-01.jpg);
@@ -100,7 +100,6 @@
 }
 
 //ループアニメーション
-
 @keyframes roop1 {
     0% {
         transform: translateX(100%);
@@ -152,7 +151,7 @@
 }
 
 
-//history画像アニメーション
+//topページのhistory画像アニメーション
 @keyframes history1 {
     15% {
         opacity: 1;

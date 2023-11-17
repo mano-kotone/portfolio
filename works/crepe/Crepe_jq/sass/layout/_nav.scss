@@ -1,0 +1,76 @@
+@use "../global" as *;
+
+.gnav {
+    display: flex;
+    position: fixed;
+    top: 51px;
+    right: 280px;
+    z-index: 4;
+
+    &__ul {
+        display: flex;
+        gap: 42px;
+        position: relative;
+        top: 0;
+        right: -89px;
+        height: 60px;
+        width: 88px;
+        margin-left: -89px;
+        padding-left: 90px;
+        background: #fff;
+        border: 1px solid $mc;
+        border-radius: 50px;
+        transition: .8s;
+        overflow: hidden;
+    }
+
+    &__link {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        text-decoration: none;
+        font-size: 21px;
+        font-weight: 500;
+        letter-spacing: -0.42px;
+        color: $mc;
+        
+        &:before {
+            content: "";
+            display: block;
+            width: 5px;
+            height: 7px;
+            margin-top: 8px;
+            background: url(../images/nav_item.png)center center / contain;
+            filter: invert(81%) sepia(15%) saturate(6474%) hue-rotate(339deg) brightness(98%) contrast(103%);
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 5;
+        width: 88px;
+        overflow: hidden;
+        cursor: pointer;
+
+    &Top,
+    &Middle,
+    &Bottom {
+        position: absolute;
+        width: 24px;
+        height: 1px;
+        background: $mc;
+        transition: .4s;
+    }
+
+    &Top {
+        transform: translateY(-6.9px);
+    }
+
+    &Bottom {
+        transform: translateY(6.9px);
+    }
+}
+}

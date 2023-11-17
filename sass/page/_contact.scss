@@ -21,6 +21,7 @@
         mix-blend-mode: normal;
     }
 
+
     .contact {
         @include padding;
         padding-top: 110px;
@@ -61,7 +62,6 @@
     }
 
     .form {
-
         &__box {
             margin-bottom: 22px;
 
