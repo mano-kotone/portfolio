@@ -128,13 +128,22 @@
     }
 
     100% {
-        transform: translateY(100%);
+        transform: translateY(200%);
     }
 }
 
 @keyframes roopVer2 {
     0% {
         transform: translateY(-200%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+@keyframes roopVer3 {
+    0% {
+        transform: translateY(-300%);
     }
 
     100% {

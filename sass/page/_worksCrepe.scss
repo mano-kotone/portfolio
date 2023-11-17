@@ -192,8 +192,9 @@
             @media screen and (min-width: 1024px) {
                 position: absolute;
                 top: 0;
-                right: -3vw;
+                right: 0;
                 z-index: 0;
+                line-height: 0.8;
                 font-size: clamp(0px, 8.38vw, 161px);
                 writing-mode: vertical-lr;
             }
@@ -206,7 +207,7 @@
                     @media screen and (min-width: 1024px) {
                         display: flex;
                         height: max-content;
-                        animation: roopVer1 100s -50s linear infinite;
+                        animation: roopVer1 99s -66s linear infinite;
                     }
                 }
 
@@ -217,7 +218,7 @@
                     @media screen and (min-width: 1024px) {
                         display: flex;
                         height: max-content;
-                        animation: roopVer2 100s linear infinite;
+                        animation: roopVer2 99s -33s linear infinite;
                     }
                 }
 
@@ -227,7 +228,7 @@
                     @media screen and (min-width: 1024px) {
                         display: flex;
                         height: max-content;
-                        animation: roopVer1 100s linear infinite;
+                        animation: roopVer3 99s linear infinite;
                     }
                 }
 

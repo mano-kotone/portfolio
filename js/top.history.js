@@ -45,3 +45,15 @@ window.addEventListener('scroll', () => {
         if (flg) { generateAndAppendElements(); }
     }
 });
+
+
+//historyセクションの生まれたからの時間
+const today = new Date();
+const since = new Date('1997-01-04T16:34:00');
+
+const count = today - since;
+const countTime = count / (60 * 60 * 1000);
+const countHour = Math.trunc(countTime);
+
+const nunber = document.querySelector('#sinceTime');
+nunber.textContent = countHour

@@ -539,6 +539,14 @@
             align-items: baseline;
             padding: 13px 0;
             border-bottom: 1px solid #fff;
+
+            &Txt {
+                font-size: 14px;
+
+                @media screen and (min-width: 1024px) {
+                    font-size: 17px;
+                }
+            }
         }
 
         &__year02 {

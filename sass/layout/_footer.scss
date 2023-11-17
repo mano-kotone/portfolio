@@ -181,6 +181,11 @@
     }
 
     &__siteName {
+        &Roop {
+            width: 120%;
+            padding-left: 30px;
+        }
+
         &Top {
             display: flex;
             height: 16px;
@@ -190,8 +195,6 @@
             }
 
             .footer__siteNameRoop {
-                width: 120%;
-
                 &-01 {
                     animation: roop1 100s -60s linear infinite;
                 }
@@ -206,8 +209,6 @@
             @extend .footer__siteNameTop;
 
             .footer__siteNameRoop {
-                width: 120%;
-
                 &-01 {
                     animation: roop1 100s -50s linear infinite;
                 }
