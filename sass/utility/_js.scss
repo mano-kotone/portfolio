@@ -1,9 +1,11 @@
 @use "../global" as *;
 
 //スライドメニュー
-.body {
+.body,
+.html {
     overflow: hidden;
 }
+
 //hoverなくしたクラス
 .header__fixed {
     position: fixed;
@@ -228,9 +230,10 @@
 
         //プラス、マイナスの切り替え
         .minus {
-            &::after{
+            &::after {
                 transform: translate(-50%, -50%) rotate(90deg);
             }
+
             &::before {
                 transform: translate(-50%, -50%) rotate(90deg);
                 opacity: 0;

@@ -361,11 +361,17 @@
 
         }
 
-        @media screen and (min-width: 1400px) {
-            display: flex;
-            justify-content: space-between;
-            padding-top: 125px;
+        &__wrapper {
+            max-width: 1539px;
+
+            @media screen and (min-width: 1400px) {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 125px;
+                margin: 0 auto;
+            }
         }
+
 
         &__ttl {
             margin-bottom: 46px;
@@ -645,6 +651,7 @@
 
         &__wrap {
             @include padding;
+            max-width: 1920px;
 
             @media screen and (min-width: 768px) {
                 @include paddingTab;
@@ -654,6 +661,7 @@
                 display: flex;
                 justify-content: space-between;
                 @include paddngHistoryPc;
+                margin: 0 auto;
             }
         }
 
@@ -726,6 +734,10 @@
             @media screen and (min-width: 768px) {
                 margin-bottom: 11px;
                 width: 100%;
+            }
+
+            @media screen and (min-width: 1024px) {
+                max-width: 836px;
             }
 
             img {
