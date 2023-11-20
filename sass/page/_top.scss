@@ -1,5 +1,3 @@
-//各ファイルは必ず登録済みの変数を最初に読み込みます
-//as *で読み込みファイル名を省略することができます
 @use "../global" as *;
 
 #top {
@@ -484,15 +482,11 @@
 
             &-06 {
                 transform: translateX(23vw);
-
-                @media screen and (min-width: 1024px) {
-                    transform: translateX(40vw);
-                }
             }
         }
 
         ul {
-            margin-bottom: 13vw;
+            margin-bottom: 3vw;
         }
 
         //works切り替え
@@ -857,6 +851,35 @@
                         height: 6px;
                     }
                 }
+            }
+        }
+
+        &__more {
+            margin-bottom: 10vw;
+            @include padding;
+            text-align: right;
+
+            @media screen and (min-width: 1024px) {
+                @include paddingPc;
+            }
+
+            &:hover {
+                @include arrowHover;
+            }
+
+        }
+
+        &__link {
+            color: $black;
+            font-size: 35px;
+            letter-spacing: -0.07em;
+
+            .arrow {
+                @include arrow($black);
+            }
+
+            @media screen and (min-width: 768px) {
+                font-size: clamp(35px, 4.56vw, 70px);
             }
         }
     }
@@ -1230,7 +1253,7 @@
                 transform: translateX(15vw);
 
                 @media screen and (min-width: 1024px) {
-                    transform: translateX(30vw);
+                    transform: translateX(28vw);
                 }
             }
         }
