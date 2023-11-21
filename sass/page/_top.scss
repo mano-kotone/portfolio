@@ -401,6 +401,7 @@
         padding-top: clamp(0px, calc(58.125px - 4vw), 43.12px);
         padding-bottom: clamp(0px, 25vw, 100px);
         background: $blue;
+        overflow: hidden;
 
         @media screen and (min-width:768px) {
             padding-top: 0;
@@ -642,7 +643,7 @@
                                 @media screen and (min-width: 950px) {
                                     position: absolute;
                                     top: 0;
-                                    left: clamp(540px, 52.5vw, 1000px);
+                                    left: clamp(563px, calc(50vw + 29px) ,1000px);
                                 }
                             }
 
@@ -749,7 +750,7 @@
                     @media screen and (min-width: 950px) {
                         position: absolute;
                         top: 50%;
-                        left: clamp(535px, 52vw, 1000px);
+                        left: clamp(535px, 50vw, 1000px);
                         transform: translateY(-50%);
                     }
 
@@ -867,21 +868,21 @@
                 @include arrowHover;
             }
 
+            &Link {
+                color: $black;
+                font-size: 35px;
+                letter-spacing: -0.07em;
+    
+                .arrow {
+                    @include arrow($black);
+                }
+    
+                @media screen and (min-width: 768px) {
+                    font-size: clamp(35px, 4.56vw, 70px);
+                }
+            }
         }
 
-        &__link {
-            color: $black;
-            font-size: 35px;
-            letter-spacing: -0.07em;
-
-            .arrow {
-                @include arrow($black);
-            }
-
-            @media screen and (min-width: 768px) {
-                font-size: clamp(35px, 4.56vw, 70px);
-            }
-        }
     }
 
     .skill {

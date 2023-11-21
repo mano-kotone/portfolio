@@ -1,8 +1,13 @@
 @use "../global" as *;
 
 #worksTop {
+    .wrapper{
+        overflow: clip;
+        background: $worksBg;
+    }
     .mv {
         position: relative;
+        margin-bottom: 5vw;
         width: 100%;
         height: 482px;
         background: $blue;
@@ -111,82 +116,86 @@
     }
 
     .works {
-        position: relative;
-        padding-top: clamp(0px, calc(58.125px - 4vw), 43.12px);
-        padding-bottom: clamp(0px, 25vw, 100px);
-        background: $blue;
+        overflow: visible;
+        padding-bottom: 3vw;
 
-        @media screen and (min-width:768px) {
-            padding-top: 0;
-        }
+        //切り替えボタン
+        &__switch {
+            position: sticky;
+            z-index: 10;
+            top: 85%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 51px;
+            width: 175px;
+            height: 45px;
+            background: $blue;
+            border-radius: 999px;
+            pointer-events: auto;
 
-        &__ttl {
-            margin-bottom: clamp(0px, 23vw, 90px);
-            @include ttl;
-
-            @media screen and (min-width:768px) {
-                position: relative;
-                z-index: 1;
-                margin-top: -20px;
+            @media screen and (min-width: 1024px) {
+                width: 262px;
+                height: 85px;
+                padding: 30px 80px;
             }
 
 
-            &-01 {
-                transform: translateX(-2vw);
+            &Line {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 20px;
+                height: 18px;
+                cursor: pointer;
 
                 @media screen and (min-width: 1024px) {
-                    transform: translateX(0);
+                    width: 30px;
+                    height: 26px;
+                }
+
+                span {
+                    width: 100%;
+                    height: 4px;
+                    background: #757575;
+
+                    @media screen and (min-width: 1024px) {
+                        height: 6px;
+                    }
                 }
             }
 
-            &-02 {
-                transform: translateX(-2vw);
-
-            }
-
-            &-03 {
-                transform: translateX(2.5vw);
-
-                @media screen and (min-width:768px) {
-                    transform: translateX(7vw);
-                }
+            &Block {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 3px;
+                width: 20px;
+                height: 18px;
+                cursor: pointer;
 
                 @media screen and (min-width: 1024px) {
-                    transform: translateX(5vw);
-                }
-            }
-
-            &-04 {
-                transform: translateX(10.3vw);
-
-                @media screen and (min-width:768px) {
-                    transform: translateX(15.3vw);
+                    width: 30px;
+                    height: 26px;
                 }
 
-                @media screen and (min-width: 1024px) {
-                    transform: translateX(13vw);
+                span {
+                    width: 4px;
+                    height: 4px;
+                    background: #757575;
+
+                    @media screen and (min-width: 1024px) {
+                        width: 6px;
+                        height: 6px;
+                    }
                 }
-            }
-
-            &-05 {
-                transform: translateX(9.5vw);
-
-                @media screen and (min-width:768px) {
-                    transform: translateX(14.3vw);
-                }
-
-                @media screen and (min-width: 1024px) {
-                    transform: translateX(12vw);
-                }
-            }
-
-            &-06 {
-                transform: translateX(23vw);
             }
         }
 
         ul {
-            margin-bottom: 3vw;
+            padding-top: clamp(0px, 5.4vw, 200px);
+            padding-bottom: clamp(0px, 12.5vw, 240px);
         }
 
         //works切り替え
@@ -342,7 +351,7 @@
                                 @media screen and (min-width: 950px) {
                                     position: absolute;
                                     top: 0;
-                                    left: clamp(540px, 52.5vw, 1000px);
+                                    left: clamp(563px, calc(50vw + 29px) ,1000px);
                                 }
                             }
 
@@ -449,7 +458,7 @@
                     @media screen and (min-width: 950px) {
                         position: absolute;
                         top: 50%;
-                        left: clamp(535px, 52vw, 1000px);
+                        left: clamp(535px, 50vw, 1000px);
                         transform: translateY(-50%);
                     }
 
@@ -477,109 +486,6 @@
                         }
                     }
                 }
-            }
-        }
-
-        //切り替えボタン
-        &__switch {
-            position: absolute;
-            z-index: 10;
-            top: 20%;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 14px 51px;
-            width: 175px;
-            height: 45px;
-            background: #fff;
-            border-radius: 999px;
-            pointer-events: auto;
-
-            @media screen and (min-width: 1024px) {
-                width: 262px;
-                height: 85px;
-                padding: 30px 80px;
-            }
-
-
-            &Line {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                width: 20px;
-                height: 18px;
-                cursor: pointer;
-
-                @media screen and (min-width: 1024px) {
-                    width: 30px;
-                    height: 26px;
-                }
-
-                span {
-                    width: 100%;
-                    height: 4px;
-                    background: #757575;
-
-                    @media screen and (min-width: 1024px) {
-                        height: 6px;
-                    }
-                }
-            }
-
-            &Block {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 3px;
-                width: 20px;
-                height: 18px;
-                cursor: pointer;
-
-                @media screen and (min-width: 1024px) {
-                    width: 30px;
-                    height: 26px;
-                }
-
-                span {
-                    width: 4px;
-                    height: 4px;
-                    background: #757575;
-
-                    @media screen and (min-width: 1024px) {
-                        width: 6px;
-                        height: 6px;
-                    }
-                }
-            }
-        }
-
-        &__more {
-            margin-bottom: 10vw;
-            @include padding;
-            text-align: right;
-
-            @media screen and (min-width: 1024px) {
-                @include paddingPc;
-            }
-
-            &:hover {
-                @include arrowHover;
-            }
-
-        }
-
-        &__link {
-            color: $black;
-            font-size: 35px;
-            letter-spacing: -0.07em;
-
-            .arrow {
-                @include arrow($black);
-            }
-
-            @media screen and (min-width: 768px) {
-                font-size: clamp(35px, 4.56vw, 70px);
             }
         }
     }

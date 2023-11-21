@@ -1,6 +1,14 @@
-// settingフォルダの変数を読み込みます
-
 @use "../setting" as *;
+
+//ページ遷移
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 //画面下部の砂嵐
 @keyframes sunaarashi{
