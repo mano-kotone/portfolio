@@ -632,23 +632,18 @@
                             display: flex;
                             justify-content: space-between;
                             @include paddingPc;
-                            padding-right: clamp(0px, 18.4vw, 365px);
+                            padding-right: clamp(0px, 18.4vw, 350px);
                             padding-bottom: 13px;
                             border-top: none;
                         }
 
                         .works {
                             &__listTime {
-
                                 @media screen and (min-width: 950px) {
                                     position: absolute;
                                     top: 0;
                                     left: clamp(563px, calc(50vw + 29px) ,1000px);
                                 }
-                            }
-
-                            &__listResponsive {
-                                margin-left: -20px; //きかない
                             }
                         }
                     }
@@ -747,6 +742,9 @@
                 }
 
                 &__time {
+                    font-family: 'Noto Sans JP';
+                    font-variant-numeric: tabular-nums;
+                    font-weight: 500;
                     @media screen and (min-width: 950px) {
                         position: absolute;
                         top: 50%;

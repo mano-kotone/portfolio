@@ -455,6 +455,9 @@
                 }
 
                 &__time {
+                    font-family: 'Noto Sans JP';
+                    font-variant-numeric: tabular-nums;
+                    font-weight: 500;
                     @media screen and (min-width: 950px) {
                         position: absolute;
                         top: 50%;
