@@ -1,0 +1,108 @@
+@use "../global" as *;
+
+.footer {
+    &__wrap {
+        position: relative;
+        overflow: hidden;
+        padding-top: 41px;
+    }
+
+    &__container {
+        position: relative;
+        height: 763px;
+        background: #703b20cb;
+    }
+
+    &__ttl {
+        position: absolute;
+        top: 150px;
+        left: -15px;
+        width: max-content;
+        font-family: $fTtl;
+        font-size: 124px;
+        font-weight: 400;
+        color: #fff;
+    }
+
+    &__pic {
+        position: absolute;
+        z-index: 5;
+
+        &--01 {
+            top: -41px;
+            left: 316px;
+            width: 480px;
+            height: 270px;
+            background: url(../images/footer-01.jpg) center center / cover;
+        }
+
+        &--02 {
+            top: 61px;
+            right: 320px;
+            width: 412px;
+            height: 640px;
+            background: url(../images/footer-02.jpg) center center / cover;
+        }
+
+        &--03 {
+            top: 381px;
+            left: 156px;
+            width: 480px;
+            height: 270px;
+            background: url(../images/footer-03.jpg) center center / cover;
+        }
+
+        &--04 {
+            bottom: -38px;
+            left: 735px;
+            width: 280px;
+            height: 200px;
+            background: url(../images/footer-04.jpg) center center / cover;
+        }
+    }
+
+    &__box {
+        position: relative;
+        z-index: 4;
+        height: 100vh;
+        background: url(../images/footer-bottom.jpg) center center / cover;
+    }
+
+    &__shear {
+        position: absolute;
+        bottom: 27px;
+        left: 320px;
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        &Txt {
+            margin-right: 21px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        &Icon {
+            width: 39px;
+            height: 39px;
+            transition: .3s;
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &__copy {
+        position: absolute;
+        right: 18px;
+        bottom: 27px;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+    }
+    &__small{
+        font-size: 18px;
+        color: #fff;
+        letter-spacing: 0.07em;
+    }
+}

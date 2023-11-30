@@ -5,6 +5,82 @@
         background: $worksBg;
     }
 
+    //レスポンシブ対応ページ
+    #worksAi,
+    #worksLloyd {
+        .mv {
+            &__responsive {
+                position: absolute;
+                left: -11px;
+                bottom: 65px;
+                display: flex;
+                gap: clamp(0px, 1vw, 15px);
+
+                @media screen and (min-width: 768px) {
+                    left: -50vw;
+                    bottom: 0;
+                }
+
+                @media screen and (min-width: 1024px) {
+                    left: 0;
+                    bottom: 20%;
+                    transform: translateX(-50%);
+                }
+
+                &-01 {
+                    flex-shrink: 0;
+                    width: 50px;
+                    aspect-ratio: 61 / 35;
+
+                    @media screen and (min-width: 768px) {
+                        width: clamp(96px, 12.5vw, 244px);
+                    }
+                }
+
+                &-02 {
+                    height: 100%;
+                    aspect-ratio: 37 / 70;
+                }
+
+                &Img {
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    #worksCrepe {
+        .deta {
+            span {
+                padding-top: 1vw;
+            }
+        }
+    }
+
+    //mvタイトルを無しにしたいページ
+    #worksAi {
+        .mv__ttl {
+            display: none;
+        }
+    }
+
+    //mvのテキストが白いページ
+    #worksLloyd,
+    #worksKamuy {
+        .mv {
+            &__img {
+                filter: brightness(90%);
+            }
+
+            &__ttl {
+                bottom: 0;
+                left: 2vw;
+                transform: translate(0);
+                color: #fff;
+            }
+        }
+    }
+
     .mv {
         position: relative;
         display: flex;
@@ -197,6 +273,12 @@
                 writing-mode: vertical-lr;
             }
 
+            span {
+                @media screen and (min-width: 1024px) {
+                    padding-top: .5em;
+                }
+            }
+
             &Txt {
                 &--01 {
                     display: block;
@@ -303,6 +385,7 @@
             &Url {
                 display: flex;
                 align-items: baseline;
+
                 &::after {
                     content: "";
                     display: inline-block;
@@ -365,6 +448,10 @@
             @media screen and (min-width: 1024px) {
                 width: clamp(290px, 17.7vw, 340px);
             }
+        }
+        &__link{
+            display: inline;
+            text-decoration: underline;
         }
 
         &__compPic {

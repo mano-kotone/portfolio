@@ -1,0 +1,54 @@
+@use "../setting" as *;
+
+@mixin padding {
+    padding-left: 320px;
+    padding-right: 320px;
+}
+
+@mixin content {
+    content: "";
+    display: block;
+}
+
+@mixin secPic {
+    @include content;
+    width: 100%;
+    height: 1202px;
+}
+
+@mixin secTtl {
+    margin-top: -41px;
+    font-family: $fTtl;
+    font-size: 85px;
+    font-weight: 400;
+    color: $ac;
+    line-height: 1.2;
+    text-shadow: -6px -3px #fff;
+}
+
+@mixin more {
+    position: relative;
+    width: fit-content;
+    font-size: 17px;
+    font-weight: 700;
+
+    &::after {
+        @include content;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 1px;
+        background: #000;
+        transform-origin: right;
+        transition: .3s;
+    }
+}
+@mixin arrow($size:.5em){
+    @include content;
+    width: $size;
+    height: $size;
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+    transform: rotate(45deg);
+}

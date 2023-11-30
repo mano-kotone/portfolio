@@ -1,0 +1,423 @@
+@use "../global" as *;
+
+#top {
+    .wrapper {
+        background-color: #fff;
+    }
+
+    .mv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin-bottom: 130px;
+        background: url(../images/mv.jpg) center center / cover;
+
+        &__ttl {
+            width: 492px;
+            height: 354px;
+            transform: translateY(-33%);
+        }
+
+        &__img {
+            object-fit: contain;
+        }
+    }
+
+    .about {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 975px;
+        margin-bottom: 160px;
+
+        &__pic {
+            &::before {
+                @include content;
+                position: absolute;
+                top: 0;
+                left: 160px;
+                width: 660px;
+                height: 441px;
+                background: url(../images/about-01.jpg) center center / cover;
+            }
+
+            &::after {
+                @include content;
+                position: absolute;
+                top: 390px;
+                left: 36px;
+                width: 552px;
+                height: 383px;
+                background: url(../images/about-02.jpg) center center / cover;
+            }
+        }
+
+        &__txt {
+            position: relative;
+            z-index: 2;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 3.4;
+            text-align: center;
+        }
+
+        &__hokkaidou {
+            position: absolute;
+            right: 160px;
+            bottom: 0;
+            width: 606px;
+            height: 534px;
+            background: url(../images/about-hokkaido.jpg) center center / contain no-repeat;
+        }
+    }
+
+    .consept {
+        margin-bottom: 160px;
+
+        &::before {
+            @include secPic;
+            background: url(../images/consept-top.jpg) center center / cover;
+        }
+
+        &__wrap {
+            @include padding;
+        }
+
+        &__ttl {
+            margin-bottom: 34px;
+            @include secTtl;
+        }
+
+        &__txt {
+            margin-bottom: 80px;
+            font-size: 18px;
+            line-height: 2.2;
+        }
+
+        &__subTtl {
+            margin-bottom: 34px;
+            font-size: 34px;
+            font-weight: 700;
+            color: $ac;
+            letter-spacing: 0.073em;
+        }
+
+        &__ul {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__list {
+            width: 563px;
+            flex-shrink: 0;
+
+            &Link:hover{
+                .consept__listPic{
+                    opacity: 0.7;
+                }
+                .consept__listMore::after{
+                    transform: scaleX(0);
+                }
+            }
+
+            &Pic {
+                margin-bottom: 35px;
+                width: 100%;
+                aspect-ratio: 67 / 40;
+                transition: .3s;
+
+                &--01 {
+                    background: url(../images/consept-vegetable.jpg) center center / cover;
+                }
+
+                &--02 {
+                    background: url(../images/consept-see.jpg) center center / cover;
+                }
+            }
+
+            &Box {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            &More {
+                @include more;
+            }
+        }
+    }
+
+    .menu {
+        margin-bottom: 160px;
+
+        &::before {
+            @include secPic;
+            background: url(../images/menu-top.jpg) center center / cover;
+        }
+
+        &__wrap {
+            @include padding;
+        }
+
+        &__ttl {
+            @include secTtl;
+
+            &Sub {
+                display: block;
+                margin-bottom: 34px;
+                font-family: $fTtl;
+                font-size: 29px;
+                color: $ac;
+                letter-spacing: 0.034em;
+            }
+        }
+
+        &__txt {
+            @extend .consept__txt;
+        }
+
+        &__subTtl {
+            @extend .consept__subTtl;
+        }
+
+        &__ul {
+            @extend .consept__ul;
+        }
+
+        &__list {
+            @extend .consept__list;
+            &Link:hover{
+                .menu__listPic{
+                    opacity: 0.7;
+                }
+                .menu__listMore::after{
+                    transform: scaleX(0);
+                }
+            }
+
+            &Pic {
+                @extend .consept__listPic;
+
+                &--01 {
+                    background: url(../images/menu-lunch.jpg) center center / cover;
+                }
+
+                &--02 {
+                    background: url(../images/menu-dinner.jpg) center center / cover;
+                }
+            }
+
+            &Box {
+                @extend .consept__listBox;
+            }
+
+            &More {
+                @include more;
+            }
+        }
+    }
+
+    .menber {
+        margin-bottom: 160px;
+
+        &::before {
+            @include secPic;
+            background: url(../images/menber-top.jpg) center center / cover;
+        }
+
+        &__ttl {
+            margin-bottom: 34px;
+            @include padding;
+            @include secTtl;
+        }
+
+        &__txt {
+            @include padding;
+            margin-bottom: 90px;
+            font-size: 18px;
+            line-height: 2.2;
+        }
+
+        &__container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            &:nth-of-type(1) {
+                flex-direction: row-reverse;
+                gap: 174px;
+                margin-bottom: 78px;
+                padding-right: 160px;
+            }
+
+            &:nth-of-type(2) {
+                gap: 159px;
+                margin-bottom: 81px;
+            }
+        }
+
+        &__pic {
+            &--01 {
+                width: 700px;
+                height: 861px;
+            }
+
+            &--02 {
+                width: 875px;
+                height: 581px;
+            }
+        }
+
+        &__box {
+            width: 566px;
+        }
+
+        &__position {
+            font-size: 34px;
+            font-weight: bold;
+            color: $acOp;
+            letter-spacing: 0.073em;
+        }
+
+        &__name {
+            margin-bottom: 34px;
+            font-size: 34px;
+            font-weight: bold;
+            color: $ac;
+            letter-spacing: 0.1em;
+        }
+
+        &__career {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 0.016em;
+            line-height: 2.2;
+        }
+
+        &__link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 auto;
+            padding-right: 71px;
+            padding-left: 93px;
+            width: 960px;
+            height: 116px;
+            border: 1px solid #000;
+            transition: .4s;
+            &:hover{
+                background: $ac;
+                border: none;
+                .menber__linkTxt{
+                    color: #fff;
+                }
+                .menber__linkMore{
+                    color: #fff;
+                    &::after{
+                        border-color: #fff;
+                    }
+                }
+            }
+
+            &Txt {
+                font-size: 24px;
+                font-weight: 500;
+                letter-spacing: 0.018em;
+            }
+
+            &More {
+                display: flex;
+                align-items: center;
+                gap: .8em;
+                font-size: 30px;
+                font-weight: 700;
+                letter-spacing: 0.1em;
+
+                &::after {
+                    @include arrow;
+                }
+            }
+        }
+    }
+
+    .shop {
+        margin-bottom: 246px;
+
+        &__pic {
+            &:nth-of-type(1) {
+                height: 996px;
+            }
+
+            &:nth-of-type(2) {
+                height: 956px;
+            }
+        }
+
+        &__wrap {
+            @include padding;
+        }
+
+        &__ttl {
+            margin-bottom: 24px;
+            @include secTtl;
+        }
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__dl {
+            margin-bottom: 68px;
+            font-size: 18px;
+
+            &Box:nth-of-type(2) {
+                display: flex;
+            }
+        }
+
+        &__dt {
+            &None {
+                display: none;
+            }
+        }
+
+        &__link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px 0 69px;
+            width: 100%;
+            height: 65px;
+            border: 1px solid #000;
+            border-radius: 50px;
+            transition: .4s;
+            &:hover{
+                border-color: #fff;
+                background: $ac;
+                .shop__google{
+                    color: #fff;
+                    &::after{
+                        border-color: #fff;
+                    }
+                }
+            }
+        }
+
+        &__google {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            font-weight: bold;
+
+            &::after {
+                @include arrow(1em);
+            }
+        }
+    }
+}

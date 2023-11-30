@@ -1,0 +1,21 @@
+@use "../global" as *;
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'work-sans', 'Noto Sans JP', sans-serif;
+    color: #000;
+}
+
+img,
+a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,19 @@
+@use "../global" as *;
+
+.gnav {
+    &__ul {
+        display: flex;
+        gap: 45px;
+    }
+
+    &__link {
+        color: #fff;
+        font-family: $fNav;
+        font-size: 18px;
+        font-weight: 100;
+        transition: .4s;
+        &:hover{
+            color: rgba(255,255,255,0.5);
+        }
+    }
+}

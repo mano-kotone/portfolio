@@ -1,0 +1,17 @@
+@use "../global" as *;
+
+.header {
+    position: fixed;
+    top: 27px;
+    left: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 46px;
+    width: 100%;
+    mix-blend-mode: difference;
+
+    &__ttl {
+        width: 91px;
+    }
+}
