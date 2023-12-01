@@ -7,7 +7,8 @@
 
     //レスポンシブ対応ページ
     #worksAi,
-    #worksLloyd {
+    #worksLloyd,
+    #worksTodo {
         .mv {
             &__responsive {
                 position: absolute;
@@ -455,14 +456,16 @@
         }
 
         &__compPic {
-
             @media screen and (min-width: 1024px) {
                 width: clamp(0px, 34.8vw, 669px);
             }
         }
 
-        &__img {
+        &__img{
             object-fit: contain;
+        }
+        &__video{
+            object-fit: cover;
         }
     }
 

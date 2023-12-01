@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width">
+  <title>TODOリスト</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link href="css/style.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+  <main class="main">
+    <h1>JavaScriptで<br>TODOリスト</h1>
+
+    <div class="todo-list">
+      <div class="add-item-area">
+        <input type="text" class="add-item" placeholder="入力してください">
+        <button class="add-button">追加する</button>
+      </div>
+
+      <div class="item-area-incomplate">
+        <p class="ttl">TODOリスト</p>
+        <ul id="incomplete__ul">
+        </ul>
+      </div>
+
+
+      <div class="item-area-complete">
+        <p class="ttl">完了</p>
+        <ul>
+        </ul>
+      </div>
+
+      <div class="item-area-delete">
+        <p class="ttl">ｺﾞﾐ箱</p>
+        <ul>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="js/function.js"></script>
+</body>
+
+</html>
