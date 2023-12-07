@@ -8,7 +8,8 @@
     //レスポンシブ対応ページ
     #worksAi,
     #worksLloyd,
-    #worksTodo {
+    #worksTodo,
+    #worksPortfolio {
         .mv {
             &__responsive {
                 position: absolute;
@@ -450,7 +451,8 @@
                 width: clamp(290px, 17.7vw, 340px);
             }
         }
-        &__link{
+
+        &__link {
             display: inline;
             text-decoration: underline;
         }
@@ -461,10 +463,11 @@
             }
         }
 
-        &__img{
+        &__img {
             object-fit: contain;
         }
-        &__video{
+
+        &__video {
             object-fit: cover;
         }
     }
